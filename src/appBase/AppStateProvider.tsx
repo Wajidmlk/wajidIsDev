@@ -5,15 +5,6 @@ type tpProps = {
   children: JSX.Element | JSX.Element[],
 }
 
-type tpAppStructure = {
-  pages: {
-
-  }[],
-  nav: string,
-}
-
-const AppStructure = (multipage: boolean) => {
-};
 const utApplyTheme = (themeName: string): void => {
   const link = document.getElementById("appTheme") as HTMLAnchorElement;
   if (link) {

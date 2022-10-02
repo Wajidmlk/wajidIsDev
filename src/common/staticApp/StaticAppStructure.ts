@@ -22,6 +22,7 @@ export const GetAppStructure = (): tpAppStructure => {
       },
     ],
     nav: {
+      id: "nav-001",
       type: "line",
       location: "up",
       toogle: false,

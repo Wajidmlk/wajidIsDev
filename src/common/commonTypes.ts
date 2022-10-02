@@ -5,11 +5,17 @@ export type tpAppStructure = {
     sequence: number,
   }[],
   nav: {
-    type: "line" | "round",
-    location: "up" | "down" | "left" | "right" | "drag",
-    toogle: boolean,
+    id: string,
+    type?: "line" | "round",
+    location?: "up" | "down" | "left" | "right" | "drag",
+    toogle?: boolean,
+    fixed?: boolean,
   },
   footer: {
-    toogle: boolean,
+    toogle?: boolean,
   },
+};
+
+export type tpCompId = {
+  id: string,
 };

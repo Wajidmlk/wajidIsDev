@@ -5,7 +5,7 @@ import PagesBase from './baseComponents/pagesBase/PagesBase';
 import HeaderContainer from './baseComponents/headerContainer/HeaderContainer';
 import FooterContainer from './baseComponents/footerContainer/FooterContainer';
 import { GetAppStructure } from './common/staticApp/StaticAppStructure';
-import './appBase.scss';
+import NavBar from './components/navs/NavBar';
 
 const CpRoutes = (): JSX.Element => {
   const appStructure = GetAppStructure();
@@ -13,8 +13,11 @@ const CpRoutes = (): JSX.Element => {
   if(!appStructure.multipage) return (<>
     <AppStateProvider>
       <div className='app-base-root'>
-        <HeaderContainer children={<>header </>}/>
+        <HeaderContainer children={
+          <NavBar id={appStructure.nav.id} />
+        }/>
           {appStructure.pages.map(page => <PagesBase
+              appStructure={appStructure}
               multipage={false}
               Component={[<h1>{`${JSON.stringify(page)}`}</h1>]}
             />)
@@ -37,6 +40,7 @@ const CpRoutes = (): JSX.Element => {
               ].map(page => <Route path={`/${page.id}`} element={
                 <PagesBase
                   multipage
+                  appStructure={appStructure}
                   Component={[<h1>{`${JSON.stringify(page)}`}</h1>]}
                 />
               } />)

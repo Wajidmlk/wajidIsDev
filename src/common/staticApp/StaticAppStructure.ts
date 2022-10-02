@@ -5,8 +5,12 @@ export const GetAppStructure = (): tpAppStructure => {
     multipage: true,
     pages: [
       {
-      id: "page1Info",
-      sequence: 0,
+      id: "home",
+      sequence: -1,
+      },
+      {
+        id: "page1Info",
+        sequence: 0,
       },
       {
       id: "page2Info",

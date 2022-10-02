@@ -1,23 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AppStateProvider from './appBase/AppStateProvider';
-import { GetAppStructure } from './appBase/appStructure/ServiceAppStructure';
+import AppStateProvider from './appUtils/AppStateProvider';
 import PagesBase from './baseComponents/pagesBase/PagesBase';
 import HeaderContainer from './baseComponents/headerContainer/HeaderContainer';
 import FooterContainer from './baseComponents/footerContainer/FooterContainer';
-import './AppThemeFoundation.scss';
-import { tpAppStructure } from './common/commonTypes';
-
-
-const MakeAppStructure = (appStructure: tpAppStructure): JSX.Element => {
-  return (
-    <>
-    </>
-  );
-}
+import { GetAppStructure } from './common/staticApp/StaticAppStructure';
+import './appBase.scss';
 
 const CpRoutes = (): JSX.Element => {
-  const appStructure = GetAppStructure(); 
+  const appStructure = GetAppStructure();
   
   if(!appStructure.multipage) return (<>
     <AppStateProvider>
@@ -32,13 +23,14 @@ const CpRoutes = (): JSX.Element => {
       </div>
     </AppStateProvider>
   </>);
+
   return (<>
     <AppStateProvider>
       <div className='app-base-root'>
         <Router>
           <Routes>
             {
-              [...appStructure.pages,  {
+              [...appStructure.pages, {
                 id: "",
                 sequence: -1,
                 },

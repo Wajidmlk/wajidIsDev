@@ -1,4 +1,4 @@
-import { tpAppStructure } from "../../common/commonTypes";
+import { tpAppStructure } from "../commonTypes";
 
 export const GetAppStructure = (): tpAppStructure => {
   return ({

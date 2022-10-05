@@ -5,6 +5,7 @@ import './index.scss';
 import './appBase.scss';
 import './components/navs/navs.scss';
 import './components/navs/navsDrawers.scss';
+import './components/footers/footers.scss';
 
 const container = document.getElementById('react-container');
 if (container !== null) {

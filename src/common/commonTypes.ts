@@ -12,6 +12,7 @@ export type tpAppStructure = {
     fixed?: boolean,
   },
   footer: {
+    id: string,
     toogle?: boolean,
   },
 };

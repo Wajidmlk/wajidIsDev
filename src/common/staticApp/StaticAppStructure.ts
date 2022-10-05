@@ -22,12 +22,13 @@ export const GetAppStructure = (): tpAppStructure => {
       },
     ],
     nav: {
-      id: "nav-001",
+      id: "nav-000",
       type: "line",
       location: "up",
       toogle: false,
     },
     footer: {
+      id: "footer-000",
       toogle: false,
     }
   });

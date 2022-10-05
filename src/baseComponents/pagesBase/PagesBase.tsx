@@ -4,6 +4,7 @@ import FooterContainer from '../footerContainer/FooterContainer';
 import './pagesBase.scss';
 import NavBar from '../../components/navs/NavBar';
 import { tpAppStructure } from '../../common/commonTypes';
+import Footer from '../../components/footers/Footer';
 type tpProps = {
   Component: JSX.Element[],
   appStructure: tpAppStructure,
@@ -15,7 +16,7 @@ const PagesBase = ({Component, multipage, appStructure}: tpProps): JSX.Element =
     <>
       <HeaderContainer children={<NavBar id={appStructure.nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>
-      <FooterContainer children={<>footer  </>}/>
+      <FooterContainer children={<Footer id={appStructure.footer.id} />} />
     </>
   );
   return (

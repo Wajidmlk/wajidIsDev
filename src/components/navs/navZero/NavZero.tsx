@@ -3,7 +3,7 @@ import { tpNavState } from '../../../common/componentTypes';
 
 type tpProps =  {state: tpNavState};
 
-const DefaultNav = ({state}: tpProps): JSX.Element => {
+const NavZero = ({state}: tpProps): JSX.Element => {
 
   return (
     <ul className='nav-000'>
@@ -12,4 +12,4 @@ const DefaultNav = ({state}: tpProps): JSX.Element => {
   );
 };
 
-export default DefaultNav;
+export default NavZero;

@@ -3,7 +3,7 @@ import { tpNavState } from '../../../common/componentTypes';
 
 type tpProps =  {state: tpNavState};
 
-const BlueNav = ({state}: tpProps): JSX.Element => {
+const BlueOne = ({state}: tpProps): JSX.Element => {
 
   return (
     <div className="nav-001">
@@ -25,4 +25,4 @@ const BlueNav = ({state}: tpProps): JSX.Element => {
   );
 };
 
-export default BlueNav;
+export default BlueOne;

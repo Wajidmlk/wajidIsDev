@@ -4,11 +4,9 @@ type tpProps = {
 }
 
 const FeaderContainer = ({children}: tpProps): JSX.Element => {
-  // state, get/post
-/*return (
-    <div>{children}</div>
-  );*/
-  return <></>
+  return (
+    <div className='footers'>{children}</div>
+  );
 };
 
 export default FeaderContainer;

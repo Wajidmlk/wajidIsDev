@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { tpCompId } from '../../common/commonTypes';
 import { tpNavState } from '../../common/componentTypes';
-import BlueNav from './blueNav/BlueNav';
-import DefaultNav from './defaultNav/DefaultNav';
+import NavOne from './navOne/NavOne';
+import NavZero from './navZero/NavZero';
+import NavTwo from './navTwo/NavTwo';
 
 const NavBar = ({id}: tpCompId): JSX.Element => {
   const [state, setState] = useState<tpNavState>({
@@ -18,13 +19,16 @@ const NavBar = ({id}: tpCompId): JSX.Element => {
   let NavBar = <></>;
   switch(id) {
     case "nav-000":
-      NavBar = <DefaultNav state={state}/>;
+      NavBar = <NavZero state={state}/>;
       break;
     case "nav-001":
-      NavBar = <BlueNav state={state}/>;
+      NavBar = <NavOne state={state}/>;
+      break;
+    case "nav-002":
+      NavBar = <NavTwo state={state}/>;
       break;
     default:
-      NavBar = <DefaultNav state={state}/>;
+      NavBar = <NavZero state={state}/>;
   }
   return NavBar;
 };

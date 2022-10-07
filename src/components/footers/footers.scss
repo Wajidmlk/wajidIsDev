@@ -1,5 +1,7 @@
 .footers {
   height: fit-content;
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: center;
   padding:0 70px;

@@ -4,7 +4,7 @@ import AppStateProvider from './appUtils/AppStateProvider';
 import PagesBase from './baseComponents/pagesBase/PagesBase';
 import HeaderContainer from './baseComponents/headerContainer/HeaderContainer';
 import FooterContainer from './baseComponents/footerContainer/FooterContainer';
-import { GetAppStructure } from './common/staticApp/StaticAppStructure';
+import { GetAppStructure, GetPageById } from './common/staticApp/StaticAppStructure';
 import NavBar from './components/navs/NavBar';
 
 const CpRoutes = (): JSX.Element => {
@@ -16,10 +16,11 @@ const CpRoutes = (): JSX.Element => {
         <HeaderContainer children={
           <NavBar id={appStructure.nav.id} />
         }/>
-          {appStructure.pages.map(page => <PagesBase
+          {appStructure.pages.map((page, key) => <PagesBase
+              key={`${page.id}${key}`}
               appStructure={appStructure}
               multipage={false}
-              Component={[<h1>{`${JSON.stringify(page)}`}</h1>]}
+              Component={[<GetPageById pageId={page.id} />]}
             />)
           }
         <FooterContainer children={<>footer  </>}/>
@@ -37,11 +38,12 @@ const CpRoutes = (): JSX.Element => {
                 id: "",
                 sequence: -1,
                 },
-              ].map(page => <Route path={`/${page.id}`} element={
+              ].map((page, key) => <Route path={`/${page.id}`} element={
                 <PagesBase
                   multipage
+                  key={`${page.id}${key}`}
                   appStructure={appStructure}
-                  Component={[<h1>{`${JSON.stringify(page)}`}</h1>]}
+                  Component={[<GetPageById pageId={page.id} />]}
                 />
               } />)
             }

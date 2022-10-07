@@ -1,7 +1,6 @@
 import * as React from 'react';
 import HeaderContainer from '../headerContainer/HeaderContainer';
 import FooterContainer from '../footerContainer/FooterContainer';
-import './pagesBase.scss';
 import NavBar from '../../components/navs/NavBar';
 import { tpAppStructure } from '../../common/commonTypes';
 import Footer from '../../components/footers/Footer';
@@ -9,21 +8,18 @@ type tpProps = {
   Component: JSX.Element[],
   appStructure: tpAppStructure,
   multipage?: boolean,
+  key: string,
 }
 
-const PagesBase = ({Component, multipage, appStructure}: tpProps): JSX.Element => {
+const PagesBase = ({Component, multipage, appStructure, key}: tpProps): JSX.Element => {
   if(multipage) return (
-    <>
+    <div key={key}>
       <HeaderContainer children={<NavBar id={appStructure.nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>
       <FooterContainer children={<Footer id={appStructure.footer.id} />} />
-    </>
+    </div>
   );
-  return (
-    <>
-      <div className='pages-base-root'>{Component}</div>
-    </>
-  );
+  return <div key={key} className='pages-base-root'>{Component}</div>;
 };
 
 PagesBase.defaultProps = {

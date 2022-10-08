@@ -20,7 +20,7 @@ const CpRoutes = (): JSX.Element => {
               key={`${page.id}${key}`}
               appStructure={appStructure}
               multipage={false}
-              Component={[<GetPageById pageId={page.id} />]}
+              Component={[<GetPageById page={page} userData={appStructure.userData} />]}
             />)
           }
         <FooterContainer children={<>footer  </>}/>
@@ -37,13 +37,14 @@ const CpRoutes = (): JSX.Element => {
               [...appStructure.pages, {
                 id: "",
                 sequence: -1,
+                style: {},
                 },
               ].map((page, key) => <Route path={`/${page.id}`} element={
                 <PagesBase
                   multipage
                   key={`${page.id}${key}`}
                   appStructure={appStructure}
-                  Component={[<GetPageById pageId={page.id} />]}
+                  Component={[<GetPageById page={page} userData={appStructure.userData}/>]}
                 />
               } />)
             }

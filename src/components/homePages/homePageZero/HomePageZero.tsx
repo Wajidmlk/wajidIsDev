@@ -1,19 +1,54 @@
 import React from "react";
-import "./homePageZero.scss";
 import Typewriter from "typewriter-effect";
-import { userIntroData } from "./../../../common/staticApp/AppStaticData";
-import { Link } from "react-router-dom";
+import { DEFAULT_IMAGE_URL, userIntroData } from "./../../../common/staticApp/AppStaticData";
+import { tpPageStructure, tpUserData } from "../../../common/commonTypes";
+import { Button } from "../../buttons/Button";
 
-const HomePageZero = () => {
+const HomePageZero = ({page, userData}: {page: tpPageStructure, userData: tpUserData}) => {
+  const { style } = page;
+  const { fullName, userId, dp } = userData;
   return (
     <div id="home" className="homePage-000">
       
-      <div className="intro_section">
-        <div
-          className="page000-backgroundImage"
-          style={{ backgroundImage: `url(${userIntroData.your_img_url})`}}
-        ></div>
-        
+      <div className={
+        `intro_section ${style.backgroundImage ? "page-backgroundImage" : ""}`} style={style}>
+        <div className="pagebody">
+          <div className="wrapper" style={{gridTemplateColumns: "55% 45%"}}>
+            <div className="box user-into">
+                <h3 className="">{fullName}</h3>
+                <h2 className="">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        userIntroData.animated.first,
+                        userIntroData.animated.second,
+                        userIntroData.animated.third,
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 10,
+                    }}
+                  />
+                </h2>
+                <p className="">{userIntroData.description}</p>
+                <div className="">{}
+                  <Button className="home0buttons" compId="button1" onClick={() => {}} label="My Portfolio"/>
+                  <Button className="home0buttons" compId="button1" onClick={() => {}} label="Contact Me"/>
+                </div>
+            </div>
+            <div
+              className={`box user-into `}
+              style={{
+                height: dp?.height || 500,
+                width: dp?.width || 400,
+                backgroundImage: dp?.url || DEFAULT_IMAGE_URL,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover"
+              }}
+            ></div>
+          </div>
+            
+        </div>
       </div>
     </div>
   );

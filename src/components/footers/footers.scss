@@ -54,4 +54,22 @@
       }
     }
   }
+
+  .sign-in-box {
+    position: fixed;
+    bottom: 5;
+    right: 10;
+    .button-3 {
+      .button-3-1 {
+        transform: translateX(100px);
+        height: 30px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+    .button-3:hover {
+
+      transform: translateX(-100px);
+    }
+  }
 }

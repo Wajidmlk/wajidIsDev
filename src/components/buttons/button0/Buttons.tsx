@@ -28,3 +28,16 @@ export const Button2 = ({ className, onClick, id, label }: tpCompProps): JSX.Ele
   </button>
 </div> 
 );
+
+export const Button3 = ({ className, onClick, id, label }: tpCompProps): JSX.Element => (
+  <div className='button-3'>
+    <button
+      className={`button-3-1 ${className}`}
+      id={id}
+      role="button"
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  </div>
+);

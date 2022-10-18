@@ -1,5 +1,5 @@
 import { tpCompProps } from "../../common/commonTypes";
-import {Button0, Button1, Button2} from "./button0/Buttons";
+import {Button0, Button1, Button2, Button3} from "./button0/Buttons";
 
 export const Button = (props: tpCompProps) => {
   let button: JSX.Element = <></>;
@@ -12,6 +12,9 @@ export const Button = (props: tpCompProps) => {
         break;
       case "button2" :
         button = <Button2 {...props} />
+        break;
+      case "button3" :
+        button = <Button3 {...props} />
         break;
     default :
       button = <Button0 {...props} />

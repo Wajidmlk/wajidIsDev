@@ -6,6 +6,7 @@ import FooterContainer from './baseComponents/footerContainer/FooterContainer';
 import { GetPageById } from './common/staticApp/StaticAppStructure';
 import NavBar from './components/navs/NavBar';
 import { useAppStateContext } from './appUtils/AppState';
+import ReactToast from './baseComponents/reactToast/ReactToast';
 
 const CpRoutes = (): JSX.Element => {
 
@@ -23,6 +24,7 @@ const CpRoutes = (): JSX.Element => {
           }
         <FooterContainer children={<>footer  </>}/>
       </div>
+      <ReactToast />
   </>);
 
   return (<>
@@ -45,6 +47,7 @@ const CpRoutes = (): JSX.Element => {
           </Routes>
         </Router>
       </div>
+      <ReactToast />
   </>);
 }
 export default CpRoutes;

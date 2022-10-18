@@ -13,13 +13,13 @@ type tpProps = {
 
 const PagesBase = ({Component, multipage, appStructure, key}: tpProps): JSX.Element => {
   if(multipage) return (
-    <div key={key}>
+    <div key={key} id={key}>
       <HeaderContainer children={<NavBar id={appStructure.nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>
       <FooterContainer children={<Footer id={appStructure.footer.id} />} />
     </div>
   );
-  return <div key={key} className='pages-base-root'>{Component}</div>;
+  return <div key={key} id={key} className='pages-base-root'>{Component}</div>;
 };
 
 PagesBase.defaultProps = {

@@ -6,10 +6,10 @@ import FooterZero from './footerZero/FooterZero';
 const Footer = ({id}: tpCompId): JSX.Element => {
   const [state, setState] = useState<tpFooterState>({
     items: [
-      {id: "home", paceHolder: "home", parentId: ""},
-      {id: "page1Info", paceHolder: "page 1", parentId: ""},
-      {id: "page2Info", paceHolder: "page 2", parentId: ""}, 
-      {id: "page3Info", paceHolder: "page 3", parentId: ""}, 
+      {id: "home", placeholder: "home", parentId: ""},
+      {id: "page1Info", placeholder: "page 1", parentId: ""},
+      {id: "page2Info", placeholder: "page 2", parentId: ""}, 
+      {id: "page3Info", placeholder: "page 3", parentId: ""}, 
     ],
   });
 

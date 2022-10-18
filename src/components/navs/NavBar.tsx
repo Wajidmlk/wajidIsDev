@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { tpCompId } from '../../common/commonTypes';
 import { tpNavState } from '../../common/componentTypes';
 import NavOne from './navOne/NavOne';
 import NavZero from './navZero/NavZero';
 import NavTwo from './navTwo/NavTwo';
+import { fetchNavbarState } from './services';
 
 const NavBar = ({id}: tpCompId): JSX.Element => {
-  const [state, setState] = useState<tpNavState>({
-    items: [
-      {id: "home", paceHolder: "home", parentId: ""},
-      {id: "page1Info", paceHolder: "page 1", parentId: ""},
-      {id: "page2Info", paceHolder: "page 2", parentId: ""}, 
-      {id: "page3Info", paceHolder: "page 3", parentId: ""}, 
-    ],
-  });
+  const [state, setState] = useState<tpNavState>({items: []});
 
+  useEffect(() => {
+    fetchNavbarState(setState);
+  }, []);
 
   let NavBar = <></>;
   switch(id) {

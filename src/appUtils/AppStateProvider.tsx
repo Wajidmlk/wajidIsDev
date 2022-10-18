@@ -1,35 +1,17 @@
-import {useEffect, useMemo, useState} from 'react';
-import { ctxAppState, tpIAppStateContext } from './AppState';
+import { useMemo, useState } from 'react';
+import { tpAppStructure } from '../common/commonTypes';
+import { GetAppStructure } from '../common/staticApp/StaticAppStructure';
+import { ctxAppState } from './AppState';
 
 type tpProps = {
   children: JSX.Element | JSX.Element[],
 }
 
-const utApplyTheme = (themeName: string): void => {
-  const link = document.getElementById("appTheme") as HTMLAnchorElement;
-  if (link) {
-    link.id = "appTheme";
-    link.rel = "stylesheet";
-    link.href = `/assets/theme/css/themes/${themeName}`;
-  }
-};
-
-const AppStateProvider = (props: tpProps):JSX.Element => {
-  const [appState, setAppState] = useState<tpIAppStateContext>({
-    multipage: true,
-    theme: 'light',
-    sideMenuToggle: 'open',
-  });
+const AppStateProvider = ({children}: tpProps):JSX.Element => {
+  const [appState, setAppState] = useState<tpAppStructure>(GetAppStructure());
 
   const value = useMemo(() => ({ ...appState, setAppState }), [appState]);
-  const {
-    children
-  } = props;
-
-  useEffect(() => {
-    utApplyTheme("1-light-theme.css");
-  }, []);
-
+  
   return (
     <ctxAppState.Provider value={value}>{children}</ctxAppState.Provider>
   );

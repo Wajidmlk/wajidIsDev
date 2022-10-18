@@ -5,10 +5,10 @@ import { tpPageStructure, tpUserData } from "../../../common/commonTypes";
 import { Button } from "../../buttons/Button";
 
 const HomePageZero = ({page, userData}: {page: tpPageStructure, userData: tpUserData}) => {
-  const { style } = page;
+  const { style, id } = page;
   const { fullName, userId, dp } = userData;
   return (
-    <div id="home" className="homePage-000">
+    <div id={id} className="homePage-000">
       
       <div className={
         `intro_section ${style.backgroundImage ? "page-backgroundImage" : ""}`} style={style}>

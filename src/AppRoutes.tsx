@@ -1,35 +1,34 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AppStateProvider from './appUtils/AppStateProvider';
 import PagesBase from './baseComponents/pagesBase/PagesBase';
 import HeaderContainer from './baseComponents/headerContainer/HeaderContainer';
 import FooterContainer from './baseComponents/footerContainer/FooterContainer';
 import { GetAppStructure, GetPageById } from './common/staticApp/StaticAppStructure';
 import NavBar from './components/navs/NavBar';
+import { useAppStateContext } from './appUtils/AppState';
 
 const CpRoutes = (): JSX.Element => {
   const appStructure = GetAppStructure();
+
+  const {nav, userData} = useAppStateContext();
   
   if(!appStructure.multipage) return (<>
-    <AppStateProvider>
       <div className='app-base-root'>
         <HeaderContainer children={
-          <NavBar id={appStructure.nav.id} />
+          <NavBar id={nav.id} />
         }/>
-          {appStructure.pages.map((page, key) => <PagesBase
-              key={`${page.id}${key}`}
+          {appStructure.pages.map((page) => <PagesBase
+              key={page.id}
               appStructure={appStructure}
               multipage={false}
-              Component={[<GetPageById page={page} userData={appStructure.userData} />]}
+              Component={[<GetPageById page={page} userData={userData} />]}
             />)
           }
         <FooterContainer children={<>footer  </>}/>
       </div>
-    </AppStateProvider>
   </>);
 
   return (<>
-    <AppStateProvider>
       <div className='app-base-root'>
         <Router>
           <Routes>
@@ -51,7 +50,6 @@ const CpRoutes = (): JSX.Element => {
           </Routes>
         </Router>
       </div>
-    </AppStateProvider>
   </>);
 }
 export default CpRoutes;

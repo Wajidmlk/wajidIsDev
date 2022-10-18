@@ -1,7 +1,7 @@
 export type tpNavState = {
   items: {
     id: string,
-    paceHolder: string,
+    placeholder: string,
     parentId: string,
   }[],
 };
@@ -9,7 +9,7 @@ export type tpNavState = {
 export type tpFooterState = {
   items: {
     id: string,
-    paceHolder: string,
+    placeholder: string,
     parentId: string,
   }[],
 };

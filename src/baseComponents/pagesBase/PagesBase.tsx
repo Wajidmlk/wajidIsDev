@@ -4,26 +4,22 @@ import FooterContainer from '../footerContainer/FooterContainer';
 import NavBar from '../../components/navs/NavBar';
 import { tpAppStructure } from '../../common/commonTypes';
 import Footer from '../../components/footers/Footer';
+import { useAppStateContext } from '../../appUtils/AppState';
 type tpProps = {
   Component: JSX.Element[],
-  appStructure: tpAppStructure,
-  multipage?: boolean,
   key: string,
 }
 
-const PagesBase = ({Component, multipage, appStructure, key}: tpProps): JSX.Element => {
+const PagesBase = ({Component, key}: tpProps): JSX.Element => {
+  const {nav, footer, multipage} = useAppStateContext();
   if(multipage) return (
     <div key={key} id={key}>
-      <HeaderContainer children={<NavBar id={appStructure.nav.id} />}/>
+      <HeaderContainer children={<NavBar id={nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>
-      <FooterContainer children={<Footer id={appStructure.footer.id} />} />
+      <FooterContainer children={<Footer id={footer.id} />} />
     </div>
   );
   return <div key={key} id={key} className='pages-base-root'>{Component}</div>;
-};
-
-PagesBase.defaultProps = {
-  multipage: false,
 };
 
 export default PagesBase;

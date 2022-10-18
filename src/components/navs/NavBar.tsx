@@ -4,7 +4,7 @@ import { tpNavState } from '../../common/componentTypes';
 import NavOne from './navOne/NavOne';
 import NavZero from './navZero/NavZero';
 import NavTwo from './navTwo/NavTwo';
-import { fetchNavbarState } from './services';
+import { fetchNavbarState } from './navServices';
 
 const NavBar = ({id}: tpCompId): JSX.Element => {
   const [state, setState] = useState<tpNavState>({items: []});

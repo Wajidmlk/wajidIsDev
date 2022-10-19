@@ -1,0 +1,36 @@
+.background-clickable-true {
+  transform: translateY(100vh);
+  .MuiDialog-container {
+    .MuiDialog-paper {
+      transform: translateY(-100vh);
+    }
+  }
+}
+.content-display-block {
+  .dailog-custom-actions {
+    position: absolute;
+    right: 25;
+    top: 8;
+    padding:0;
+    .MuiButtonBase-root {
+      svg{ font-size: 1.25rem; }
+    }
+  }
+}
+.content-display-none {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      .dailog-custom-actions {
+        position: absolute;
+        right: 40;
+        top: 5;
+        .MuiButtonBase-root {
+          svg{ font-size: 1.25rem; }
+        }
+      }
+      .MuiDialogContent-root {
+        display: none;
+      }
+    }
+  }
+}

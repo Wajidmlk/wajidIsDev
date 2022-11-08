@@ -21,8 +21,8 @@ export type tpAppStructure = {
   pages: tpPageStructure[],
   nav: {
     id: string,
-    type?: "line" | "round",
-    location?: "up" | "down" | "left" | "right" | "drag",
+    type?: 'line' | 'round',
+    location?: 'up' | 'down' | 'left' | 'right' | 'drag',
     toogle?: boolean,
     fixed?: boolean,
   },
@@ -47,3 +47,12 @@ export type tpCompProps = {
   label?: string,
   id?: string,
 }
+
+export type TFile = {
+  fPath: string,
+  fName: string,
+  fEntityId: string,
+  fExtension: string,
+  fType: string,
+  fId?: string,
+};

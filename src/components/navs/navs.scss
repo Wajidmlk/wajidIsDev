@@ -34,7 +34,7 @@ $pad:     10px;
         cursor: pointer;
         white-space: nowrap;
         &::before {
-          content: " ";
+          content: ' ';
           position: absolute;
           top: 0;
           left:0;
@@ -76,7 +76,7 @@ $pad:     10px;
         }
         li {
           display: inline;
-          font-family: "Fira Sans", sans-serif;
+          font-family: 'Fira Sans', sans-serif;
           font-size: 17px;
         }
       }
@@ -109,7 +109,7 @@ $pad:     10px;
             top: 0;
             width: $pad;
             height: 100%;
-            content: "";
+            content: '';
             background: #ED1C5B;
             z-index: 1;
             transition: background 400ms;

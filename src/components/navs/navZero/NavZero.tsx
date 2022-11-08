@@ -10,7 +10,7 @@ const NavZero = ({state}: tpProps): JSX.Element => {
     <ul className='nav-000'>
       {state.items.map(item => (
         <a 
-          href={`${multipage ? "/" : "#"}${item.id}`}
+          href={`${multipage ? '/' : '#'}${item.id}`}
         >
           <li key={item.id}>{item.placeholder}</li>
         </a>))}

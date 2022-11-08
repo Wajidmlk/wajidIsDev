@@ -15,13 +15,13 @@ const NavBar = ({id}: tpCompId): JSX.Element => {
 
   let NavBar = <></>;
   switch(id) {
-    case "nav-000":
+    case 'nav-000':
       NavBar = <NavZero state={state}/>;
       break;
-    case "nav-001":
+    case 'nav-001':
       NavBar = <NavOne state={state}/>;
       break;
-    case "nav-002":
+    case 'nav-002':
       NavBar = <NavTwo state={state}/>;
       break;
     default:

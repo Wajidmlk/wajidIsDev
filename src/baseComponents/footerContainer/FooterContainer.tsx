@@ -16,7 +16,7 @@ const FeaderContainer = ({children}: tpProps): JSX.Element => {
       <div className='sign-in-box'>
         <Button
           label='Login'
-          onClick={() => {Toast("Successfully Logged-In", "success"); sT(true)}}
+          onClick={() => {Toast('Successfully Logged-In', 'success'); sT(true)}}
           compId='button3'
         />
       </div>
@@ -25,18 +25,18 @@ const FeaderContainer = ({children}: tpProps): JSX.Element => {
           <DraggableDialog
 
             open={t}
-            size="xl"
+            size='xl'
             defaultWidth={500}
-            onDelete={() => {Toast("Feature Under Progress....", "info")}}
-            onPrint={() => {Toast("Feature Under Progress....", "info")}}
+            onDelete={() => {Toast('Feature Under Progress....', 'info')}}
+            onPrint={() => {Toast('Feature Under Progress....', 'info')}}
             isResizeable
             isDraggable
             hideBackdrop
-            title="Notes"
+            title='Notes'
             onClose={() => {
               sT(false)
             }}
-            className="cp-advance-notes-dialog"
+            className='cp-advance-notes-dialog'
           >
             <p>HAHAHAHAHA</p>
           </DraggableDialog>

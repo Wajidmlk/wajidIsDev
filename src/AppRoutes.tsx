@@ -33,7 +33,7 @@ const CpRoutes = (): JSX.Element => {
           <Routes>
             {
               [...pages, {
-                id: "",
+                id: '',
                 sequence: -1,
                 style: {},
                 },

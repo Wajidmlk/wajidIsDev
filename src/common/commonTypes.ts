@@ -24,12 +24,12 @@ export type tpAppStructure = {
     id: string,
     type?: 'line' | 'round',
     location?: 'up' | 'down' | 'left' | 'right' | 'drag',
-    toogle?: boolean,
+    toggle?: boolean,
     fixed?: boolean,
   },
   footer: {
     id: string,
-    toogle?: boolean,
+    toggle?: boolean,
   },
   components : {
     button?: string,

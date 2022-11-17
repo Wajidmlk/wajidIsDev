@@ -28,11 +28,11 @@ export const GetAppStructure = (): tpAppStructure => {
       id: 'nav-000',
       type: 'line',
       location: 'up',
-      toogle: false,
+      toggle: false,
     },
     footer: {
       id: 'footer-000',
-      toogle: false,
+      toggle: false,
     },
     components: {
       button: 'button0',

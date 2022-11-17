@@ -65,7 +65,7 @@ const DropDownMenu = ({
 );
 
 DropDownMenu.defaultProps = {
-  className: ',
+  className: '',
   open: true,
   closeMenuOnClick: false,
 };

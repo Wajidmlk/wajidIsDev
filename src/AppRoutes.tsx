@@ -10,16 +10,16 @@ import ReactToast from './baseComponents/reactToast/ReactToast';
 
 const CpRoutes = (): JSX.Element => {
 
-  const {nav, userData, multipage, pages} = useAppStateContext();
+  const {nav, multiPage, pages} = useAppStateContext();
   
-  if(!multipage) return (<>
+  if(!multiPage) return (<>
       <div className='app-base-root'>
         <HeaderContainer children={
           <NavBar id={nav.id} />
         }/>
           {pages.map((page) => <PagesBase
               key={page.id}
-              Component={[<GetPageById page={page} userData={userData} />]}
+              Component={[<GetPageById page={page} />]}
             />)
           }
         <FooterContainer children={<>footer  </>}/>
@@ -34,13 +34,14 @@ const CpRoutes = (): JSX.Element => {
             {
               [...pages, {
                 id: '',
+                categoryId: '',
                 sequence: -1,
                 style: {},
                 },
               ].map((page, key) => <Route path={`/${page.id}`} element={
                 <PagesBase
                   key={`${page.id}${key}`}
-                  Component={[<GetPageById page={page} userData={userData}/>]}
+                  Component={[<GetPageById page={page} />]}
                 />
               } />)
             }

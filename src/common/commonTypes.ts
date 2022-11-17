@@ -1,5 +1,6 @@
 export type tpPageStructure = {
   id: string,
+  categoryId: string,
   sequence: number,
   style: {
     backgroundImage?: string,
@@ -17,7 +18,7 @@ export type tpUserData = {
 };
 
 export type tpAppStructure = {
-  multipage: boolean,
+  multiPage: boolean,
   pages: tpPageStructure[],
   nav: {
     id: string,

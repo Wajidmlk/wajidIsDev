@@ -73,13 +73,13 @@ const FilesDragAndDrop = ({
     e.preventDefault();
     e.stopPropagation();
     setDragging(false);
-    const allFiles = e.dataTransfer ? [...files, ...e.dataTransfer.files] : [];
-    HandleUpload({ files: allFiles, onUpload }, messages, validations, setMessage);
+    //const allFiles = e.dataTransfer ? [...files, ...e.dataTransfer.files] : [];
+    //HandleUpload({ files: allFiles, onUpload }, messages, validations, setMessage);
   };
 
   const useHookDragDropRefCallback = (): React.MutableRefObject<HTMLDivElement | null>[] => {
     const ref = useRef<HTMLDivElement | null>(null);
-    const setRef = useCallback((element) => {
+    const setRef = useCallback((element: any) => {
       if (ref.current) ref?.current.removeEventListener('dragover', (e) => HandleDragOver(e));
       if (ref.current) ref?.current.removeEventListener('drop', (e) => HandleDrop(e));
       if (ref.current) ref?.current.removeEventListener('dragenter', (e) => HandleDragEnter(e, ref, setDragging));
@@ -116,7 +116,7 @@ const FilesDragAndDrop = ({
           accept={formats ? formats.map((format) => `.${format}`).join(', ') : undefined}
           multiple={!count || count > 1}
           onChange={(e) => HandleSelectFiles(
-            { files: [...files, ...e.target.files as FileList], onUpload },
+            { files: [...files, /*...e.target.files as FileList*/], onUpload },
             messages, validations, setMessage,
           )}
         />

@@ -3,12 +3,12 @@ import Typewriter from 'typewriter-effect';
 import { DEFAULT_IMAGE_URL, userIntroData } from './../../../common/staticApp/AppStaticData';
 import { TFile, tpPageStructure, tpUserData } from '../../../common/commonTypes';
 import { Button } from '../../buttons/Button';
-import DragDropFileUploader from '../../../baseComponents/dragDropFilesUploader/DragDropFilesUploader';
+import { useAppStateContext } from '../../../appUtils/AppState';
 
-const HomePageZero = ({page, userData}: {page: tpPageStructure, userData: tpUserData}) => {
+const HomePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, id } = page;
-  const { fullName, userId, dp } = userData;
-  const [uploadedFiles, setUploadedFiles] = useState<TFile[]>([]);
+  const { userData } = useAppStateContext();
+  const { fullName, dp } = userData;
   return (
     <div id={id} className='homePage-000'>
       
@@ -48,12 +48,6 @@ const HomePageZero = ({page, userData}: {page: tpPageStructure, userData: tpUser
                 backgroundSize: 'cover'
               }}
             ></div>
-            <div>
-              <DragDropFileUploader
-                uploadedFiles={uploadedFiles}
-                setUploadedFiles={setUploadedFiles}
-              />
-            </div>
           </div>
             
         </div>

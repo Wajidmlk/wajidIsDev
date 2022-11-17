@@ -11,8 +11,8 @@ type tpProps = {
 }
 
 const PagesBase = ({Component, key}: tpProps): JSX.Element => {
-  const {nav, footer, multipage} = useAppStateContext();
-  if(multipage) return (
+  const {nav, footer, multiPage} = useAppStateContext();
+  if(multiPage) return (
     <div key={key} id={key}>
       <HeaderContainer children={<NavBar id={nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>

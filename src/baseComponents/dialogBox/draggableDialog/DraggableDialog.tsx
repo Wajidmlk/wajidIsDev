@@ -141,13 +141,15 @@ const ResizeableBody = ({
 const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHeightWidthProps&{
   isDraggable?: boolean,
   isResizeable?: boolean,
+  isSimple?: boolean,
 }): JSX.Element => {
   const [state, setState] = useState<tpDragDialogState>({ maximum: true, onTop: false });
   const {
     className, onDelete, onPrint, isResizeable, isDraggable, children, defaultHeight, defaultWidth,
+    isSimple,
   } = props;
-  const [height, setHeight] = useState(defaultHeight || 200);
-  const [width, setWidth] = useState(defaultWidth || 300);
+  const [height, setHeight] = useState(defaultHeight || 350);
+  const [width, setWidth] = useState(defaultWidth || 500);
 
   const DraggableDialogActions = () => (
     <div className='dailog-custom-actions'>
@@ -202,7 +204,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
       removeBackdrop={state.onTop}
       className={`cp-draggable-dialog-root ${state.maximum ? 'content-display-block' : 'content-display-none'} ${className}`}
       PaperComponent={isDraggable ? CpPaperComponent : undefined}
-      customActions={<DraggableDialogActions />}
+      customActions={isSimple ? <></> : <DraggableDialogActions />}
     >
       { isResizeable
         ? ResizeableBody({
@@ -218,6 +220,7 @@ DraggableDialog.defaultProps = {
   onPrint: undefined,
   isDraggable: false,
   isResizeable: false,
+  isSimple: false,
 };
 
 export default DraggableDialog;

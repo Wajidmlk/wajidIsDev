@@ -5,7 +5,7 @@ import { tpNavState } from '../../../common/componentTypes';
 type tpProps =  {state: tpNavState};
 
 const BlueOne = ({state}: tpProps): JSX.Element => {
-  const {multipage} = useAppStateContext();
+  const {multiPage} = useAppStateContext();
   return (
     <div className='nav-001'>
       <div id='navigation-bar'>
@@ -13,7 +13,7 @@ const BlueOne = ({state}: tpProps): JSX.Element => {
           <ul>
           {state.items.map(item => (
             <a 
-              href={`${multipage ? '/' : '#'}${item.id}`}
+              href={`${multiPage ? '/' : '#'}${item.id}`}
             >
               <li key={item.id}>{item.placeholder}</li>
             </a>))

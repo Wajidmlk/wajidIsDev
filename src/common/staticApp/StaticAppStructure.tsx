@@ -59,6 +59,7 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
       pageById = <IntroPage page={page} />
       break;
     default :
+      pageById = <HomePage page={page} />
     break;
   
   }

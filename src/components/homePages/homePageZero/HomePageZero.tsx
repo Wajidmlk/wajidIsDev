@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { DEFAULT_IMAGE_URL, userIntroData } from './../../../common/staticApp/AppStaticData';
-import { TFile, tpPageStructure, tpUserData } from '../../../common/commonTypes';
+import { tpPageStructure } from '../../../common/commonTypes';
 import { Button } from '../../buttons/Button';
 import { useAppStateContext } from '../../../appUtils/AppState';
 
@@ -14,7 +14,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
       
       <div className={
         `intro_section ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
-        <div className='pagebody'>
+        <div className='pageBody'>
           <div className='wrapper' style={{gridTemplateColumns: '55% 45%'}}>
             <div className='box user-into'>
                 <h3 className=''>{fullName}</h3>
@@ -34,7 +34,10 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                 </h2>
                 <p className=''>{userIntroData.description}</p>
                 <div className=''>{}
-                  <Button className='home0buttons' compId='button1' onClick={() => {}} label='My Portfolio'/>
+                  <Button className='home0buttons' compId='button1' onClick={() => {
+                    window.location.href = `/#630d36aa-2aa4-11ed-a261-0242ac121001`;
+                  }}
+                  label='My Portfolio'/>
                   <Button className='home0buttons' compId='button1' onClick={() => {}} label='Contact Me'/>
                 </div>
             </div>

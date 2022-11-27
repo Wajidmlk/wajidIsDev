@@ -1,0 +1,63 @@
+.introPage-000 {
+  width: 100%;
+  padding: 10px;
+  .showcase-card-boxes {
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    .card-box {
+      margin: 5px 10px 5px 10px;
+      min-height: 200px;
+      min-width: 200px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      justify-content: space-evenly;
+      align-items: center;
+      color: rgb(66, 65, 65);
+      .image {
+        background: #0F2027;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        margin-bottom: 10px;
+        height: 110px;
+        width: 110px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+        .MuiSvgIcon-root {
+          top: 100;
+          height: 60px;
+          width: 60px;
+          color: rgb(255, 255, 255);
+          margin: auto;
+          position: absolute;
+          top: 75%;
+          left: 70%;
+          margin: -50px 0 0 -50px;
+        }
+      }
+      .title {
+        font-size: x-large;
+        font-weight: bold;
+      }
+      .para {
+        font-size: medium;
+        font-weight: 300;
+        text-align: center;
+        line-height: 20px;
+      }
+    }
+  }
+  .box {
+    border: 1px solid black;
+    height: fit-content;
+  }
+}

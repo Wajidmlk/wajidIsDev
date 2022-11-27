@@ -8,6 +8,8 @@ import './components/navs/navs.scss';
 import './components/navs/navsDrawers.scss';
 import './components/footers/footers.scss';
 import './components/buttons/buttons.scss';
+import './components/IntroPages/introPages.scss';
+import './components/progressBar/progressBar.scss';
 import AppStateProvider from './appUtils/AppStateProvider';
 
 const container = document.getElementById('react-container');

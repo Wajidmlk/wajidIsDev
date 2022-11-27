@@ -19,7 +19,7 @@ export const GetAppStructure = (): tpAppStructure => {
         categoryId :'630d36aa-2aa4-11ed-a261-0242ac120001',
         sequence: 0,
         style: {
-          backgroundImage: `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkuP4A26vUkEZwYJL4zGV8KRxUbBmcX11Mdw&usqp=CAU)`
+          backgroundImage: `url(https://img.freepik.com/free-vector/realistic-studio-lights-empty-background-design_1017-27233.jpg?w=2000)`
         }
       },
       
@@ -43,7 +43,7 @@ export const GetAppStructure = (): tpAppStructure => {
       dp: {
         height: 500,
         width: 400,
-        url: 'url(https://upload.wikimedia.org/wikipedia/commons/7/7f/Dani_Daniels_AEE_2013.jpg)',
+        url: 'url(https://scontent.fskz1-1.fna.fbcdn.net/v/t39.30808-6/274988342_4423016951132943_6969899941379106606_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGV-2_LTewPU1LXu7B3vQx5cNDK03yHRclw0MrTfIdFyUF8JE7t7ImcDnSLOXrj0ZZzvBDp3xb1ZDWt1Q3kxRYS&_nc_ohc=4d7Q0izLj4EAX9_4nkE&_nc_ht=scontent.fskz1-1.fna&oh=00_AfCwJJxY4MnwMAQra3ULXKnA01rA29OFpOwRRrKc1vvHjQ&oe=63832F24)',
       },
     },
   });

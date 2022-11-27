@@ -58,12 +58,12 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
           ))
         }
       </div>
-      {/*<div className='wrapper' style={{gridTemplateColumns: '40% 58%'}}>
+      <div className='wrapper' style={{gridTemplateColumns: '40% 58%'}}>
         <div className='box'></div>
         <div className='box'>
          <SkillsBox />
         </div>
-      </div>*/}
+      </div>
     </div>
   );
 };

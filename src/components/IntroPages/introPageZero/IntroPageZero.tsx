@@ -38,7 +38,13 @@ const data = [
     defaultHeight: undefined,
     defaultWidth: 250,
   },
-]
+];
+
+const MyImages = () => (
+  <div className="my-images">
+   
+  </div>
+)
 
 const IntroPageZero = ({page}: {page: tpPageStructure}) => {
   const { style, id } = page;
@@ -59,7 +65,9 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
         }
       </div>
       <div className='wrapper' style={{gridTemplateColumns: '40% 58%'}}>
-        <div className='box'></div>
+        <div className='box'>
+          <MyImages />
+        </div>
         <div className='box'>
          <SkillsBox />
         </div>

@@ -15,7 +15,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
       <div className={
         `intro_section ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
         <div className='pageBody'>
-          <div className='wrapper' style={{gridTemplateColumns: '55% 45%'}}>
+          <div className='grid' style={{gridTemplateColumns: '55% 45%'}}>
             <div className='box user-into'>
                 <h3 className=''>{fullName}</h3>
                 <h2 className=''>

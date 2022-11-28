@@ -6,6 +6,7 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import CardBox from '../cardBox/CardBox';
 import SkillsBox from '../skillsBox/SkillsBox';
+import BubbleShowcase from '../../bubbleShowcase/BubbleShowcase';
 
 const data = [
   {
@@ -40,12 +41,6 @@ const data = [
   },
 ];
 
-const MyImages = () => (
-  <div className="my-images">
-   
-  </div>
-)
-
 const IntroPageZero = ({page}: {page: tpPageStructure}) => {
   const { style, id } = page;
   return (
@@ -64,9 +59,9 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
           ))
         }
       </div>
-      <div className='wrapper' style={{gridTemplateColumns: '40% 58%'}}>
+      <div className='grid' style={{gridTemplateColumns: '40% 58%'}}>
         <div className='box'>
-          <MyImages />
+          <BubbleShowcase />
         </div>
         <div className='box'>
          <SkillsBox />

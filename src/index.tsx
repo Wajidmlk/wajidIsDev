@@ -10,7 +10,6 @@ import './components/footers/footers.scss';
 import './components/buttons/buttons.scss';
 import './components/IntroPages/introPages.scss';
 import './components/progressBar/progressBar.scss';
-import './components/bubbleShowcase/bubbleShowcase.scss';
 import './common/common.scss';
 import AppStateProvider from './appUtils/AppStateProvider';
 

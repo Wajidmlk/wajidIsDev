@@ -4,6 +4,10 @@ export type tpPageStructure = {
   sequence: number,
   style: {
     backgroundImage?: string,
+    height?: string,
+    width?: string,
+    display?: string,
+    padding?: string,
   }
 };
 

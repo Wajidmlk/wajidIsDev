@@ -6,7 +6,6 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import CardBox from '../cardBox/CardBox';
 import SkillsBox from '../skillsBox/SkillsBox';
-import BubbleShowcase from '../../bubbleShowcase/BubbleShowcase';
 
 const data = [
   {
@@ -14,14 +13,14 @@ const data = [
     title: "Customizable",
     para: `Mind-set of creating highly customizable web-apps`,
     defaultHeight: undefined,
-    defaultWidth: 250,
+    defaultWidth: "250",
   },
   {
     image: <PaletteIcon />,
     title: "Themes",
     para: `Provide multiple options to switch your app's look`,
     defaultHeight: undefined,
-    defaultWidth: 250,
+    defaultWidth: "250",
   },
   {
     image: <SettingsSuggestIcon />,
@@ -29,7 +28,7 @@ const data = [
     para: `Apps configurable & setup-able.
       custom translations & modes`,
     defaultHeight: undefined,
-    defaultWidth: 250,
+    defaultWidth: "250",
   },
   {
     image: <QueryStatsIcon />,
@@ -37,7 +36,7 @@ const data = [
     para: `Dynamic apps keep track of
     page visits & app traffic`,
     defaultHeight: undefined,
-    defaultWidth: 250,
+    defaultWidth: "250",
   },
 ];
 
@@ -61,7 +60,17 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
       </div>
       <div className='grid' style={{gridTemplateColumns: '40% 58%'}}>
         <div className='box'>
-          <BubbleShowcase />
+            <CardBox
+              className='showcase'
+              para='My Expertise...'
+              image={
+                <div
+                  className='showcase-inside-image page-backgroundImage'
+                  style={{backgroundImage: 'url(https://meritglobaltraining.com/backend/uploads/e29544dbabbcd8ae3eb604d30e3478eb.jpg)', backgroundAttachment: "scroll"}}
+                ></div>}
+              defaultHeight={"100%"}
+              defaultWidth={"100%"}
+            />
         </div>
         <div className='box'>
          <SkillsBox />

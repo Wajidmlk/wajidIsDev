@@ -1,3 +1,10 @@
 .showcasePage-000 {
-
+  .showcase-container {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }

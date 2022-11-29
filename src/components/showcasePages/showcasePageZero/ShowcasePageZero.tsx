@@ -1,5 +1,6 @@
 import React from 'react';
 import { tpPageStructure } from '../../../common/commonTypes';
+import ProductContainer from '../productContainer/ProductContainer';
 const ShowcasePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, id } = page;
   return (
@@ -9,8 +10,10 @@ const ShowcasePageZero = ({page}: {page: tpPageStructure}) => {
         `showcasePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}
     >
-      <div style={{height: "200px", width: "100%", border: "1px solid black"}}>
-
+      <div className='showcase-container'>
+        {
+          ["","","","","","","",""].map(item => (<ProductContainer />))
+        }
       </div>
     </div>
   );

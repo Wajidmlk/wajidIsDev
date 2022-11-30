@@ -5,5 +5,32 @@
   min-height: 300px;
   margin: 20px;
   border-radius: 15px;
-  border: 2px solid rgb(88, 76, 76);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  .side-strip {
+  border-radius: 0 5px 5px 0;
+    width: 22px;
+    height: 125px;
+    float: right;
+    background-color: blueviolet;
+    transform: rotate(-45deg) translate(25px, -35px);
+    border-left: 1px solid rgb(120, 55, 180);
+    box-shadow: rgba(148, 18, 255, 0.25) 0px 14px 28px, rgba(30, 41, 80, 0.22) 0px 10px 10px;
+    .strip-corner-left {
+      height: 10px;
+      width: 17px;
+      background-color: rgba(137, 43, 226, 0.849);
+      transform: rotate(-30deg) translate(-14px, -4.5px);
+      border-radius: 0 0 0 5px;
+    }
+    .strip-corner-right {
+      height: 10px;
+      width: 18px;
+      background-color: rgba(137, 43, 226, 0.849);
+      transform: translate(-14px);
+      position: absolute;
+      bottom: 0;
+      transform: rotate(30deg) translate(-15px, 4.5px);
+      border-radius: 5px 0 0 0;
+    }
+  }
 }

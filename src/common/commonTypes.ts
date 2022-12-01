@@ -1,14 +1,16 @@
+export type tpStyleProps = {
+  backgroundImage?: string,
+  height?: string,
+  width?: string,
+  display?: string,
+  padding?: string,
+}
+
 export type tpPageStructure = {
   id: string,
   categoryId: string,
   sequence: number,
-  style: {
-    backgroundImage?: string,
-    height?: string,
-    width?: string,
-    display?: string,
-    padding?: string,
-  }
+  style: tpStyleProps,
 };
 
 export type tpUserData = {

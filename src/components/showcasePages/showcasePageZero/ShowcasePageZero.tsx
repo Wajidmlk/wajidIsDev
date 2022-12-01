@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { tpPageStructure } from '../../../common/commonTypes';
+import { tpProductsState } from '../../../common/componentTypes';
 import ProductContainer from '../productContainer/ProductContainer';
-const ShowcasePageZero = ({page}: {page: tpPageStructure}) => {
+const ShowcasePageZero = ({page, state, setState}: {
+  page: tpPageStructure,
+  state: tpProductsState,
+  setState: Dispatch<SetStateAction<tpProductsState>>,
+}) => {
   const { style, id } = page;
   return (
     <div
@@ -12,7 +17,14 @@ const ShowcasePageZero = ({page}: {page: tpPageStructure}) => {
     >
       <div className='showcase-container'>
         {
-          ["","","","","","","",""].map(item => (<ProductContainer />))
+          state.data.map((item, i) => (
+            <ProductContainer
+              seqNo={i}
+              dataRow={item}
+              state={state}
+              setState={setState}
+              onBannerClick={() => {}}
+            />))
         }
       </div>
     </div>

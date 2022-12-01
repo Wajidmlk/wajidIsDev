@@ -5,9 +5,10 @@
   min-height: 300px;
   margin: 20px;
   border-radius: 15px;
+  background-color: rgba(137, 43, 226, 0.192);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   .side-strip {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 50% 50% 0;
     width: 22px;
     height: 125px;
     float: right;
@@ -15,11 +16,18 @@
     transform: rotate(-45deg) translate(25px, -35px);
     border-left: 1px solid rgb(120, 55, 180);
     box-shadow: rgba(148, 18, 255, 0.25) 0px 14px 28px, rgba(30, 41, 80, 0.22) 0px 10px 10px;
+    .strip-value {
+      text-align: center;
+      transform: rotate(90deg) translate(40px, 40px);
+      width: 100px;
+      color: rgb(255, 255, 255);
+      font-weight: 600;
+    }
     .strip-corner-left {
       height: 10px;
       width: 17px;
-      background-color: rgba(137, 43, 226, 0.849);
-      transform: rotate(-30deg) translate(-14px, -4.5px);
+      background-color: rgba(137, 43, 226, 0.959);
+      transform: rotate(-30deg) translate(-14px, -3.5px);
       border-radius: 0 0 0 5px;
     }
     .strip-corner-right {
@@ -29,8 +37,40 @@
       transform: translate(-14px);
       position: absolute;
       bottom: 0;
-      transform: rotate(30deg) translate(-15px, 4.5px);
+      transform: rotate(30deg) translate(-15px, 4px);
       border-radius: 5px 0 0 0;
+    }
+  }
+  .side-strip:hover, .side-value:hover {
+    transform: rotate(-45deg) translate(25px, -35px) scale(1.05, 1.05);
+  }
+  .badges {
+    color: black;
+    width: 75%;
+    height: 60px;
+    display: flex;
+    overflow-x: hidden;
+    transform: translate(10px, 10px);
+   
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+    .badge {
+      width: fit-content;
+      height: fit-content;
+      background-color: white;
+      border-radius: 10px;
+      padding: 4px 8px;
+      margin-right: 10px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.22) 0px 1px 1px;
+    }
+    .badge:hover {
+      background-color: rgb(255, 246, 246);
+      transform: scale(1.05, 1.05);
     }
   }
 }

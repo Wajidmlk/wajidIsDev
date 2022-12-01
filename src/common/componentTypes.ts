@@ -1,3 +1,5 @@
+import { tpStyleProps } from "./commonTypes";
+
 export type tpNavState = {
   items: {
     id: string,
@@ -27,4 +29,26 @@ export type tpProgressBarProps =  {
   max?: number,
   min?: number,
   label?: string,
+};
+
+export type tpProduct = {
+  id: string,
+  name: string,
+  sideBanner?: {
+    value: string,
+    style?: tpStyleProps,
+    onClick?: () => void,
+  },
+  show: boolean,
+  badges: {
+    id: string,
+    name: string,
+    iconName?: string,
+    check: boolean,
+    show: boolean,
+  }[],
+};
+
+export type tpProductsState = {
+  data: tpProduct[],
 };

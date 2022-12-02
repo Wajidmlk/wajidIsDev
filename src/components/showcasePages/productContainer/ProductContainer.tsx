@@ -2,31 +2,6 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../buttons/Button';
 
-
-/*
-const onHoverOrClickBadges = ({
-  currentTarget: {id},
-}: MouseEvent<HTMLDivElement, globalThis.MouseEvent>, type: "show"|"hide") => {
-  const hoveredBadge = document.getElementById(id);
-  if(hoveredBadge?.className) {
-    hoveredBadge.className = hoveredBadge.className + type;
-  }
-  if(parentElement) {
-     const siblingsIds: string[] = [];
-     let element: Element|null = parentElement?.firstElementChild;
-     for(element = element; element !== null; ) {
-      if(element?.id !== id) siblingsIds.push(element.id);
-      element = element?.nextElementSibling;
-     }
-     if(siblingsIds.length && document) {
-
-      if(ss?.className) 
-        ss.className = ss.className + (" off");
-    }
-  }
-  
-}
-*/
  const onHoverOrClickBadges = (
   seqNo: number, value: boolean, type: "check"|"show", badgeNo: number,state: tpProductsState,
   setState: Dispatch<SetStateAction<tpProductsState>>,
@@ -97,13 +72,14 @@ const ProductContainer = ({seqNo, dataRow: {
             <Button
               className='toggle-product-button'
               compId='button3'
-              label={ state.data[seqNo].toggleSize ? 'Maximize' : 'Minimize'}
+              label={ state.data[seqNo].toggleSize ? 'Minimize' : 'Maximize'}
               onClick={() => {
                 const copyData = {...state};
-                copyData.data[seqNo].className = !copyData.data[seqNo].toggleSize ?
+                let toggle = copyData.data[seqNo].toggleSize;
+                copyData.data[seqNo].className =  toggle ?
                   copyData.data[seqNo].className.replace("product-full-screen", "") :
                   copyData.data[seqNo].className.replace("", "product-full-screen");
-                copyData.data[seqNo].toggleSize = !copyData.data[seqNo].toggleSize;
+                copyData.data[seqNo].toggleSize = !toggle;
                 setState(copyData);
               }}
             />

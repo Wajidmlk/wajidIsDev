@@ -41,9 +41,9 @@ const data = [
 ];
 
 const IntroPageZero = ({page}: {page: tpPageStructure}) => {
-  const { style, id } = page;
+  const { style, pageId } = page;
   return (
-    <div id={id} className={
+    <div id={pageId} className={
       `introPage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
       <div className="showcase-card-boxes">
         {

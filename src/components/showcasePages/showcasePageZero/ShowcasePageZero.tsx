@@ -7,10 +7,10 @@ const ShowcasePageZero = ({page, state, setState}: {
   state: tpProductsState,
   setState: Dispatch<SetStateAction<tpProductsState>>,
 }) => {
-  const { style, id } = page;
+  const { style, pageId } = page;
   return (
     <div
-      id={id}
+      id={pageId}
       className={
         `showcasePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}

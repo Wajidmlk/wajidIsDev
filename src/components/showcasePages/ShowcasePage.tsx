@@ -9,7 +9,8 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       id: "",
       name: "",
       show: true,
-      toggle: false,
+      toggleSize: false,
+      toggleView: false,
       className: "",
       sideBanner: {
         value: "Visit Now",
@@ -41,7 +42,8 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       id: "",
       name: "",
       show: true,
-      toggle: false,
+      toggleSize: false,
+      toggleView: false,
       className: "",
       badges: [
         {
@@ -61,7 +63,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
     }]
   });
   let pageById: JSX.Element = <></>;
-  switch(page.id) {
+  switch(page.pageCatId) {
     case '630d36aa-2aa4-11ed-a261-0242ac121001' :
       pageById = <ShowcasePageZero page={page} state={state} setState={setState}/>
       break;

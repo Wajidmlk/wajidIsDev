@@ -6,11 +6,11 @@ import { Button } from '../../buttons/Button';
 import { useAppStateContext } from '../../../appUtils/AppState';
 
 const HomePageZero = ({page}: {page: tpPageStructure}) => {
-  const { style, id } = page;
+  const { style, pageId } = page;
   const { userData } = useAppStateContext();
   const { fullName, dp } = userData;
   return (
-    <div id={id} className='homePage-000'>
+    <div id={pageId} className='homePage-000'>
       
       <div className={
         `intro_section ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>

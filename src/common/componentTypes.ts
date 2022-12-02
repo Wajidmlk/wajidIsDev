@@ -1,11 +1,7 @@
-import { tpStyleProps } from "./commonTypes";
+import { tpPageStructure, tpStyleProps } from "./commonTypes";
 
 export type tpNavState = {
-  items: {
-    id: string,
-    placeholder: string,
-    parentId: string,
-  }[],
+  items: Partial<tpPageStructure[]>,
 };
 
 export type tpSkillsState = {
@@ -35,7 +31,8 @@ export type tpProduct = {
   id: string,
   name: string,
   show: boolean,
-  toggle: boolean,
+  toggleSize: boolean,
+  toggleView: boolean,
   className: string,
   sideBanner?: {
     value: string,

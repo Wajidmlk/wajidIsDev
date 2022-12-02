@@ -5,12 +5,14 @@ import NavOne from './navOne/NavOne';
 import NavZero from './navZero/NavZero';
 import NavTwo from './navTwo/NavTwo';
 import { fetchNavbarState } from './navServices';
+import { useAppStateContext } from '../../appUtils/AppState';
 
 const NavBar = ({id}: tpCompId): JSX.Element => {
   const [state, setState] = useState<tpNavState>({items: []});
+  const { pages } = useAppStateContext();
 
   useEffect(() => {
-    fetchNavbarState(setState);
+    fetchNavbarState(setState, pages);
   }, []);
 
   let NavBar = <></>;

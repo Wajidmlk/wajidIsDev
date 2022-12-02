@@ -14,12 +14,12 @@ const BlueTwo = ({state}: tpProps): JSX.Element => {
         <nav className='head-nav'>
           <ul className='menu'>
             {state.items.map(item => (
-              <li key={item.id}>
-                <a href={`${multiPage ? '/' : '#'}${item.id}`}>
+              <li key={item?.pageId}>
+                <a href={`${multiPage ? '/' : '#'}${item?.pageId}`}>
                   <svg className='person'>
                     {/*<use  xmlnsXlink='http://www.w3.org/1999/xlink' xlinkHref='#paper-airplane'></use>*/}
                   </svg>
-                  <span>{item.placeholder}</span></a>
+                  <span>{item?.pageName}</span></a>
               </li>
             ))
             }

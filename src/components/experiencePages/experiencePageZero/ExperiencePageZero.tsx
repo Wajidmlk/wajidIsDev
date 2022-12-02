@@ -1,10 +1,10 @@
 import React from 'react';
 import { tpPageStructure } from '../../../common/commonTypes';
 const ExperiencePageZero = ({page}: {page: tpPageStructure}) => {
-  const { style, id } = page;
+  const { style, pageId } = page;
   return (
     <div
-      id={id}
+      id={pageId}
       className={
         `experiencePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}

@@ -7,8 +7,11 @@ export type tpStyleProps = {
 }
 
 export type tpPageStructure = {
-  id: string,
-  categoryId: string,
+  pageId: string,
+  pageName: string,
+  parentId: string,
+  pageCatId: string,
+  visibility?: 'hidden'|'visible',
   sequence: number,
   style: tpStyleProps,
 };

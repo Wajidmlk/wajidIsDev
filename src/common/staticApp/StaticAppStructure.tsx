@@ -9,8 +9,10 @@ export const GetAppStructure = (): tpAppStructure => {
     multiPage: false,
     pages: [
       {
-        id: '630d36aa-2aa4-11ed-a261-0242ac121000',
-        categoryId :'630d36aa-2aa4-11ed-a261-0242ac120000',
+        pageId: '630d36aa-2aa4-11ed-a261-0242ac121000',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120000',
+        pageName: 'Home',
+        parentId: '',
         sequence: -1,
         style: {
           backgroundImage: `url(https://images.unsplash.com/photo-1514790193030-c89d266d5a9d)`,
@@ -18,8 +20,10 @@ export const GetAppStructure = (): tpAppStructure => {
         }
       },
       {
-        id: '630d36aa-2aa4-11ed-a261-0242ac121001',
-        categoryId :'630d36aa-2aa4-11ed-a261-0242ac120001',
+        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120001',
+        pageName: 'About Me',
+        parentId: '',
         sequence: 0,
         style: {
           backgroundImage: `url(https://img.freepik.com/free-vector/realistic-studio-lights-empty-background-design_1017-27233.jpg?w=2000)`,
@@ -27,21 +31,25 @@ export const GetAppStructure = (): tpAppStructure => {
         },
       },
       {
-        id: '630d36aa-2aa4-11ed-a261-0242ac121001',
-        categoryId :'630d36aa-2aa4-11ed-a261-0242ac120003',
+        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120003',
+        pageName: 'Showcase',
+        parentId: '',
         sequence: 2,
         style: {
           padding: "50px",
         }
       },
       {
-        id: '630d36aa-2aa4-11ed-a261-0242ac121001',
-        categoryId :'630d36aa-2aa4-11ed-a261-0242ac120002',
+        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120002',
+        pageName: 'Experience',
+        parentId: '',
         sequence: 3,
+        visibility: 'hidden',
         style: {
           height: "300px",
           width: "100%",
-          display: "none",
           padding: "10px",
         }
       },
@@ -72,8 +80,9 @@ export const GetAppStructure = (): tpAppStructure => {
 }
 
 export const GetPageById = ({page}: {page: tpPageStructure}) => {
+  if(page?.visibility === "hidden") return <></>
   let pageById: JSX.Element = <></>;
-  switch(page.categoryId) {
+  switch(page.pageCatId) {
     case '630d36aa-2aa4-11ed-a261-0242ac120000' :
       pageById = <HomePage page={page} />
       break;

@@ -13,9 +13,9 @@ const BlueOne = ({state}: tpProps): JSX.Element => {
           <ul>
           {state.items.map(item => (
             <a 
-              href={`${multiPage ? '/' : '#'}${item.id}`}
+              href={`${multiPage ? '/' : '#'}${item?.pageId}`}
             >
-              <li key={item.id}>{item.placeholder}</li>
+              <li key={item?.pageId}>{item?.pageName}</li>
             </a>))
           }
           </ul>

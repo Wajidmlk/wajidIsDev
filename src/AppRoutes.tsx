@@ -18,7 +18,7 @@ const CpRoutes = (): JSX.Element => {
           <NavBar id={nav.id} />
         }/>
           {pages.map((page) => <PagesBase
-              key={page.id}
+              key={page.pageId}
               Component={[<GetPageById page={page} />]}
             />)
           }
@@ -33,14 +33,16 @@ const CpRoutes = (): JSX.Element => {
           <Routes>
             {
               [...pages, {
-                id: '',
-                categoryId: '',
+                pageId: '',
+                pageCatId: '',
+                pageName: '',
+                parentId: '',
                 sequence: -1,
                 style: {},
                 },
-              ].map((page, key) => <Route path={`/${page.id}`} element={
+              ].map((page, key) => <Route path={`/${page.pageId}`} element={
                 <PagesBase
-                  key={`${page.id}${key}`}
+                  key={`${page.pageId}${key}`}
                   Component={[<GetPageById page={page} />]}
                 />
               } />)

@@ -34,12 +34,14 @@ export type tpProgressBarProps =  {
 export type tpProduct = {
   id: string,
   name: string,
+  show: boolean,
+  toggle: boolean,
+  className: string,
   sideBanner?: {
     value: string,
     style?: tpStyleProps,
     onClick?: () => void,
   },
-  show: boolean,
   badges: {
     id: string,
     name: string,

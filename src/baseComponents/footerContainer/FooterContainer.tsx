@@ -8,7 +8,7 @@ type tpProps = {
 }
 
 
-const FeaderContainer = ({children}: tpProps): JSX.Element => {
+const FooterContainer = ({children}: tpProps): JSX.Element => {
   const [openLoginDialog, setOpenLoginDialog] = useState<boolean>(false);
   return (
     <div className='footers'>
@@ -16,6 +16,7 @@ const FeaderContainer = ({children}: tpProps): JSX.Element => {
       <div className='sign-in-box'>
         <Button
           label='Login'
+          className='sign-in-button-hover-box'
           onClick={() => {
             Toast('Successfully Logged-In', 'success');
             setOpenLoginDialog(true);
@@ -45,4 +46,4 @@ const FeaderContainer = ({children}: tpProps): JSX.Element => {
   );
 };
 
-export default FeaderContainer;
+export default FooterContainer;

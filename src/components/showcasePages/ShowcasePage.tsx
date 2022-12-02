@@ -9,6 +9,8 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       id: "",
       name: "",
       show: true,
+      toggle: false,
+      className: "",
       sideBanner: {
         value: "Visit Now",
       },
@@ -39,19 +41,14 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       id: "",
       name: "",
       show: true,
+      toggle: false,
+      className: "",
       badges: [
         {
           show: false,
           check: false,
           id: "ChildOne",
           name: "One",
-        },
-        {
-          show: false,
-          check: false,
-          id: "ChildTwo",
-          name: "Two",
-          iconName: "",
         },
         {
           show: false,

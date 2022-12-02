@@ -21,5 +21,5 @@ export const Button = (props: tpCompProps) => {
     break;
   
   }
-  return <span className='buttons-root'>{button}</span>;
+  return button
 }

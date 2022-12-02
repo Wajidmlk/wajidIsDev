@@ -59,17 +59,16 @@
     position: fixed;
     bottom: 5;
     right: 10;
-    .button-3 {
-      .button-3-1 {
-        transform: translateX(100px);
-        height: 30px;
-        padding-right: 10px;
-        padding-left: 10px;
-      }
+    height: 30px;
+    width: 50px;
+    .sign-in-button-hover-box {
+      height: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
+      transform: translateX(100px);
     }
-    .button-3:hover {
-
-      transform: translateX(-100px);
-    }
+  }
+  .sign-in-box:hover > .sign-in-button-hover-box {
+    transform: translateX(0px);
   }
 }

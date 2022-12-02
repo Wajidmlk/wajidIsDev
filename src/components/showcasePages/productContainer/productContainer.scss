@@ -1,4 +1,5 @@
 .product-container {
+  position: relative; 
   width: 250px;
   min-width: 250px;
   height: 300px;
@@ -72,5 +73,22 @@
       background-color: rgb(255, 246, 246);
       transform: scale(1.05, 1.05);
     }
+  }
+  .toggle-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 120px;
+    background-color: transparent;
+    border-radius: 15px;
+    .toggle-product-button {
+      visibility: hidden;
+      transform: translate(5px, 0px);
+      height: 40px;
+    }
+  }
+  .toggle-button:hover > .toggle-product-button {
+    visibility: visible;
   }
 }

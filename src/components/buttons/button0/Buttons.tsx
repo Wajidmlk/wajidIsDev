@@ -24,20 +24,18 @@ export const Button2 = ({ className, onClick, id, label }: tpCompProps): JSX.Ele
     <span className='circle' aria-hidden='true'>
       <span className='icon arrow'></span>
     </span>
-    <span className='button-text'>{label}</span>
+    <span className='button-text'>{label || "Click"}</span>
   </button>
 </div> 
 );
 
 export const Button3 = ({ className, onClick, id, label }: tpCompProps): JSX.Element => (
-  <div className='button-3'>
-    <button
-      className={`button-3-1 ${className}`}
-      id={id}
-      role='button'
-      onClick={onClick}
-    >
-      {label}
-    </button>
-  </div>
+  <button
+    className={`button-3 ${className}`}
+    id={id}
+    role='button'
+    onClick={onClick}
+  >
+    {label || "Click"}
+  </button>
 );

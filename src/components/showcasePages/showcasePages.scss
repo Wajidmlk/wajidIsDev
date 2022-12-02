@@ -6,5 +6,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    .product-full-screen {
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 70%;
+      height: 70%;
+      position: fixed;
+      margin: 10%;
+      background-color: rgba(137, 43, 226, 0.892);
+     
+    }
+    .toggle-product-button {
+      transform: translate(100px, 10px);
+    }
   }
 }

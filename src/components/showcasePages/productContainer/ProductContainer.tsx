@@ -1,5 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
+import { Button } from '../../buttons/Button';
 
 
 /*
@@ -40,7 +41,7 @@ const onHoverOrClickBadges = ({
     setState(copyData);
   }
 const ProductContainer = ({seqNo, dataRow: {
-  badges, sideBanner,
+  badges, sideBanner, className,
 }, state, setState, onBannerClick}: {
   dataRow: tpProduct, seqNo: number, state:tpProductsState,
   setState: Dispatch<SetStateAction<tpProductsState>>,
@@ -48,14 +49,14 @@ const ProductContainer = ({seqNo, dataRow: {
 }) => {
  
   return (
-    <div className='product-container'>
+    <div className={`product-container ${className}`}>
       { sideBanner && <div className='side-strip' onClick={onBannerClick}>
         <div className='strip-corner-left'></div>
         <div className='strip-value'>{sideBanner.value}</div>
         <div className='strip-corner-right'></div>
       </div>
       }
-      <div className='badges'>
+      {(badges && badges.length > 0) && <div className='badges'>
         {
           badges.map((badge, badgeNo) => {
             const {id, name, show, check, iconName} = badge;
@@ -75,9 +76,23 @@ const ProductContainer = ({seqNo, dataRow: {
             </div>
           )})
         }
-      </div>
+      </div>}
       <div className='images-slider'></div>
-      <div className='toggle-button'></div>
+      <div className='toggle-button'>
+        <Button
+          className='toggle-product-button'
+          compId='button3'
+          label={ state.data[seqNo].toggle ? 'Maximize' : 'Minimize'}
+          onClick={() => {
+            const copyData = {...state};
+            copyData.data[seqNo].className = !copyData.data[seqNo].toggle ?
+              copyData.data[seqNo].className.replace("product-full-screen", "") :
+              copyData.data[seqNo].className.replace("", "product-full-screen");
+            copyData.data[seqNo].toggle = !copyData.data[seqNo].toggle;
+            setState(copyData);
+          }}
+        />
+      </div>
     </div>
   );
 };

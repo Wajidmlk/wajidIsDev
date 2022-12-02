@@ -15,79 +15,73 @@ import { Button } from '../../buttons/Button';
   copyData.data[seqNo].badges = badges;
   setState(copyData);
 }
+
 const onHoverProduct = (
    seqNo: number, value: boolean, type: "toggleView"|"toggleSize", state: tpProductsState,
    setState: Dispatch<SetStateAction<tpProductsState>>,
  ) => {
-   const copyData = {...state};
-   copyData.data[seqNo][type] = value;
-   setState(copyData);
+  const copyData = {...state};
+  copyData.data[seqNo][type] = value;
+  setState(copyData);
+  if(value) setTimeout(() => onHoverProduct(seqNo, false, type, state, setState), 30000);
  }
 const ProductContainer = ({seqNo, dataRow: {
-  badges, sideBanner, className,
+  badges, sideBanner, className, toggleSize, toggleView,
 }, state, setState, onBannerClick}: {
   dataRow: tpProduct, seqNo: number, state:tpProductsState,
   setState: Dispatch<SetStateAction<tpProductsState>>,
   onBannerClick?: () => void,
-}) => {
- 
-  return (
-    <div
-      className={`product-container ${className}`}
-      onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
-    >
-      {!state.data[seqNo].toggleView ? 
-        <div className='upper-description'></div> :
-        <>
-          { sideBanner &&
-            <div className='side-strip' onClick={onBannerClick}>
-              <div className='strip-corner-left'></div>
-              <div className='strip-value'>{sideBanner.value}</div>
-              <div className='strip-corner-right'></div>
-            </div>
-          }
-          {(badges && badges.length > 0) && <div className='badges'>
-            {
-              badges.map((badge, badgeNo) => {
-                const {id, name, show, check, iconName} = badge;
-                return (
-                <div
-                  id={id}
-                  key={id}
-                  className='badge'
-                  onMouseEnter={() => onHoverOrClickBadges(seqNo, true, "check", badgeNo, state, setState)}
-                  onMouseLeave={() => onHoverOrClickBadges(seqNo, false, "check", badgeNo, state, setState)}
-                  onClick={() => onHoverOrClickBadges(seqNo, false, "show", badgeNo, state, setState)}
-                >
-                  { !(check || show) ?
-                    <div>{iconName ? iconName : name.charAt(0).toLocaleUpperCase()}</div> : 
-                    <div>{name}</div>
-                  }
-                </div>
-              )})
+}) => (
+  <div
+    className={`product-container ${className}`}
+    onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
+  >
+    {(!toggleView && !toggleSize) && <div className='upper-description'></div>}
+    { sideBanner &&
+      <div className={`side-strip ${!toggleView && "visibility-hidden"}`} onClick={onBannerClick}>
+        <div className='strip-corner-left'></div>
+        <div className='strip-value'>{sideBanner.value}</div>
+        <div className='strip-corner-right'></div>
+      </div>
+    }
+    {(badges && badges.length > 0) && <div className={`badges ${!toggleView && "visibility-hidden"}`}>
+      {
+        badges.map((badge, badgeNo) => {
+          const {id, name, show, check, iconName} = badge;
+          return (
+          <div
+            id={id}
+            key={id}
+            className='badge'
+            onMouseEnter={() => onHoverOrClickBadges(seqNo, true, "check", badgeNo, state, setState)}
+            onMouseLeave={() => onHoverOrClickBadges(seqNo, false, "check", badgeNo, state, setState)}
+            onClick={() => onHoverOrClickBadges(seqNo, false, "show", badgeNo, state, setState)}
+          >
+            { !(check || show) ?
+              <div>{iconName ? iconName : name.charAt(0).toLocaleUpperCase()}</div> : 
+              <div>{name}</div>
             }
-          </div>}
-          <div className='images-slider'></div>
-          <div className='toggle-button'>
-            <Button
-              className='toggle-product-button'
-              compId='button3'
-              label={ state.data[seqNo].toggleSize ? 'Minimize' : 'Maximize'}
-              onClick={() => {
-                const copyData = {...state};
-                let toggle = copyData.data[seqNo].toggleSize;
-                copyData.data[seqNo].className =  toggle ?
-                  copyData.data[seqNo].className.replace("product-full-screen", "") :
-                  copyData.data[seqNo].className.replace("", "product-full-screen");
-                copyData.data[seqNo].toggleSize = !toggle;
-                setState(copyData);
-              }}
-            />
           </div>
-        </>
+        )})
       }
+    </div>}
+    <div className='images-slider'></div>
+    <div className='toggle-button'>
+      <Button
+        className='toggle-product-button'
+        compId='button3'
+        label={ toggleSize ? 'Minimize' : 'Maximize'}
+        onClick={() => {
+          const copyData = {...state};
+          copyData.data[seqNo].className = toggleSize ?
+            copyData.data[seqNo].className.replace("product-full-screen", "") :
+            copyData.data[seqNo].className.replace("", "product-full-screen");
+          copyData.data[seqNo].toggleSize = !toggleSize;
+          setState(copyData);
+        }}
+      />
     </div>
-  );
-};
+  </div>
+);
 
 export default ProductContainer;

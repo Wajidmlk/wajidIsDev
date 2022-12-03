@@ -17,7 +17,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
         `intro_section ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
         <div className='pageBody'>
           <div className='grid' style={{gridTemplateColumns: '55% 45%'}}>
-            <div className='box user-into'>
+            <div className='box user-info'>
                 <h3 className=''>{fullName}</h3>
                 <h2 className=''>
                   <Typewriter
@@ -44,16 +44,12 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                   }} label='Contact Me'/>
                 </div>
             </div>
-            <div
-              className={`box user-into `}
-              style={{
-                height: dp?.height || 500,
-                width: dp?.width || 400,
-                backgroundImage: dp?.url || DEFAULT_IMAGE_URL,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover'
-              }}
-            ></div>
+            <img
+              width={dp?.width || 400}
+              height={dp?.height || 500}
+              src={dp?.url || DEFAULT_IMAGE_URL}
+              className={`box user-info user-dp`}
+             />
           </div>
             
         </div>

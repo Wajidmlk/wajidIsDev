@@ -11,7 +11,7 @@
     .intro_section {
       .pageBody {
         .grid {
-          .user-into {
+          .user-info {
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -23,6 +23,9 @@
             .home0buttons {
               margin: 0 5px;
             }
+          }
+          .user-dp {
+            border-radius: 40px;
           }
         }
       }

@@ -20,7 +20,7 @@ export const GetAppStructure = (): tpAppStructure => {
         }
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '530d36aa-2aa4-11ed-a261-0242ac121000',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120001',
         pageName: 'About Me',
         parentId: '',
@@ -31,7 +31,7 @@ export const GetAppStructure = (): tpAppStructure => {
         },
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '430d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120003',
         pageName: 'Showcase',
         parentId: '',
@@ -42,7 +42,7 @@ export const GetAppStructure = (): tpAppStructure => {
         }
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '330d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120002',
         pageName: 'Experience',
         parentId: '',

@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "wajidIsDev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wajidIsDev.com",
+  "homepage": "http://wajidmlk.github.io/wajidIsDev",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.4",
@@ -17,6 +17,7 @@
     "@types/node": "^16.11.62",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "gh-pages": "^4.0.0",
     "material-ui-popup-state": "^4.1.0",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
@@ -31,6 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
-import { Button } from '../../buttons/Button';
+import { Button } from '../../../components/buttons/Button';
 
  const onHoverOrClickBadges = (
   seqNo: number, value: boolean, type: "check"|"show", badgeNo: number,state: tpProductsState,

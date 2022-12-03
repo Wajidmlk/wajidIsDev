@@ -1,8 +1,8 @@
 import { tpAppStructure, tpPageStructure } from '../commonTypes';
-import HomePage from '../../components/homePages/HomePage';
-import IntroPage from '../../components/IntroPages/IntroPage';
-import ExperiencePage from '../../components/experiencePages/ExperiencePage';
-import ShowcasePage from '../../components/showcasePages/ShowcasePage';
+import HomePage from '../../pages/homePages/HomePage';
+import IntroPage from '../../pages/IntroPages/IntroPage';
+import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
+import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
 
 export const GetAppStructure = (): tpAppStructure => {
   return ({

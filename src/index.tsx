@@ -4,16 +4,16 @@ import AppRoutes from './AppRoutes';
 import './index.scss';
 import './appBase.scss';
 import './common/common.scss';
-import './components/homePages/homePages.scss';
+import './pages/homePages/homePages.scss';
 import './components/navs/navs.scss';
 import './components/navs/navsDrawers.scss';
 import './components/footers/footers.scss';
 import './components/buttons/buttons.scss';
-import './components/IntroPages/introPages.scss';
+import './pages/IntroPages/introPages.scss';
 import './components/progressBar/progressBar.scss';
-import './components/experiencePages/experiencePages.scss';
-import './components/showcasePages/showcasePages.scss';
-import './components/showcasePages/productContainer/productContainer.scss';
+import './pages/experiencePages/experiencePages.scss';
+import './pages/showcasePages/showcasePages.scss';
+import './pages/showcasePages/productContainer/productContainer.scss';
 
 import AppStateProvider from './appUtils/AppStateProvider';
 

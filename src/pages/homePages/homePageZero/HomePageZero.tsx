@@ -2,8 +2,8 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { DEFAULT_IMAGE_URL, userIntroData } from './../../../common/staticApp/AppStaticData';
 import { tpPageStructure } from '../../../common/commonTypes';
-import { Button } from '../../buttons/Button';
 import { useAppStateContext } from '../../../appUtils/AppState';
+import { Button } from '../../../components/buttons/Button';
 
 const HomePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, pageId } = page;

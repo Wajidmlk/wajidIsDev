@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { tpSkillsState } from '../../../common/componentTypes';
-import ProgressBar from '../../progressBar/ProgressBar';
+import ProgressBar from '../../../components/progressBar/ProgressBar';
 import { fetchSkillsState } from './skillsBoxServices';
 
 const SkillsBox = () => {

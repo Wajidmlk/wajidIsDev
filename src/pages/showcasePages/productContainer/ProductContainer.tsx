@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
+import Slider from '../../../components/slider/Slider';
 
  const onHoverOrClickBadges = (
   seqNo: number, value: boolean, type: "check"|"show", badgeNo: number,state: tpProductsState,
@@ -23,7 +24,7 @@ const onHoverProduct = (
   const copyData = {...state};
   copyData.data[seqNo][type] = value;
   setState(copyData);
-  if(value) setTimeout(() => onHoverProduct(seqNo, false, type, state, setState), 30000);
+  //if(value) setTimeout(() => onHoverProduct(seqNo, false, type, state, setState), 30000);
  }
 const ProductContainer = ({seqNo, dataRow: {
   badges, sideBanner, className, toggleSize, toggleView,
@@ -37,6 +38,7 @@ const ProductContainer = ({seqNo, dataRow: {
     onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
   >
     {(!toggleView && !toggleSize) && <div className='upper-description'></div>}
+    <div className={`images-slider ${!toggleView && "z-index-minus-1"}`}><Slider id='slider0' /></div>
     { sideBanner &&
       <div className={`side-strip ${!toggleView && "visibility-hidden"}`} onClick={onBannerClick}>
         <div className='strip-corner-left'></div>
@@ -65,7 +67,6 @@ const ProductContainer = ({seqNo, dataRow: {
         )})
       }
     </div>}
-    <div className='images-slider'></div>
     <div className='toggle-button'>
       <Button
         className='toggle-product-button'

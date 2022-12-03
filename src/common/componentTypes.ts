@@ -27,6 +27,12 @@ export type tpProgressBarProps =  {
   label?: string,
 };
 
+export type tpSliderParams = {
+  type: "images" | "text" | "custom",
+  data: any[],
+  slideShow?: boolean,
+};
+
 export type tpProduct = {
   id: string,
   name: string,
@@ -34,6 +40,7 @@ export type tpProduct = {
   toggleSize: boolean,
   toggleView: boolean,
   className: string,
+  slides?: tpSliderParams,
   sideBanner?: {
     value: string,
     style?: tpStyleProps,

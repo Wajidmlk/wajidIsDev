@@ -5,21 +5,16 @@ import Paper, { PaperProps } from '@material-ui/core/Paper';
 import Draggable from 'react-draggable';
 import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import OpenInFullIcon from '@mui/icons-material/OpenInFull';
-import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
-import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
-import AirplayIcon from '@mui/icons-material/Airplay';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import { Resizable } from 'react-resizable';
-import { Delete } from '@mui/icons-material';
 import 'react-resizable/css/styles.css';
 import './draggableDialog.scss';
 import DialogBox, { tpDialogBoxProps } from '../DialogBox';
+import { MUI_ICON } from '../../../appUtils/DataConstants';
 
 
 export type tpDialogDefaultHeightWidthProps = {
@@ -56,7 +51,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        <CloseFullscreenIcon titleAccess='Minimize' />
+        {MUI_ICON({CODE: "CloseFullscreenIcon", titleAccess: 'Minimize'})}
         Minimize
       </MenuItem>
       {onTop && (
@@ -65,7 +60,11 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        <AirplayIcon titleAccess='Pin to Top' className={`${onTop ? 'selected-item' : ''}`} />
+
+        {MUI_ICON({
+          CODE: "AirplayIcon", titleAccess: 'Pin to Top',
+          className:`${onTop ? 'selected-item' : ''}`,
+        })}
         Always On Top
       </MenuItem>
       )}
@@ -75,7 +74,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        <Delete titleAccess='Delete' />
+        {MUI_ICON({CODE: "Delete", titleAccess: 'Delete'})}
         Delete
       </MenuItem>
       )}
@@ -85,7 +84,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        <LocalPrintshopIcon titleAccess='Print' />
+        {MUI_ICON({CODE: "LocalPrintshopIcon", titleAccess: 'Print'})}
         Print
       </MenuItem>
       )}
@@ -168,7 +167,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
                     {...bindTrigger(popupState)}
                     style={{ background: 'none', boxShadow: 'none', transition: 'none' }}
                   >
-                    <MoreVertIcon titleAccess='Show Settings' />
+                    {MUI_ICON({CODE: "MoreVertIcon", titleAccess: 'Show Settings'})}
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     <CpMenuItems
@@ -188,10 +187,10 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
               aria-label='show 4 new mails'
               color='inherit'
             >
-              <OpenInFullIcon
-                titleAccess='Maximize'
-                onClick={() => setState((prevState) => ({ ...prevState, maximum: true }))}
-              />
+              {MUI_ICON({
+                CODE: "OpenInFullIcon", titleAccess: 'Maximize',
+                onClick: () => {setState((prevState) => ({ ...prevState, maximum: true }))},
+              })}
             </IconButton>
           )
       }

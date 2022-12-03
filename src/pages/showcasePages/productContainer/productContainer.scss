@@ -6,9 +6,8 @@
   min-height: 300px;
   margin: 20px;
   border-radius: 15px;
-  background-color: rgba(137, 43, 226, 0.192);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  .upper-description {
+  .upper-description, .images-slider {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +15,8 @@
     bottom: 0;
     color: aliceblue;
     border-radius: 15px;
+  }
+  .upper-description {
     background: repeating-linear-gradient(
       -55deg,
       rgba(206, 189, 221, 0.644),
@@ -25,10 +26,11 @@
     );
   }
   .side-strip {
-  border-radius: 0 50% 50% 0;
+    position: absolute;
+    right: 0;
+    border-radius: 0 50% 50% 0;
     width: 22px;
     height: 125px;
-    float: right;
     background-color: blueviolet;
     transform: rotate(-45deg) translate(25px, -35px);
     border-left: 1px solid rgb(120, 55, 180);
@@ -63,6 +65,7 @@
   }
   .badges {
     color: black;
+    position: absolute;
     width: 75%;
     height: 60px;
     display: flex;

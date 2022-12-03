@@ -4,6 +4,8 @@ import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
 
+const IMG = require('./../images/dp1.jpg');
+
 export const GetAppStructure = (): tpAppStructure => {
   return ({
     multiPage: false,
@@ -20,7 +22,7 @@ export const GetAppStructure = (): tpAppStructure => {
         }
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '530d36aa-2aa4-11ed-a261-0242ac121000',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120001',
         pageName: 'About Me',
         parentId: '',
@@ -31,7 +33,7 @@ export const GetAppStructure = (): tpAppStructure => {
         },
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '430d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120003',
         pageName: 'Showcase',
         parentId: '',
@@ -41,7 +43,7 @@ export const GetAppStructure = (): tpAppStructure => {
         }
       },
       {
-        pageId: '630d36aa-2aa4-11ed-a261-0242ac121001',
+        pageId: '330d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120002',
         pageName: 'Experience',
         parentId: '',
@@ -73,7 +75,7 @@ export const GetAppStructure = (): tpAppStructure => {
       dp: {
         height: 500,
         width: 400,
-        url: 'url(https://scontent.fskz2-1.fna.fbcdn.net/v/t39.30808-6/274988342_4423016951132943_6969899941379106606_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGV-2_LTewPU1LXu7B3vQx5cNDK03yHRclw0MrTfIdFyUF8JE7t7ImcDnSLOXrj0ZZzvBDp3xb1ZDWt1Q3kxRYS&_nc_ohc=TK3aeTXc0LYAX-J_N3G&_nc_ht=scontent.fskz2-1.fna&oh=00_AfCIA6D8ZQNAJ0Dwb4Tmg_D14uhUpCD2DDuslF5Kb2b4Sg&oe=638B1824)',
+        url: IMG,
       },
     },
   });

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wajidIsDev/static/css/main.d2fec88d.css",
+    "main.js": "/wajidIsDev/static/js/main.6dcd72f3.js",
+    "index.html": "/wajidIsDev/index.html",
+    "main.d2fec88d.css.map": "/wajidIsDev/static/css/main.d2fec88d.css.map",
+    "main.6dcd72f3.js.map": "/wajidIsDev/static/js/main.6dcd72f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2fec88d.css",
+    "static/js/main.6dcd72f3.js"
+  ]
+}

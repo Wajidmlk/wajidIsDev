@@ -6,6 +6,10 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import CardBox from '../cardBox/CardBox';
 import SkillsBox from '../skillsBox/SkillsBox';
+import { Button } from '../../../components/buttons/Button';
+import { saveAs } from "file-saver";
+
+const WajidResume = require("../../../common/resume/WajidResume.pdf");
 
 const data = [
   {
@@ -62,7 +66,6 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
         <div className='box'>
             <CardBox
               className='showcase'
-              para='My Expertise...'
               image={
                 <div
                   className='showcase-inside-image page-backgroundImage'
@@ -70,6 +73,13 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
                 ></div>}
               defaultHeight={"100%"}
               defaultWidth={"100%"}
+              children={
+                <Button
+                  compId='button000'
+                  label='Save My Resume...'
+                  onClick={() => saveAs(WajidResume, "Wajid's Resume.pdf")}
+                />
+              }
             />
         </div>
         <div className='box'>

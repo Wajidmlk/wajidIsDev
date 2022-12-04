@@ -1,4 +1,3 @@
-import React from 'react';
 import { tpPageStructure } from '../../../common/commonTypes';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import PaletteIcon from '@mui/icons-material/Palette';

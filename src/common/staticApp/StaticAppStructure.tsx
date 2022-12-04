@@ -1,3 +1,4 @@
+import React from 'react';
 import { tpAppStructure, tpPageStructure } from '../commonTypes';
 import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { tpCompId, tpFooterData } from '../../common/commonTypes';
 import { tpFooterState } from '../../common/componentTypes';
 import FooterZero from './footerZero/FooterZero';

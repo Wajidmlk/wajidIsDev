@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import HeaderContainer from '../headerContainer/HeaderContainer';
 import FooterContainer from '../footerContainer/FooterContainer';
 import NavBar from '../../components/navs/NavBar';

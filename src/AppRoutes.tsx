@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PagesBase from './baseComponents/pagesBase/PagesBase';
 import HeaderContainer from './baseComponents/headerContainer/HeaderContainer';

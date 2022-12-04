@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import DraggableDialog from '../../../baseComponents/dialogBox/draggableDialog/DraggableDialog';
 import { tpFooterData } from '../../../common/commonTypes';
 

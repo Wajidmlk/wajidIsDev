@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/wajidIsDev/static/css/main.d2fec88d.css",
-    "main.js": "/wajidIsDev/static/js/main.6dcd72f3.js",
+    "main.css": "/wajidIsDev/static/css/main.26391c29.css",
+    "main.js": "/wajidIsDev/static/js/main.2b069530.js",
+    "static/media/WajidResume.pdf": "/wajidIsDev/static/media/WajidResume.6ce11cdaf179180dab7e.pdf",
+    "static/media/dp1.jpg": "/wajidIsDev/static/media/dp1.41539a19e738a416a442.jpg",
     "index.html": "/wajidIsDev/index.html",
-    "main.d2fec88d.css.map": "/wajidIsDev/static/css/main.d2fec88d.css.map",
-    "main.6dcd72f3.js.map": "/wajidIsDev/static/js/main.6dcd72f3.js.map"
+    "main.26391c29.css.map": "/wajidIsDev/static/css/main.26391c29.css.map",
+    "main.2b069530.js.map": "/wajidIsDev/static/js/main.2b069530.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2fec88d.css",
-    "static/js/main.6dcd72f3.js"
+    "static/css/main.26391c29.css",
+    "static/js/main.2b069530.js"
   ]
 }

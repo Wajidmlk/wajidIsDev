@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/wajidIsDev/static/css/main.78b8501f.css",
+    "main.js": "/wajidIsDev/static/js/main.0e401b03.js",
+    "static/media/dp1.jpg": "/wajidIsDev/static/media/dp1.41539a19e738a416a442.jpg",
+    "index.html": "/wajidIsDev/index.html",
+    "main.78b8501f.css.map": "/wajidIsDev/static/css/main.78b8501f.css.map",
+    "main.0e401b03.js.map": "/wajidIsDev/static/js/main.0e401b03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78b8501f.css",
+    "static/js/main.0e401b03.js"
+  ]
+}

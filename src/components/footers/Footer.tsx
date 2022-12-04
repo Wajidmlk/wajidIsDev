@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
-import { tpCompId } from '../../common/commonTypes';
+import { tpCompId, tpFooterData } from '../../common/commonTypes';
 import { tpFooterState } from '../../common/componentTypes';
 import FooterZero from './footerZero/FooterZero';
 
-const Footer = ({id}: tpCompId): JSX.Element => {
-  const [state, setState] = useState<tpFooterState>({
-    items: [
-      {id: 'home', placeholder: 'home', parentId: ''},
-      {id: 'page1Info', placeholder: 'page 1', parentId: ''},
-      {id: 'page2Info', placeholder: 'page 2', parentId: ''}, 
-      {id: 'page3Info', placeholder: 'page 3', parentId: ''}, 
-    ],
-  });
+type tpProps = {data: tpFooterData[]};
 
-
+const Footer = ({id, data}: tpProps&tpCompId): JSX.Element => {
   let footer = <></>;
   switch(id) {
     case 'footer-000':
-      footer = <FooterZero state={state}/>;
+      footer = <FooterZero state={data}/>;
       break;
     default:
-      footer = <FooterZero state={state}/>;
+      footer = <FooterZero state={data}/>;
   }
   return footer;
 };

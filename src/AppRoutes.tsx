@@ -7,10 +7,11 @@ import { GetPageById } from './common/staticApp/StaticAppStructure';
 import NavBar from './components/navs/NavBar';
 import { useAppStateContext } from './appUtils/AppState';
 import ReactToast from './baseComponents/reactToast/ReactToast';
+import Footer from './components/footers/Footer';
 
 const CpRoutes = (): JSX.Element => {
 
-  const {nav, multiPage, pages} = useAppStateContext();
+  const {nav, footer, multiPage, pages} = useAppStateContext();
   
   if(!multiPage) return (<>
       <div className='app-base-root'>
@@ -22,7 +23,7 @@ const CpRoutes = (): JSX.Element => {
               Component={[<GetPageById page={page} />]}
             />)
           }
-        <FooterContainer children={<>footer  </>}/>
+        <FooterContainer children={<Footer {...footer}/>}/>
       </div>
       <ReactToast />
   </>);

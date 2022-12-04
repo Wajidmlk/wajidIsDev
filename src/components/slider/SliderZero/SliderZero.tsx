@@ -4,7 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { tpSliderParams } from '../../../common/componentTypes';
 
 
-const SliderZero = ({data}:tpSliderParams) => {
+const SliderZero = ({data, hideArrows}:tpSliderParams) => {
   const [current, setCurrent] = useState(0);
   const length = data.length;
 
@@ -22,8 +22,11 @@ const SliderZero = ({data}:tpSliderParams) => {
 
   return (
     <section className='slider-000'>
-      <ArrowBackIosNewIcon className='left-arrow' onClick={prevSlide} />
-      <ArrowForwardIosIcon className='right-arrow' onClick={nextSlide} />
+      { !!hideArrows && <>
+          <ArrowBackIosNewIcon className='left-arrow' onClick={prevSlide} />
+          <ArrowForwardIosIcon className='right-arrow' onClick={nextSlide} />
+        </>
+      }
       {data.map((slide, index) => {
         return (
           <div

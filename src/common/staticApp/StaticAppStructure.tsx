@@ -37,7 +37,6 @@ export const GetAppStructure = (): tpAppStructure => {
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120003',
         pageName: 'Showcase',
         parentId: '',
-        visibility: 'hidden',
         sequence: 2,
         style: {
           padding: "50px",

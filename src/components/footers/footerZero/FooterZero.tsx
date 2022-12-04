@@ -1,17 +1,38 @@
-import React from 'react';
-import { tpFooterState } from '../../../common/componentTypes';
+import React, { useState } from 'react';
+import DraggableDialog from '../../../baseComponents/dialogBox/draggableDialog/DraggableDialog';
+import { tpFooterData } from '../../../common/commonTypes';
 
-const FooterZero = ({state}:{state: tpFooterState}): JSX.Element => {
+const openDataDefaultState = {link: "", option: ""};
+
+const FooterZero = ({state}:{state: tpFooterData[]}): JSX.Element => {
+  const [openData, setOpenData] = useState<{
+    link: string, option: string, order?: 0,
+  }>(openDataDefaultState);
 
   return (
     <div className='footer-000'>
       <ul>
-        <li><a href='https://twitter.com/julesforrest'>Twitter</a></li>
-        <li><a href='https://codepen.io/julesforrest'>Codepen</a></li>
-        <li><a href='mailto:julesforrest@gmail.com'>Email</a></li>
-        <li><a href='https://dribbble.com/julesforrest'>Dribbble</a></li>
-        <li><a href='https://github.com/julesforrest'>Github</a></li>
+        {state.map(({mod, link, value}) => (
+          <li><div onClick={() => {
+            switch(mod) {
+              case "goto":
+                setOpenData(openDataDefaultState);
+                if(window) window.open(link, '_blank');
+                break;
+              case "open":
+                setOpenData({link, option: mod});
+                break;
+            }
+            
+          }}>{value}</div></li>
+        ))}
       </ul>
+      <DraggableDialog
+        title={state[openData?.order || 0].value}
+        open={openData.option === "open"}
+        children={<iframe src={openData.link} />}
+        onClose={() => setOpenData(openDataDefaultState)}
+      />
     </div>    
   );
 };

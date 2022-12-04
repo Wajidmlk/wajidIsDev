@@ -1,5 +1,6 @@
 export type tpStyleProps = {
   backgroundImage?: string,
+  backgroundColor?: string,
   height?: string,
   width?: string,
   display?: string,
@@ -26,6 +27,13 @@ export type tpUserData = {
   }
 };
 
+export type tpFooterData = {
+  value: string,
+  link: string,
+  mod: "goto" | "copy" | "open",
+}
+
+
 export type tpAppStructure = {
   multiPage: boolean,
   pages: tpPageStructure[],
@@ -39,6 +47,7 @@ export type tpAppStructure = {
   footer: {
     id: string,
     toggle?: boolean,
+    data: tpFooterData[],
   },
   components : {
     button?: string,

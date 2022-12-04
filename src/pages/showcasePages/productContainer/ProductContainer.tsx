@@ -48,6 +48,7 @@ const ProductContainer = ({seqNo, dataRow: {
         id='slider0'
         type={slides.type}
         data={slides.data}
+        hideArrows={toggleView}
         slideShow={slides.slideShow}
       />
     </div>}
@@ -70,15 +71,11 @@ const ProductContainer = ({seqNo, dataRow: {
             className='badge'
             onMouseEnter={() => onHoverOrClickBadges(seqNo, true, "check", badgeNo, state, setState)}
             onMouseLeave={() => onHoverOrClickBadges(seqNo, false, "check", badgeNo, state, setState)}
-            onClick={() => onHoverOrClickBadges(
-              seqNo, !show, "show", badgeNo, state, setState,
-            )}
+            onClick={() => onHoverOrClickBadges(seqNo, !show, "show", badgeNo, state, setState)}
           >
             { !(check || show) ?
               <div>{Icon ? Icon : name.charAt(0).toLocaleUpperCase()}</div> : 
-              <div style={{
-                display: "flex", height: "18px",
-              }}><>{Icon}</> <>{name}</></div>
+              <div style={{display: "flex", height: "18px"}}><>{Icon}</> <>{name}</></div>
             }
           </div>
         )})

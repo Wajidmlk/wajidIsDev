@@ -16,7 +16,7 @@ const PagesBase = ({Component, key}: tpProps): JSX.Element => {
     <div key={key} id={key}>
       <HeaderContainer children={<NavBar id={nav.id} />}/>
       <div className='pages-base-root'>{Component}</div>
-      <FooterContainer children={<Footer id={footer.id} />} />
+      <FooterContainer children={<Footer id={footer.id} data={footer.data} />} />
     </div>
   );
   return <div key={key} id={key} className='pages-base-root'>{Component}</div>;

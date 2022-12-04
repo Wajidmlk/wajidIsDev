@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
  
 body::-webkit-scrollbar-track {
@@ -20,8 +20,10 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(170, 170, 170);
   outline: 1px solid rgb(82, 94, 105);
+  border-radius: 20px;
+  width: 12px;
 }
 
 code {

@@ -64,6 +64,18 @@ export const GetAppStructure = (): tpAppStructure => {
     },
     footer: {
       id: 'footer-000',
+      data: [
+        {
+          value: "Github",
+          link: "https://www.github.com/wajidmlk",
+          mod: "goto",
+        },
+        {
+          value: "linkedIn",
+          link: "https://www.linkedin.com/in/wajidmlk123",
+          mod: "goto",
+        },
+      ],
       toggle: false,
     },
     components: {

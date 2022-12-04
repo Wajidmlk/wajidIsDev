@@ -31,6 +31,7 @@ export type tpSliderParams = {
   type: "images" | "text" | "custom",
   data: any[],
   slideShow?: boolean,
+  hideArrows?: boolean,
 };
 
 export type tpProduct = {

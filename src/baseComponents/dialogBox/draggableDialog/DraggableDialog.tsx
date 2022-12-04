@@ -1,5 +1,5 @@
 import React, {
-  Dispatch, ReactNode, useState, SetStateAction,
+  Dispatch, ReactNode, useState, SetStateAction
 } from 'react';
 import Paper, { PaperProps } from '@material-ui/core/Paper';
 import Draggable from 'react-draggable';

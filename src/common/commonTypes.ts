@@ -29,8 +29,11 @@ export type tpUserData = {
 
 export type tpFooterData = {
   value: string,
+  icon?: string,
   link: string,
   mod: "goto" | "copy" | "open",
+  detailed?: boolean,
+  style?: tpStyleProps,
 }
 
 

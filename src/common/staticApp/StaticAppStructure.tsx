@@ -76,6 +76,16 @@ export const GetAppStructure = (): tpAppStructure => {
           link: "https://www.linkedin.com/in/wajidmlk123",
           mod: "goto",
         },
+        {
+          value: "Email",
+          link: "mailto:wajidmlk123@gmail.com?subject=Query Form Web",
+          mod: "goto",
+        },
+        {
+          value: "WhatsApp",
+          link: "whatsapp://send?phone=+923022244303",
+          mod: "goto",
+        },
       ],
       toggle: false,
     },

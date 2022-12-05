@@ -17,7 +17,7 @@ const FooterZero = ({state}:{state: tpFooterData[]}): JSX.Element => {
             switch(mod) {
               case "goto":
                 setOpenData(openDataDefaultState);
-                if(window) window.open(link, '_blank');
+                if(window) window.open(link);
                 break;
               case "open":
                 setOpenData({link, option: mod});

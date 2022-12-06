@@ -1,3 +1,4 @@
+import { tpIconCODE } from "../appUtils/AppUtliities";
 import { tpPageStructure, tpStyleProps } from "./commonTypes";
 
 export type tpNavState = {
@@ -50,7 +51,7 @@ export type tpProduct = {
   badges: {
     id: string,
     name: string,
-    iconName?: string,
+    icon?: tpIconCODE,
     check: boolean,
     show: boolean,
   }[],

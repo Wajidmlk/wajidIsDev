@@ -1,30 +1,44 @@
-import BurstModeIcon from '@mui/icons-material/BurstMode';
+
+import { tpStyleProps } from '../common/commonTypes';
+
+import DeleteIcon from '@mui/icons-material/Delete';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import AirplayIcon from '@mui/icons-material/Airplay';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import BurstModeIcon from '@mui/icons-material/BurstMode';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
-import AirplayIcon from '@mui/icons-material/Airplay';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { tpStyleProps } from '../common/commonTypes';
+
+
+
+const icons = {
+  Delete: <DeleteIcon />,
+  GitHub: <GitHubIcon />,
+  Airplay: <AirplayIcon/>,
+  LinkedIn: <LinkedInIcon />,
+  MoreVert: <MoreVertIcon />,
+  BurstMode: <BurstModeIcon />,
+  OpenInFull: <OpenInFullIcon />,
+  LocalPrintshop: <LocalPrintshopIcon />,
+  CloseFullscreen: <CloseFullscreenIcon />,
+};
+
+export type tpIconCODE = keyof typeof icons;
 
 type tpProps = {
-  CODE: string, titleAccess?: string,
+  CODE: tpIconCODE | undefined, titleAccess?: string,
   className?: string, style?: tpStyleProps, onClick?: () => void,
 };
 
 export const MUI_ICON = ({CODE, style, titleAccess, onClick, className}: tpProps) => {
+
+  if(!CODE) return "";
+
   const styling = style ? style : {};
-  const props = {style, titleAccess, className, onClick };
-  const icons = {
-    AirplayIcon: <AirplayIcon {...props}/>,
-    MoreVertIcon: <MoreVertIcon {...props} />,
-    BurstModeIcon: <BurstModeIcon {...props} />,
-    OpenInFullIcon: <OpenInFullIcon {...props} />,
-    LocalPrintshopIcon: <LocalPrintshopIcon {...props} />,
-    CloseFullscreenIcon: <CloseFullscreenIcon {...props} />,
-    GitHubIcon: <GitHubIcon {...props} />,
-    
-  };
-  type Keys = keyof typeof icons;
-  return icons[CODE as Keys];
+  const foundIcon = icons[CODE];
+
+  foundIcon.props = {...foundIcon.props, style, titleAccess, className, onClick}
+  return foundIcon;
 }

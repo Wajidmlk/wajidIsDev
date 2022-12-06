@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import { MUI_ICON } from '../../../appUtils/DataConstants';
+import { MUI_ICON } from '../../../appUtils/AppUtliities';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
 import Slider from '../../../components/slider/Slider';

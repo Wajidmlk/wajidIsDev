@@ -10,6 +10,7 @@ import './components/navs/navsDrawers.scss';
 import './components/footers/footers.scss';
 import './components/buttons/buttons.scss';
 import './components/slider/slider.scss';
+import './components/informationStripe/informationStripe.scss';
 import './pages/IntroPages/introPages.scss';
 import './components/progressBar/progressBar.scss';
 import './pages/experiencePages/experiencePages.scss';

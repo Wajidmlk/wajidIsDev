@@ -62,8 +62,8 @@ const ProductContainer = ({seqNo, dataRow: {
     {(badges && badges.length > 0) && <div className={`badges ${!toggleView && "visibility-hidden"}`}>
       {
         badges.map((badge, badgeNo) => {
-          const {id, name, show, check, iconName} = badge;
-          const Icon = iconName ? MUI_ICON({CODE: iconName, style:{height: "18px"}}) : "";
+          const {id, name, show, check, icon} = badge;
+          const Icon = icon ? MUI_ICON({CODE: icon, style:{height: "18px"}}) : "";
           return (
           <div
             id={id}

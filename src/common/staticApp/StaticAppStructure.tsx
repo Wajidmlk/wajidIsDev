@@ -67,12 +67,13 @@ export const GetAppStructure = (): tpAppStructure => {
         {
           value: "Github",
           link: "https://www.github.com/wajidmlk",
-          icon: "GitHubIcon",
+          icon: "GitHub",
           mod: "goto",
         },
         {
           value: "linkedIn",
           link: "https://www.linkedin.com/in/wajidmlk123",
+          icon: "LinkedIn",
           mod: "goto",
         },
         {

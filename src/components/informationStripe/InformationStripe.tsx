@@ -44,7 +44,9 @@ const InformationStripe = (props: tpProps): JSX.Element => {
     {
       state.data.map((box, i) => {
         const {value, icon, style, detailed} = box;
-
+        
+        const IconJSX = MUI_ICON({CODE: icon, titleAccess: icon}) || value;
+        
         return <div className='stripe-box' style={{
           ...style,
           ...boxesShape, 
@@ -58,10 +60,14 @@ const InformationStripe = (props: tpProps): JSX.Element => {
         >
           {
             (!!detailed) ?
-              <div style={{ display: "flex" }}>
-                <div>{MUI_ICON({CODE: icon || "", titleAccess: icon})}</div>&nbsp;<div>{value}</div>
+              <div>
+                <div>
+                  {IconJSX}
+                </div>
+                &nbsp;
+                <textPath>{value}</textPath>
               </div> :
-              <div>{icon ? (MUI_ICON({CODE: icon, titleAccess: icon})) : value}</div>
+              <div>{IconJSX}</div>
           }
         </div>
       })

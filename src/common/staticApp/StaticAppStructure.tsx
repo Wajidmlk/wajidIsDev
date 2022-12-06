@@ -3,7 +3,6 @@ import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
-
 const IMG = require('./../images/dp1.jpg');
 
 export const GetAppStructure = (): tpAppStructure => {
@@ -68,6 +67,7 @@ export const GetAppStructure = (): tpAppStructure => {
         {
           value: "Github",
           link: "https://www.github.com/wajidmlk",
+          icon: "GitHubIcon",
           mod: "goto",
         },
         {

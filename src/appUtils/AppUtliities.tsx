@@ -4,6 +4,7 @@ import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import AirplayIcon from '@mui/icons-material/Airplay';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { tpStyleProps } from '../common/commonTypes';
 
 type tpProps = {
@@ -21,7 +22,7 @@ export const MUI_ICON = ({CODE, style, titleAccess, onClick, className}: tpProps
     OpenInFullIcon: <OpenInFullIcon {...props} />,
     LocalPrintshopIcon: <LocalPrintshopIcon {...props} />,
     CloseFullscreenIcon: <CloseFullscreenIcon {...props} />,
-
+    GitHubIcon: <GitHubIcon {...props} />,
     
   };
   type Keys = keyof typeof icons;

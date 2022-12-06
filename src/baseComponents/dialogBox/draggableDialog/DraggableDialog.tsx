@@ -14,7 +14,7 @@ import { Resizable } from 'react-resizable';
 import 'react-resizable/css/styles.css';
 import './draggableDialog.scss';
 import DialogBox, { tpDialogBoxProps } from '../DialogBox';
-import { MUI_ICON } from '../../../appUtils/DataConstants';
+import { MUI_ICON } from '../../../appUtils/AppUtliities';
 
 
 export type tpDialogDefaultHeightWidthProps = {

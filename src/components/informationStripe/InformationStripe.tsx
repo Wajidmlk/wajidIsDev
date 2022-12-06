@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { MUI_ICON } from '../../appUtils/AppUtliities';
 import { tpFooterData, tpStyleProps } from '../../common/commonTypes';
 import { tpProgressBarProps } from '../../common/componentTypes';
 
@@ -26,41 +27,41 @@ const InformationStripe = (props: tpProps): JSX.Element => {
   const {direction, shape, size, className} = state;
 
   const boxesShape = {
-    backgroundColor: "white",
-    color: "black",
     borderRadius: "0%", height: size || 20, width: size || 20,
   };
   switch(shape) {
     case "round":
-    boxesShape.borderRadius = "20%";
+    boxesShape.borderRadius = "50%";
     break;
   }
 
-  return <div className={`information-stripe ${className}`} style={{
-    display: "flex", backgroundColor: "black",
-    flexDirection: direction === "vertical" ? "column" : "row",
-  }}>
+  return <div
+    className={`information-stripe ${className}`}
+    style={{
+      display: "flex", flexDirection: direction === "vertical" ? "column" : "row",
+    }}
+  >
     {
       state.data.map((box, i) => {
         const {value, icon, style, detailed} = box;
 
-        return <div style={{
+        return <div className='stripe-box' style={{
           ...style,
-          display: "flex",
           ...boxesShape, 
+        }}
+        onMouseEnter={() => {
+          onHoverBox(i, true, "detailed", state, setState); 
+        }}
+        onMouseLeave={() => {
+          onHoverBox(i, false, "detailed", state, setState); 
         }}
         >
           {
             (!!detailed) ?
-              <div onMouseEnter={() => {
-                onHoverBox(i, false, "detailed", state, setState); 
-              }}
-              onMouseLeave={() => {
-                onHoverBox(i, true, "detailed", state, setState); 
-              }}>
-                <>{icon}</>  <>{value}</>
+              <div style={{ display: "flex" }}>
+                <div>{MUI_ICON({CODE: icon || "", titleAccess: icon})}</div>&nbsp;<div>{value}</div>
               </div> :
-              <div>{icon ? icon : value}</div>
+              <div>{icon ? (MUI_ICON({CODE: icon, titleAccess: icon})) : value}</div>
           }
         </div>
       })

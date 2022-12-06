@@ -8,7 +8,7 @@ import { Toast } from '../../../baseComponents/reactToast/ReactToast';
 
 const HomePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, pageId } = page;
-  const { userData } = useAppStateContext();
+  const { userData, multiPage } = useAppStateContext();
   const { fullName, dp } = userData;
   return (
     <div id={pageId} className='homePage-000'>
@@ -36,7 +36,10 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                 <p className=''>{userIntroData.description}</p>
                 <div className=''>{}
                   <Button className='home0buttons' compId='button1' onClick={() => {
-                    window.location.href = `/#530d36aa-2aa4-11ed-a261-0242ac121000`;
+                    
+                    window.location.href =  `/wajidIsDev/${
+                      multiPage ? '/' : '#'
+                    }530d36aa-2aa4-11ed-a261-0242ac121000`;
                   }}
                   label='My Portfolio'/>
                   <Button className='home0buttons' compId='button1' onClick={() => {

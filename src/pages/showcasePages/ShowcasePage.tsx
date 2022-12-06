@@ -89,7 +89,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
     }]
   });
   let pageById: JSX.Element = <></>;
-  switch(page.pageCatId) {
+  switch(page.pageId) {
     case '630d36aa-2aa4-11ed-a261-0242ac121001' :
       pageById = <ShowcasePageZero page={page} state={state} setState={setState}/>
       break;

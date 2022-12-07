@@ -1,3 +1,5 @@
+import { tpIconCODE } from "../appUtils/AppUtilities";
+
 export type tpStyleProps = {
   backgroundImage?: string,
   backgroundColor?: string,
@@ -30,7 +32,10 @@ export type tpUserData = {
 export type tpFooterData = {
   value: string,
   link: string,
+  icon?: tpIconCODE,
   mod: "goto" | "copy" | "open",
+  detailed?: boolean,
+  style?: tpStyleProps,
 }
 
 

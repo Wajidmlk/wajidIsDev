@@ -1,0 +1,14 @@
+.information-stripe {
+  .stripe-box {
+    display: flex;
+    background-color: rgba(173, 65, 65, 0.877);
+    justify-content: center;
+    margin: 5px;
+    div{ 
+      height: fit-content;
+      width: fit-content;
+      margin: auto;
+      font-size: 15px;
+    }
+  }
+}

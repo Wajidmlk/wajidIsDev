@@ -13,7 +13,8 @@ import DialogContentText from '@mui/material/DialogContentText';
 import { Resizable } from 'react-resizable';
 import 'react-resizable/css/styles.css';
 import './draggableDialog.scss';
-import DialogBox, { tpDialogBoxProps } from '../DialogBox';
+import DialogBox from '../DialogBox';
+import { tpDialogBoxProps } from '../DialogBox';
 import { MUI_ICON } from '../../../appUtils/AppUtilities';
 
 

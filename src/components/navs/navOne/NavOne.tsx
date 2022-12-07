@@ -12,9 +12,7 @@ const BlueOne = ({state}: tpProps): JSX.Element => {
         <nav>
           <ul>
           {state.items.map(item => (
-            <a 
-              href={`${multiPage ? '/' : '#'}${item?.pageId}`}
-            >
+            <a href={`${multiPage ? '/' : '#'}${item?.pageId}`}>
               <li key={item?.pageId}>{item?.pageName}</li>
             </a>))
           }

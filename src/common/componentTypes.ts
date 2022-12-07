@@ -1,4 +1,4 @@
-import { tpIconCODE } from "../appUtils/AppUtliities";
+import { tpIconCODE } from "../appUtils/AppUtilities";
 import { tpPageStructure, tpStyleProps } from "./commonTypes";
 
 export type tpNavState = {

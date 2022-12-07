@@ -51,20 +51,24 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
       `introPage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
       <div className="showcase-card-boxes">
         {
-          data.map(({image, defaultHeight, defaultWidth, para, title}) => (
+          data.map((dt, i) => {
+            const {image, defaultHeight, defaultWidth, para, title} = dt;
+            return (
             <CardBox
+              key={`${title}-${i}`}
               image={image}
               title={title}
               para={para}
               defaultHeight={defaultHeight}
               defaultWidth={defaultWidth}
             />
-          ))
+          )})
         }
       </div>
       <div className='grid' style={{gridTemplateColumns: '40% 58%'}}>
         <div className='box'>
             <CardBox
+              key="cv-download"
               className='showcase'
               image={
                 <div

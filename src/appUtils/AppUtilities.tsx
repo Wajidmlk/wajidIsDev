@@ -1,4 +1,5 @@
-import React, {cloneElement} from 'react';
+import React from 'react';
+import {cloneElement} from 'react';
 import { tpStyleProps } from '../common/commonTypes';
 
 import DeleteIcon from '@mui/icons-material/Delete';

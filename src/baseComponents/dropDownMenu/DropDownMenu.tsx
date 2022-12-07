@@ -3,8 +3,9 @@ import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { MUI_ICON, tpIconCODE } from '../../appUtils/AppUtilities';
 
-type tpButtonProps = {id?: string, toolTip?: string, icon?: JSX.Element, value?: string};
+type tpButtonProps = {id?: string, toolTip?: string, icon?: tpIconCODE, value?: string};
 type tpProps = {
   open?: boolean,
   className?: string,
@@ -32,7 +33,7 @@ const DropDownMenu = ({
               {...bindTrigger(popupState)}
               style={{ background: 'none', boxShadow: 'none', transition: 'none' }}
             >
-              {openButtonProps.icon}
+              {MUI_ICON({CODE: openButtonProps.icon, titleAccess: openButtonProps.icon})}
               {' '}
               {openButtonProps.value}
             </Button>
@@ -49,7 +50,7 @@ const DropDownMenu = ({
                       if (closeMenuOnClick) popupState.close();
                     }}
                   >
-                    {icon}
+                    {MUI_ICON({CODE: icon, titleAccess: value})}
                     {' '}
                     {value}
                   </MenuItem>

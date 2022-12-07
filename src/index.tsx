@@ -15,6 +15,7 @@ import './components/progressBar/progressBar.scss';
 import './pages/experiencePages/experiencePages.scss';
 import './pages/showcasePages/showcasePages.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
+import './components/informationStripe/informationStripe.scss';
 
 import AppStateProvider from './appUtils/AppStateProvider';
 

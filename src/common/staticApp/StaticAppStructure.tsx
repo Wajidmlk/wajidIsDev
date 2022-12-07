@@ -3,7 +3,6 @@ import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
-
 const IMG = require('./../images/dp1.jpg');
 
 export const GetAppStructure = (): tpAppStructure => {
@@ -63,16 +62,30 @@ export const GetAppStructure = (): tpAppStructure => {
       toggle: false,
     },
     footer: {
-      id: 'footer-000',
+      id: 'footer-001',
       data: [
         {
           value: "Github",
           link: "https://www.github.com/wajidmlk",
+          icon: "GitHub",
           mod: "goto",
         },
         {
           value: "linkedIn",
           link: "https://www.linkedin.com/in/wajidmlk123",
+          icon: "LinkedIn",
+          mod: "goto",
+        },
+        {
+          value: "Email",
+          link: "mailto:wajidmlk123@gmail.com?subject=Query Form Web",
+          icon: "LocalPostOffice",
+          mod: "goto",
+        },
+        {
+          value: "WhtsAp",
+          link: "whatsapp://send?phone=+923022244303",
+          icon: "WhatsApp",
           mod: "goto",
         },
         {

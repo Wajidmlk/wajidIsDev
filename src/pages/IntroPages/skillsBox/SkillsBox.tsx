@@ -14,7 +14,7 @@ const SkillsBox = () => {
     <div className='skills-box'>
       {
         state.items.map(({id, placeholder, value}) => (
-          <ProgressBar id={id} value={value} label={placeholder} />
+          <ProgressBar key={id} id={id} value={value} label={placeholder} />
         ))
       }
     </div>

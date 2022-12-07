@@ -2,7 +2,6 @@ import * as React from 'react';
 import HeaderContainer from '../headerContainer/HeaderContainer';
 import FooterContainer from '../footerContainer/FooterContainer';
 import NavBar from '../../components/navs/NavBar';
-import { tpAppStructure } from '../../common/commonTypes';
 import Footer from '../../components/footers/Footer';
 import { useAppStateContext } from '../../appUtils/AppState';
 type tpProps = {

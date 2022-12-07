@@ -14,7 +14,7 @@ import { Resizable } from 'react-resizable';
 import 'react-resizable/css/styles.css';
 import './draggableDialog.scss';
 import DialogBox, { tpDialogBoxProps } from '../DialogBox';
-import { MUI_ICON } from '../../../appUtils/DataConstants';
+import { MUI_ICON } from '../../../appUtils/AppUtilities';
 
 
 export type tpDialogDefaultHeightWidthProps = {
@@ -51,7 +51,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        {MUI_ICON({CODE: "CloseFullscreenIcon", titleAccess: 'Minimize'})}
+        {MUI_ICON({CODE: "CloseFullscreen", titleAccess: 'Minimize'})}
         Minimize
       </MenuItem>
       {onTop && (
@@ -62,7 +62,7 @@ const CpMenuItems = (props: tpDragDialog&{
       >
 
         {MUI_ICON({
-          CODE: "AirplayIcon", titleAccess: 'Pin to Top',
+          CODE: "Airplay", titleAccess: 'Pin to Top',
           className:`${onTop ? 'selected-item' : ''}`,
         })}
         Always On Top
@@ -84,7 +84,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        {MUI_ICON({CODE: "LocalPrintshopIcon", titleAccess: 'Print'})}
+        {MUI_ICON({CODE: "LocalPrintshop", titleAccess: 'Print'})}
         Print
       </MenuItem>
       )}
@@ -167,7 +167,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
                     {...bindTrigger(popupState)}
                     style={{ background: 'none', boxShadow: 'none', transition: 'none' }}
                   >
-                    {MUI_ICON({CODE: "MoreVertIcon", titleAccess: 'Show Settings'})}
+                    {MUI_ICON({CODE: "MoreVert", titleAccess: 'Show Settings'})}
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     <CpMenuItems
@@ -188,7 +188,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
               color='inherit'
             >
               {MUI_ICON({
-                CODE: "OpenInFullIcon", titleAccess: 'Maximize',
+                CODE: "OpenInFull", titleAccess: 'Maximize',
                 onClick: () => {setState((prevState) => ({ ...prevState, maximum: true }))},
               })}
             </IconButton>

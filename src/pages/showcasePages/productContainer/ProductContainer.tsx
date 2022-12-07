@@ -1,5 +1,6 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { MUI_ICON } from '../../../appUtils/DataConstants';
+import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
+import { MUI_ICON } from '../../../appUtils/AppUtilities';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
 import Slider from '../../../components/slider/Slider';
@@ -31,14 +32,16 @@ const onHoverProduct = (
   //if(value) setTimeout(() => onHoverProduct(seqNo, false, type, state, setState), 30000);
  }
 
-const ProductContainer = ({seqNo, dataRow: {
+const ProductContainer = ({key, seqNo, dataRow: {
   badges, slides, sideBanner, className, toggleSize, toggleView,
 }, state, setState, onBannerClick}: {
+  key: string,
   dataRow: tpProduct, seqNo: number, state:tpProductsState,
   setState: Dispatch<SetStateAction<tpProductsState>>,
   onBannerClick?: () => void,
 }) => (
   <div
+    key={key}
     className={`product-container ${className}`}
     onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
   >
@@ -62,8 +65,8 @@ const ProductContainer = ({seqNo, dataRow: {
     {(badges && badges.length > 0) && <div className={`badges ${!toggleView && "visibility-hidden"}`}>
       {
         badges.map((badge, badgeNo) => {
-          const {id, name, show, check, iconName} = badge;
-          const Icon = iconName ? MUI_ICON({CODE: iconName, style:{height: "18px"}}) : "";
+          const {id, name, show, check, icon} = badge;
+          const Icon = icon ? MUI_ICON({CODE: icon, style:{height: "18px"}}) : "";
           return (
           <div
             id={id}

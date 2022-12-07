@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import DraggableDialog from '../../../baseComponents/dialogBox/draggableDialog/DraggableDialog';
 import { tpFooterData } from '../../../common/commonTypes';
 
@@ -13,10 +14,9 @@ const FooterZero = ({state}:{state: tpFooterData[]}): JSX.Element => {
     <div className='footer-000'>
       <ul>
         {state.map(({mod, link, value}) => (
-          <li><div onClick={() => {
+          <li key={link}><div onClick={() => {
             switch(mod) {
               case "goto":
-                setOpenData(openDataDefaultState);
                 if(window) window.open(link);
                 break;
               case "open":

@@ -1,6 +1,7 @@
 import React from 'react';
 
 type tpProps = {
+  key: string,
   title?: string,
   para?: string,
   image?: JSX.Element,
@@ -10,9 +11,9 @@ type tpProps = {
   children?: JSX.Element,
 }
 
-const CardBox = ({image, para, title, className, children, defaultHeight, defaultWidth}: tpProps) => {
+const CardBox = ({key, image, para, title, className, children, defaultHeight, defaultWidth}: tpProps) => {
   return (
-    <div className={`card-box ${className}`} style={{height: defaultHeight, width: defaultWidth}}>
+    <div key={key|| ""} className={`card-box ${className}`} style={{height: defaultHeight, width: defaultWidth}}>
     {image && <div className='image'>{image}</div>}
     {title && <div className='title'>{title}</div>}
     {para && <div className='para'>{para}</div>}

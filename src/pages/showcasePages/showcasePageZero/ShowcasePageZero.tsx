@@ -19,6 +19,7 @@ const ShowcasePageZero = ({page, state, setState}: {
         {
           state.data.map((item, i) => (
             <ProductContainer
+              key={`${item.id}-${i}`}
               seqNo={i}
               dataRow={item}
               state={state}

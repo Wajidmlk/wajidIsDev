@@ -32,11 +32,11 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       },
       badges: [
         {
+          icon: "BurstMode",
           show: true,
           check: false,
           id: "ChildOne",
           name: "Gallery",
-          icon: "BurstMode",
         },
         {
           show: false,

@@ -1,6 +1,7 @@
 import React from 'react';
 
 type tpProps = {
+  key: string,
   title?: string,
   para?: string,
   image?: JSX.Element,
@@ -8,7 +9,6 @@ type tpProps = {
   defaultWidth?: string,
   className?: string,
   children?: JSX.Element,
-  key: string,
 }
 
 const CardBox = ({key, image, para, title, className, children, defaultHeight, defaultWidth}: tpProps) => {

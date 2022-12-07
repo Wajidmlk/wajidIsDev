@@ -64,26 +64,30 @@ export const GetAppStructure = (): tpAppStructure => {
       toggle: false,
     },
     footer: {
-      id: 'footer-000',
+      id: 'footer-001',
       data: [
         {
           value: "Github",
           link: "https://www.github.com/wajidmlk",
           mod: "goto",
+          icon: "GitHub",
         },
         {
           value: "linkedIn",
           link: "https://www.linkedin.com/in/wajidmlk123",
+          icon: "LinkedIn",
           mod: "goto",
         },
         {
           value: "Email",
           link: "mailto:wajidmlk123@gmail.com?subject=Query Form Web",
+          icon: "LocalPostOffice",
           mod: "goto",
         },
         {
-          value: "WhatsApp",
+          value: "WhtsAp",
           link: "whatsapp://send?phone=+923022244303",
+          icon: "WhatsApp",
           mod: "goto",
         },
       ],

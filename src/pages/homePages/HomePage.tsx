@@ -4,7 +4,7 @@ import HomePageZero from './homePageZero/HomePageZero';
 
 const HomePage = ({page}: {page: tpPageStructure}) => {
   let pageById: JSX.Element = <></>;
-  switch(page.pageId) {
+  switch(page.pageId){
     case '630d36aa-2aa4-11ed-a261-0242ac121000' :
       pageById = <HomePageZero page={page} />
       break;

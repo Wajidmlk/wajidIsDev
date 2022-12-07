@@ -34,9 +34,9 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                   />
                 </h2>
                 <p className=''>{userIntroData.description}</p>
-                <div className=''>{}
+                <div className=''>
                   <Button className='home0buttons' compId='button1' onClick={() => {
-                    window.location.href = `/wajidIsDev/${
+                     window.location.href =  `/wajidIsDev/${
                       multiPage ? '/' : '#'
                     }530d36aa-2aa4-11ed-a261-0242ac121000`;
                   }}

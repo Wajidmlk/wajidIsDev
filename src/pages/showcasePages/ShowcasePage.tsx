@@ -36,21 +36,19 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           check: false,
           id: "ChildOne",
           name: "Gallery",
-          iconName: "BurstModeIcon",
+          icon: "BurstMode",
         },
         {
           show: false,
           check: false,
           id: "ChildTwo",
           name: "Description",
-          iconName: "",
         },
         {
           show: false,
           check: false,
           id: "ChildThree",
           name: "Support",
-          iconName: "",
         },
       ],
     },
@@ -82,13 +80,12 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           check: false,
           id: "ChildTwo",
           name: "Description",
-          iconName: "",
         },
       ],
     }]
   });
   let pageById: JSX.Element = <></>;
-  switch(page.pageId) {
+  switch(page.pageId){
     case '630d36aa-2aa4-11ed-a261-0242ac121001' :
       pageById = <ShowcasePageZero page={page} state={state} setState={setState}/>
       break;

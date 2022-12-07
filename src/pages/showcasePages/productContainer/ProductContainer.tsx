@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { MUI_ICON } from '../../../appUtils/AppUtilities';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';

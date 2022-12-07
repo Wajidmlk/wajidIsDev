@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wajidIsDev/static/css/main.55dfa566.css",
-    "main.js": "/wajidIsDev/static/js/main.a42c4c44.js",
-    "static/media/WajidResume.pdf": "/wajidIsDev/static/media/WajidResume.6ce11cdaf179180dab7e.pdf",
+    "main.js": "/wajidIsDev/static/js/main.9f954c5b.js",
+    "static/media/WajidResumeDec.pdf": "/wajidIsDev/static/media/WajidResumeDec.64b6117d429f2e676ead.pdf",
     "static/media/dp1.jpg": "/wajidIsDev/static/media/dp1.41539a19e738a416a442.jpg",
     "index.html": "/wajidIsDev/index.html",
     "main.55dfa566.css.map": "/wajidIsDev/static/css/main.55dfa566.css.map",
-    "main.a42c4c44.js.map": "/wajidIsDev/static/js/main.a42c4c44.js.map"
+    "main.9f954c5b.js.map": "/wajidIsDev/static/js/main.9f954c5b.js.map"
   },
   "entrypoints": [
     "static/css/main.55dfa566.css",
-    "static/js/main.a42c4c44.js"
+    "static/js/main.9f954c5b.js"
   ]
 }

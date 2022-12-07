@@ -9,7 +9,7 @@ import SkillsBox from '../skillsBox/SkillsBox';
 import { Button } from '../../../components/buttons/Button';
 import { saveAs } from "file-saver";
 
-const WajidResume = require("../../../common/resume/WajidResume.pdf");
+const WajidResume = require("../../../common/resume/WajidResumeDec.pdf");
 
 const data = [
   {

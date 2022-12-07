@@ -79,11 +79,13 @@ export const GetAppStructure = (): tpAppStructure => {
         {
           value: "Email",
           link: "mailto:wajidmlk123@gmail.com?subject=Query Form Web",
+          icon: "LocalPostOffice",
           mod: "goto",
         },
         {
-          value: "WhatsApp",
+          value: "WhtsAp",
           link: "whatsapp://send?phone=+923022244303",
+          icon: "WhatsApp",
           mod: "goto",
         },
       ],

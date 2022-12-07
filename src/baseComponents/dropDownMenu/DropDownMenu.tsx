@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-import { MUI_ICON, tpIconCODE } from '../../appUtils/AppUtliities';
+import { MUI_ICON, tpIconCODE } from '../../appUtils/AppUtilities';
 
 type tpButtonProps = {id?: string, toolTip?: string, icon?: tpIconCODE, value?: string};
 type tpProps = {
@@ -44,6 +44,7 @@ const DropDownMenu = ({
                 }) => (
                   <MenuItem
                     id={id}
+                    key={id}
                     title={toolTip}
                     onClick={() => {
                       onClick();

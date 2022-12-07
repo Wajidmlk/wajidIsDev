@@ -31,7 +31,7 @@ const SliderZero = ({data, hideArrows}:tpSliderParams) => {
         return (
           <div
             className={index === current ? 'slide active' : 'slide'}
-            key={index}
+            key={`${index}-${current}`}
           >
             {index === current && (
               <img src={slide} alt='travel image' className='image' />

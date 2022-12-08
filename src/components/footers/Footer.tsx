@@ -1,11 +1,11 @@
 import React from 'react';
-import { tpCompId, tpFooterData } from '../../common/commonTypes';
+import { tpCompId, tpFooter } from '../../common/commonTypes';
 import InformationStripe from '../informationStripe/InformationStripe';
 import FooterZero from './footerZero/FooterZero';
 
-type tpProps = {data: tpFooterData[]};
-
-const Footer = ({id, data}: tpProps&tpCompId): JSX.Element => {
+const Footer = ({id, data, visibility}: tpFooter&tpCompId): JSX.Element => {
+  if(visibility === "hidden") return <></>;
+  
   let footer = <></>;
   switch(id) {
     case 'footer-000':

@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import { MUI_ICON } from '../../../appUtils/AppUtilities';
+import { getIcon } from '../../../appUtils/AppUtilities';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
 import Slider from '../../../components/slider/Slider';
@@ -63,7 +63,7 @@ const ProductContainer = ({seqNo, dataRow: {
       {
         badges.map((badge, badgeNo) => {
           const {id, name, show, check, icon} = badge;
-          const Icon = icon ? MUI_ICON({CODE: icon, style:{height: "18px"}}) : "";
+          const Icon = icon ? getIcon({CODE: icon, style:{height: "18px"}}) : "";
           return (
           <div
             id={id}

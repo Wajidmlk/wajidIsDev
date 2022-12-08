@@ -37,7 +37,12 @@ export type tpFooterData = {
   detailed?: boolean,
   style?: tpStyleProps,
 }
-
+export type tpFooter = {
+  id: string,
+  toggle?: boolean,
+  visibility?: 'hidden'|'visible',
+  data: tpFooterData[],
+};
 
 export type tpAppStructure = {
   multiPage: boolean,
@@ -49,11 +54,7 @@ export type tpAppStructure = {
     toggle?: boolean,
     fixed?: boolean,
   },
-  footer: {
-    id: string,
-    toggle?: boolean,
-    data: tpFooterData[],
-  },
+  footer: tpFooter,
   components : {
     button?: string,
   },

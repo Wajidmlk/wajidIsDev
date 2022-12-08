@@ -45,7 +45,7 @@ type tpProps = {
   className?: string, style?: tpStyleProps, onClick?: () => void,
 };
 
-export const MUI_ICON = ({CODE, style, titleAccess, onClick, className}: tpProps) => {
+export const getIcon = ({CODE, style, titleAccess, onClick, className}: tpProps) => {
 
   if(!CODE) return "";
   const styling = style ? style : {};

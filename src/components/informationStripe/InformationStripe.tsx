@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
-import { MUI_ICON } from '../../appUtils/AppUtilities';
+import { getIcon } from '../../appUtils/AppUtilities';
 import { tpFooterData } from '../../common/commonTypes';
 
 type tpProps = {
@@ -44,7 +44,7 @@ const InformationStripe = (props: tpProps): JSX.Element => {
       state.data.map((box, i) => {
         const {value, icon, style, detailed, mod, link} = box;
 
-        const IconJSX = MUI_ICON({CODE: icon, titleAccess: icon}) || value;
+        const IconJSX = getIcon({CODE: icon, titleAccess: icon}) || value;
 
         return <div key={`${value}-${i}`} className='stripe-box' style={{
             ...style,

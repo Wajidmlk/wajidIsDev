@@ -16,6 +16,7 @@ import './pages/experiencePages/experiencePages.scss';
 import './pages/showcasePages/showcasePages.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './components/informationStripe/informationStripe.scss';
+import './pages/footerPages/footerPages.scss';
 
 import AppStateProvider from './appUtils/AppStateProvider';
 

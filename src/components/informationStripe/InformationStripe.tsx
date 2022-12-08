@@ -20,7 +20,7 @@ const onHoverBox = (
 
 const InformationStripe = (props: tpProps): JSX.Element => {
   const [state, setState] = useState<tpProps>({
-    ...props, direction: "vertical", size: 70, shape: "round",
+    direction: "vertical", size: 70, shape: "round", ...props,
   });
 
   const {direction, shape, size, className} = state;
@@ -43,8 +43,8 @@ const InformationStripe = (props: tpProps): JSX.Element => {
     {
       state.data.map((box, i) => {
         const {value, icon, style, detailed, mod, link} = box;
-
-        const IconJSX = getIcon({CODE: icon, titleAccess: icon}) || value;
+        const iconSize = {paddingLeft: "5px", height: "60%", width: "60%"};
+        const IconJSX = getIcon({CODE: icon, titleAccess: icon, style: !detailed ? iconSize :{}}) || value;
 
         return <div key={`${value}-${i}`} className='stripe-box' style={{
             ...style,

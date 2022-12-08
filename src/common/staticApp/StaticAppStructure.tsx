@@ -3,6 +3,7 @@ import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
+import FooterPage from '../../pages/footerPages/FooterPage';
 
 const IMG = require('./../images/dp1.jpg');
 
@@ -55,6 +56,18 @@ export const GetAppStructure = (): tpAppStructure => {
           padding: "10px",
         }
       },
+      {
+        pageId: '621d36aa-2aa4-11ed-a261-0242ac121000',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120004',
+        pageName: 'Footer Page',
+        parentId: '',
+        sequence: 4,
+        style: {
+          height: "300px",
+          width: "100%",
+          padding: "10px",
+        }
+      },
     ],
     nav: {
       id: 'nav-000',
@@ -64,6 +77,7 @@ export const GetAppStructure = (): tpAppStructure => {
     },
     footer: {
       id: 'footer-001',
+      visibility: 'hidden',
       data: [
         {
           value: "Github",
@@ -122,6 +136,9 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
       break;
     case '630d36aa-2aa4-11ed-a261-0242ac120003' :
       pageById = <ShowcasePage page={page} />
+      break;
+    case '630d36aa-2aa4-11ed-a261-0242ac120004' :
+      pageById = <FooterPage page={page} />
       break;
     default :
       pageById = <HomePage page={page} />

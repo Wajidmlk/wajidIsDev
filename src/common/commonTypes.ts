@@ -49,6 +49,7 @@ export type tpAppStructure = {
   pages: tpPageStructure[],
   nav: {
     id: string,
+    visibility: 'hidden'|'visible',
     type?: 'line' | 'round',
     location?: 'up' | 'down' | 'left' | 'right' | 'drag',
     toggle?: boolean,

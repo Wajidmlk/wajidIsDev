@@ -11,12 +11,12 @@ import Footer from './components/footers/Footer';
 
 const CpRoutes = (): JSX.Element => {
 
-  const {nav, footer, multiPage, pages} = useAppStateContext();
+  const {footer, multiPage, pages} = useAppStateContext();
   
   if(!multiPage) return (<>
       <div className='app-base-root'>
         <HeaderContainer children={
-          <NavBar id={nav.id} />
+          <NavBar />
         }/>
           {pages.map((page) => <PagesBase
               key={page.pageId}

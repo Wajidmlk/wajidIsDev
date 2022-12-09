@@ -59,7 +59,7 @@ export const GetAppStructure = (): tpAppStructure => {
       {
         pageId: '621d36aa-2aa4-11ed-a261-0242ac121000',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120004',
-        pageName: 'Footer Page',
+        pageName: 'Navigation',
         parentId: '',
         sequence: 4,
         style: {

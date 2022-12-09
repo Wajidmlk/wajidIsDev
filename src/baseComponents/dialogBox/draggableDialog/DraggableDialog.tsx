@@ -15,7 +15,7 @@ import 'react-resizable/css/styles.css';
 import './draggableDialog.scss';
 import DialogBox from '../DialogBox';
 import { tpDialogBoxProps } from '../DialogBox';
-import { MUI_ICON } from '../../../appUtils/AppUtilities';
+import { getIcon } from '../../../appUtils/AppUtilities';
 
 
 export type tpDialogDefaultHeightWidthProps = {
@@ -52,7 +52,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        {MUI_ICON({CODE: "CloseFullscreen", titleAccess: 'Minimize'})}
+        {getIcon({CODE: "CloseFullscreen", titleAccess: 'Minimize'})}
         Minimize
       </MenuItem>
       {onTop && (
@@ -62,7 +62,7 @@ const CpMenuItems = (props: tpDragDialog&{
       }}
       >
 
-        {MUI_ICON({
+        {getIcon({
           CODE: "Airplay", titleAccess: 'Pin to Top',
           className:`${onTop ? 'selected-item' : ''}`,
         })}
@@ -75,7 +75,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        {MUI_ICON({CODE: "Delete", titleAccess: 'Delete'})}
+        {getIcon({CODE: "Delete", titleAccess: 'Delete'})}
         Delete
       </MenuItem>
       )}
@@ -85,7 +85,7 @@ const CpMenuItems = (props: tpDragDialog&{
         popupStateClose();
       }}
       >
-        {MUI_ICON({CODE: "LocalPrintshop", titleAccess: 'Print'})}
+        {getIcon({CODE: "LocalPrintshop", titleAccess: 'Print'})}
         Print
       </MenuItem>
       )}
@@ -168,7 +168,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
                     {...bindTrigger(popupState)}
                     style={{ background: 'none', boxShadow: 'none', transition: 'none' }}
                   >
-                    {MUI_ICON({CODE: "MoreVert", titleAccess: 'Show Settings'})}
+                    {getIcon({CODE: "MoreVert", titleAccess: 'Show Settings'})}
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     <CpMenuItems
@@ -188,7 +188,7 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
               aria-label='show 4 new mails'
               color='inherit'
             >
-              {MUI_ICON({
+              {getIcon({
                 CODE: "OpenInFull", titleAccess: 'Maximize',
                 onClick: () => {setState((prevState) => ({ ...prevState, maximum: true }))},
               })}

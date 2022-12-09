@@ -1,7 +1,7 @@
 .progress-000 {
   display: flex;
   .grid {
-    padding: 5px 15% 5px 15%;
+    flex-direction: row !important;
     grid-gap: 0px;
     text-align: center;
     .box {
@@ -21,6 +21,8 @@
     }
     .progress-bar {
       display: flex;
+      flex-direction: row !important;
+      position: relative;
       .bar {
         border-radius: 7px;
         width: 100%;
@@ -34,7 +36,8 @@
         background-color: rgb(80, 155, 165);
       }
       .bar-percent {
-        margin-left: -9%;
+        position: absolute;
+        right: 5;
       }
     }
   }

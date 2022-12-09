@@ -7,13 +7,17 @@ import NavTwo from './navTwo/NavTwo';
 import { fetchNavbarState } from './navServices';
 import { useAppStateContext } from '../../appUtils/AppState';
 
-const NavBar = ({id}: tpCompId): JSX.Element => {
+const NavBar = (): JSX.Element => {
   const [state, setState] = useState<tpNavState>({items: []});
-  const { pages } = useAppStateContext();
+  const { nav, pages } = useAppStateContext();
+
+  const {id, visibility} = nav;
 
   useEffect(() => {
     fetchNavbarState(setState, pages);
   }, []);
+
+  if(visibility === "hidden") return <></>;
 
   let NavBar = <></>;
   switch(id) {

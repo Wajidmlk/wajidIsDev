@@ -10,20 +10,19 @@
   }
 }
 .grid {
-  display: grid;
+  display: flex;
   height: 100%;
   width: 100%;
-  grid-gap: 5px;
+  padding: 5px;
 }
 
 .box {
   border-radius: 5px;
-  padding: 20px;
   font-size: 150%;
 }
 
 .card-box {
-  margin: 5px 10px 5px 10px;
+  margin: auto;
   min-height: 200px;
   min-width: 200px;
   max-width: 500px;

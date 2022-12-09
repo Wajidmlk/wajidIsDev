@@ -2,9 +2,9 @@
   width: 100%;
 
   .homePage-000 {
-    flex: 1 0 auto;
     position: relative;
     width: 100%;
+    height: fit-content;
     -webkit-transition: all .5s ease-in;
     -o-transition: all .5s ease-in;
     transition: all .5s ease-in;
@@ -12,6 +12,7 @@
       .pageBody {
         .grid {
           .user-info {
+            width: 50%;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -21,10 +22,11 @@
               text-align: center;
             }
             .home0buttons {
-              margin: 0 5px;
+              margin: 5px;
             }
           }
           .user-dp {
+            width: 40%;
             border-radius: 40px;
           }
         }

@@ -37,23 +37,25 @@ export type tpFooterData = {
   detailed?: boolean,
   style?: tpStyleProps,
 }
-
+export type tpFooter = {
+  id: string,
+  toggle?: boolean,
+  visibility?: 'hidden'|'visible',
+  data: tpFooterData[],
+};
 
 export type tpAppStructure = {
   multiPage: boolean,
   pages: tpPageStructure[],
   nav: {
     id: string,
+    visibility: 'hidden'|'visible',
     type?: 'line' | 'round',
     location?: 'up' | 'down' | 'left' | 'right' | 'drag',
     toggle?: boolean,
     fixed?: boolean,
   },
-  footer: {
-    id: string,
-    toggle?: boolean,
-    data: tpFooterData[],
-  },
+  footer: tpFooter,
   components : {
     button?: string,
   },

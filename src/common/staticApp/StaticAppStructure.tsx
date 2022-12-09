@@ -73,7 +73,7 @@ export const GetAppStructure = (): tpAppStructure => {
     nav: {
       id: 'nav-000',
       type: 'line',
-      visibility: 'hidden',
+      visibility: 'visible',
       location: 'up',
       toggle: false,
     },

@@ -1,5 +1,11 @@
 
 @media only screen and (max-width: 800px) {
+  .navs {
+    justify-content: end !important;
+  }
+  .nav-000 {
+    flex-direction: column;
+  }
   .grid {
     flex-direction: column;
   }

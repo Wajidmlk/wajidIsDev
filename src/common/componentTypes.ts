@@ -3,6 +3,7 @@ import { tpPageStructure, tpStyleProps } from "./commonTypes";
 
 export type tpNavState = {
   items: Partial<tpPageStructure[]>,
+  isMobileMode: boolean,
 };
 
 export type tpSkillsState = {

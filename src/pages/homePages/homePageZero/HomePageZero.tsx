@@ -16,7 +16,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
       <div className={
         `intro_section ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
         <div className='pageBody'>
-          <div className='grid' style={{gridTemplateColumns: '55% 45%'}}>
+          <div className='grid'>
             <div className='box user-info'>
                 <h3 className=''>{fullName}</h3>
                 <h2 className=''>
@@ -47,10 +47,8 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                 </div>
             </div>
             <img
-              width={dp?.width || 400}
-              height={dp?.height || 500}
               src={dp?.url || DEFAULT_IMAGE_URL}
-              className={`box user-info user-dp`}
+              className={`box user-dp`}
              />
           </div>
             

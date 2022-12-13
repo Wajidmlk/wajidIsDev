@@ -59,8 +59,8 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
           ))
         }
       </div>
-      <div className='grid' style={{gridTemplateColumns: '40% 58%'}}>
-        <div className='box'>
+      <div className='grid'>
+        <div className='box' style={{width: "40%", marginBottom: 20}}>
             <CardBox
               className='showcase'
               image={{
@@ -81,7 +81,7 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
               }
             />
         </div>
-        <div className='box'>
+        <div className='box' style={{width: "50%"}}>
          <SkillsBox />
         </div>
       </div>

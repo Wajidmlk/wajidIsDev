@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import AppRoutes from './AppRoutes';
 import './index.scss';
 import './appBase.scss';
+import './responsiveStyles.scss';
 import './common/common.scss';
 import './pages/homePages/homePages.scss';
 import './components/navs/navs.scss';

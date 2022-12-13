@@ -1,0 +1,15 @@
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .box {
+   width: 100% !important; 
+  }
+  .information-stripe {
+    flex-wrap: wrap !important;
+  }
+  .progress-label {width: 25% !important;}
+  .progress-bar {width: 65% !important;}
+}

@@ -2,11 +2,13 @@ import React from 'react';
 import {cloneElement} from 'react';
 import { tpStyleProps } from '../common/commonTypes';
 
+import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PaletteIcon from '@mui/icons-material/Palette';
 import AirplayIcon from '@mui/icons-material/Airplay';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import BurstModeIcon from '@mui/icons-material/BurstMode';
@@ -21,12 +23,15 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
 
 
+
 const icons = {
+  Close: <CloseIcon />,
   Delete: <DeleteIcon />,
   GitHub: <GitHubIcon />,
   Airplay: <AirplayIcon/>,
   Palette: <PaletteIcon />,
   LinkedIn: <LinkedInIcon />,
+  MenuOpen: <MenuOpenIcon />,
   WhatsApp: <WhatsAppIcon />,
   MoreVert: <MoreVertIcon />,
   BurstMode: <BurstModeIcon />,

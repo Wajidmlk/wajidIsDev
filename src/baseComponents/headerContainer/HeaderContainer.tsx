@@ -6,7 +6,7 @@ type tpProps = {
 const HeaderContainer = ({children}: tpProps): JSX.Element => {
   // state, get/post
   return (
-    <div className='navs'>{children}</div>
+    <div>{children}</div>
   );
 };
 

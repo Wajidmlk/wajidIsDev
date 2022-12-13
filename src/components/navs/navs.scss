@@ -2,6 +2,19 @@
 $color-1: #1a1a1a;
 $color-2: #fefefe;
 $pad:     10px;
+.nav-mobile-mode {
+  justify-content: flex-end !important;
+  .nav-000 {
+    margin-right: 10px !important;
+    flex-direction: column;
+    .button {
+      align-self: end;
+      li {
+        padding: 10px 0 0 10px;
+      }
+    }
+  }
+}
 .navs {
   z-index: 10;
   position: fixed;

@@ -40,7 +40,7 @@ export const GetAppStructure = (): tpAppStructure => {
         parentId: '',
         sequence: 2,
         style: {
-          padding: "50px",
+          padding: "35px",
         }
       },
       {

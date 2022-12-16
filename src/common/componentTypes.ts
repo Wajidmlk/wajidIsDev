@@ -43,6 +43,7 @@ export type tpProduct = {
   toggleSize: boolean,
   toggleView: boolean,
   className: string,
+  description: string,
   slides?: tpSliderParams,
   sideBanner?: {
     value: string,

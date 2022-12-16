@@ -1,5 +1,5 @@
 import { tpPageStructure } from '../../../common/commonTypes';
-import CardBox from '../cardBox/CardBox';
+import CardBox from '../../../components/cards/cardBox/CardBox';
 import SkillsBox from '../skillsBox/SkillsBox';
 import { Button } from '../../../components/buttons/Button';
 import { saveAs } from "file-saver";

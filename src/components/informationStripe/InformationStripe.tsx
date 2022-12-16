@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { getIcon } from '../../appUtils/AppUtilities';
 import { tpFooterData } from '../../common/commonTypes';
 

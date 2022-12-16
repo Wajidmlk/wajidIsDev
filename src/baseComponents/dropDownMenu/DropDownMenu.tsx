@@ -2,7 +2,8 @@ import React from 'react';
 import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import PopupState from 'material-ui-popup-state';
+import { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import { getIcon, tpIconCODE } from '../../appUtils/AppUtilities';
 
 type tpButtonProps = {id?: string, toolTip?: string, icon?: tpIconCODE, value?: string};

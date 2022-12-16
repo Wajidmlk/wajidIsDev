@@ -1,13 +1,16 @@
-import React, {
+import React from 'react';
+import {
   Dispatch, ReactNode, useState, SetStateAction
 } from 'react';
-import Paper, { PaperProps } from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper';
+import { PaperProps } from '@material-ui/core/Paper';
 import Draggable from 'react-draggable';
 import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import PopupState  from 'material-ui-popup-state';
+import { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import { Resizable } from 'react-resizable';

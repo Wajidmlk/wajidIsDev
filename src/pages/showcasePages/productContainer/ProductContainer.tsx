@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { getIcon } from '../../../appUtils/AppUtilities';
 import { Toast } from '../../../baseComponents/reactToast/ReactToast';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';

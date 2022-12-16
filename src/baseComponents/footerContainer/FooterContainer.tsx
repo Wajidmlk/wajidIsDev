@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Button } from '../../components/buttons/Button';
 import DialogBox from '../dialogBox/DialogBox';
 import DraggableDialog from '../dialogBox/draggableDialog/DraggableDialog';

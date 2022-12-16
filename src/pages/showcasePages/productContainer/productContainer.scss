@@ -1,5 +1,5 @@
 .product-container {
-  position: relative; 
+  position: relative;
   width: 550px;
   min-width: 250px;
   height: 400px;
@@ -7,7 +7,7 @@
   margin: 10px 0;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  .upper-description, .images-slider {
+  .upper-description, .images-slider, .description-mode {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,6 +17,7 @@
     border-radius: 15px;
   }
   .upper-description {
+    padding: 5%;
     background: repeating-linear-gradient(
       -55deg,
       rgba(206, 189, 221, 0.644),
@@ -24,6 +25,25 @@
       rgba(223, 223, 223, 0.644) 10px,
       rgba(204, 201, 201, 0.623) 20px
     );
+    p {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      text-align: center;
+      color: #a52a2a9e;
+      font-weight: bold;
+      line-height: 25px;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      font-style: italic;
+      font-size: 20px;
+      justify-content: space-around;
+      align-content: center;
+      overflow-y: hidden;
+    }
   }
   .side-strip {
     position: absolute;

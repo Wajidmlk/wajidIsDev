@@ -18,6 +18,7 @@ import './pages/showcasePages/showcasePages.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './components/informationStripe/informationStripe.scss';
 import './pages/footerPages/footerPages.scss';
+//import './components/cards/sliderCardBox/sliderCardBox.scss';
 
 import AppStateProvider from './appUtils/AppStateProvider';
 

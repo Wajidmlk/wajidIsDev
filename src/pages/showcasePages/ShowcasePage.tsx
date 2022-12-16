@@ -41,6 +41,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           name: "Support",
         },
       ],
+      description: `Eminent Studio is a platform where buyers, product owners and clients meet with group of skilled people specially works together to meet specific product needs.`,
     },
     {
       id: "",
@@ -73,6 +74,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           name: "Description",
         },
       ],
+      description: "test",
     }]
   });
   let pageById: JSX.Element = <></>;

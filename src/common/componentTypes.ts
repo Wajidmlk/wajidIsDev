@@ -18,7 +18,6 @@ export type tpExperienceState = {
   heading: string,
   data: {
     title: string,
-    organization?: string,
     duration?: string,
     details?: string,
     description?: string,

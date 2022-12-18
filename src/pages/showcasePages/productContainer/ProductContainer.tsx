@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dispatch, SetStateAction } from 'react';
 import { getIcon } from '../../../appUtils/AppUtilities';
-import { Toast } from '../../../baseComponents/reactToast/ReactToast';
+import { ToastWIP } from '../../../baseComponents/reactToast/ReactToast';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
 import Slider from '../../../components/slider/Slider';
@@ -17,7 +17,7 @@ const onHoverOrClickBadges = (
   setState: Dispatch<SetStateAction<tpProductsState>>,
 ) => {
   if(type==="show") {
-    Toast("Work in Progress...");
+    ToastWIP();
     return;
   }
   const copyData = {...state};
@@ -51,13 +51,13 @@ const onHoverProduct = (
     case "Gallery":
       comp = slides ? <div className={`images-slider ${!toggleView && "z-index-minus-1"}`}>
         <Slider
-          id='slider0'
-          type={slides.type}
-          data={slides.data}
-          hideArrows={toggleView}
-          slideShow={slides.slideShow}
-        />
-      </div> : <></>;
+            id='slider0'
+            type={slides.type}
+            data={slides.data}
+            hideArrows={toggleView}
+            slideShow={slides.slideShow}
+          />
+        </div> : <></>;
       break;
     case "Description":
       comp = <div className='description-mode'>HI</div>;

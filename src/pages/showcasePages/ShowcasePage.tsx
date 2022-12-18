@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { tpPageStructure } from '../../common/commonTypes';
 import { tpProductsState } from '../../common/componentTypes';
 import ShowcasePageZero from './showcasePageZero/ShowcasePageZero';
-import { eminentImages } from './tempData';
+import { eminentImages, consolImages } from './tempData';
 
 const ShowcasePage = ({page}: {page: tpPageStructure}) => {
   const [state, setState] = useState<tpProductsState>({
@@ -35,12 +35,6 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           id: "ChildTwo",
           name: "Description",
         },
-        {
-          show: false,
-          check: false,
-          id: "ChildThree",
-          name: "Support",
-        },
       ],
       description: `Eminent Studio is a platform where buyers, product owners and clients meet with group of skilled people specially works together to meet specific product needs.`,
     },
@@ -52,12 +46,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
       toggleView: false,
       className: "",
       slides: {
-        data: [
-          'https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80'
-          ,
-          'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
-          ,
-          ],
+        data: consolImages(6),
         type: "images",
       },
       badges: [
@@ -74,7 +63,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           name: "Description",
         },
       ],
-      description: "test",
+      description: "It a portfolio website, build to introduce the assists of construction company 'Consol'.",
     }]
   });
   let pageById: JSX.Element = <></>;

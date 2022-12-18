@@ -10,6 +10,10 @@ export const Toast = (
   toast(msg, { type: type || 'default' });
 };
 
+export const ToastWIP = (): void => {
+  Toast("Work in Progress...");
+};
+
 
 const ReactToast = ():JSX.Element => (
   <ToastContainer

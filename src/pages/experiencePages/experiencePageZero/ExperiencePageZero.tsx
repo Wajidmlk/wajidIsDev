@@ -1,7 +1,10 @@
 import React from 'react';
 import { tpPageStructure } from '../../../common/commonTypes';
-const ExperiencePageZero = ({page}: {page: tpPageStructure}) => {
-  const { style, pageId } = page;
+import { tpExperienceState } from '../../../common/componentTypes';
+import ExperienceBox from '../../../components/cards/experienceBox/ExperienceBox';
+
+const ExperiencePageZero = (props: tpExperienceState&{page: tpPageStructure}) => {
+  const { style, pageId } = props.page;
   return (
     <div
       id={pageId}
@@ -9,9 +12,7 @@ const ExperiencePageZero = ({page}: {page: tpPageStructure}) => {
         `experiencePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}
     >
-      <div style={{height: "200px", width: "90%", border: "1px solid black"}}>
-
-      </div>
+      <ExperienceBox id='expBox000' heading={props.heading} data={props.data}/>
     </div>
   );
 };

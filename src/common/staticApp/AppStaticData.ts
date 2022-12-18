@@ -1,10 +1,10 @@
 
 export const userIntroData = {
-  title: 'I’m Malik',
+  title: `It's Wajid Malik`,
   animated: {
       first: 'I am MERN Stack Developer....',
       second: '3+ Years of experience...',
-      third: '100+ successful projects....',
+      third: '30+ successful projects....',
   },
   description: `Checkout my portfolio for products, Or Hit Contact Me for special requirements, custom apps or discussion`,
   imageUrl: 'https://images.unsplash.com/photo-1514790193030-c89d266d5a9d',

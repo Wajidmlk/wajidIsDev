@@ -29,10 +29,16 @@
   color: white;
   cursor: pointer;
   user-select: none;
+  background-color: rgba(37, 37, 37, 0.116);
+  border-radius: 15px;
+  padding: 3px;
   path {
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.22) 0px 1px 1px;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px, rgba(0, 0, 0, 0.22) 0px 1px 1px;
   }
+}
+.left-arrow:hover, .right-arrow:hover {
+  transform: scale(1.1);
 }
 
 .right-arrow {

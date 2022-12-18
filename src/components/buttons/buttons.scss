@@ -12,6 +12,10 @@ $color: #0cf;
   position: relative;
   overflow: hidden;
   z-index: 1;
+
+  color: #ffffff;
+  text-shadow: 0 2px 2px #ffffff,
+  -1.05px 2.05px 0px #979797;
   &:after {
     content: '';
     position: absolute;

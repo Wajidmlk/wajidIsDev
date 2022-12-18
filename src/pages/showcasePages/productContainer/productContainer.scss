@@ -1,11 +1,12 @@
 .product-container {
   position: relative;
+  border: 3px solid rgba(37, 37, 37, 0.116);
   width: 550px;
   min-width: 250px;
   height: 400px;
   min-height: 300px;
   margin: 10px 0;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   .upper-description, .images-slider, .description-mode {
     position: absolute;

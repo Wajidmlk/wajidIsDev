@@ -113,7 +113,7 @@ export const GetAppStructure = (): tpAppStructure => {
     },
     userData: {
       userId: '000',
-      fullName: 'Malik',
+      fullName: 'Malik Wajid',
       dp: {
         height: 500,
         width: 400,

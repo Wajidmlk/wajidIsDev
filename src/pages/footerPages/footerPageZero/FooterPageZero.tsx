@@ -3,6 +3,7 @@ import { useAppStateContext } from '../../../appUtils/AppState';
 import { tpPageStructure } from '../../../common/commonTypes';
 import InformationStripe from '../../../components/informationStripe/InformationStripe';
 import {ToastWIP} from '../../../baseComponents/reactToast/ReactToast';
+const LOGO = require("../../../common/images/logo.png");
 
 const FooterPageZero = ({page}: {page: tpPageStructure}) => {
   const { style, pageId } = page;
@@ -17,7 +18,7 @@ const FooterPageZero = ({page}: {page: tpPageStructure}) => {
         <div className="inner">
           <div className="column is-logo">
             <a href="#" className="main-logo">
-              <div className="logo"><img src="logo.png" alt="stackfindover" /></div>
+              <div className="logo"><img src={LOGO} alt="stackfindover" /></div>
               <div className="logo-info">
                 <div className="text">Malik Wajid</div>
                 <span className="copyright">© 2022. All rights reserved.</span>

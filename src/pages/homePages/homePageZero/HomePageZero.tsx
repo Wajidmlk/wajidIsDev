@@ -18,7 +18,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
         <div className='pageBody'>
           <div className='grid'>
             <div className='box user-info'>
-                <h3 className=''>{fullName}</h3>
+                <h3 className=''>{userIntroData.title}</h3>
                 <h2 className=''>
                   <Typewriter
                     options={{

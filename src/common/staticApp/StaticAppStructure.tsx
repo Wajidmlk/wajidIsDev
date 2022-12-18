@@ -49,10 +49,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageName: 'Experience',
         parentId: '',
         sequence: 3,
-        visibility: 'hidden',
         style: {
-          height: "300px",
-          width: "100%",
           padding: "10px",
         }
       },
@@ -112,7 +109,7 @@ export const GetAppStructure = (): tpAppStructure => {
     },
     userData: {
       userId: '000',
-      fullName: 'Malik',
+      fullName: 'Malik Wajid',
       dp: {
         height: 500,
         width: 400,

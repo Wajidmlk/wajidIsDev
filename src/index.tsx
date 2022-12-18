@@ -17,6 +17,7 @@ import './pages/experiencePages/experiencePages.scss';
 import './pages/showcasePages/showcasePages.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './components/informationStripe/informationStripe.scss';
+import './components/cards/experienceBox/experienceBox.scss';
 import './pages/footerPages/footerPages.scss';
 //import './components/cards/sliderCardBox/sliderCardBox.scss';
 

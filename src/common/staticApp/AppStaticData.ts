@@ -1,6 +1,6 @@
 
 export const userIntroData = {
-  title: `It's Wajid Malik`,
+  title: `It's Malik Wajid`,
   animated: {
       first: 'I am MERN Stack Developer....',
       second: '3+ Years of experience...',

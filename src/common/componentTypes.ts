@@ -14,6 +14,17 @@ export type tpSkillsState = {
   }[],
 };
 
+export type tpExperienceState = {
+  heading: string,
+  data: {
+    title: string,
+    duration?: string,
+    details?: string,
+    description?: string,
+    list?: string[],
+  }[],
+}
+
 export type tpFooterState = {
   items: {
     id: string,

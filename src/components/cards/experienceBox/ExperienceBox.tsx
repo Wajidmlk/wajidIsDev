@@ -3,20 +3,18 @@ import { tpCompId } from '../../../common/commonTypes';
 import { tpExperienceState } from '../../../common/componentTypes';
 
 const serviceGetLinks = (data: string) => {
-  const MATCH_START = "<LINK-";
-  const MATCH_END = "-LINK>";
-  if(!data.includes(MATCH_START)) return data;
-  const startIndexOfLink = data.indexOf(MATCH_START) + MATCH_START.length;
-  const endIndexOfLink = data.indexOf(MATCH_END) - 1;
+  const START = "<";
+  const END = ">";
+
+  if(!data.includes(START)) return data;
+  const startIndexOfLink = data.indexOf(START);
+  const endIndexOfLink = data.indexOf(END);
+  const link = data.substring(startIndexOfLink + 1, endIndexOfLink);
   
-  const link = data.substring(startIndexOfLink, endIndexOfLink + 1);
-  const finalData = <>{
-      data.substring(0, startIndexOfLink - MATCH_START.length)
-    }
+  const finalData = <>
+    {data.substring(0, startIndexOfLink - 1)}
     <a href={link}>{link}</a>
-    {
-      data.substring(endIndexOfLink + MATCH_END.length + 1)
-    }</>
+    {data.substring(endIndexOfLink + 1)}</>
   return finalData;
 }
 

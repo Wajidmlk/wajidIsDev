@@ -12,4 +12,14 @@
   }
   .progress-label {width: 25% !important;}
   .progress-bar {width: 65% !important;}
+  .experiencePage-000 {
+    padding: 10px !important;
+    .experience-box {
+      .row {
+        .org-name, .duration {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }

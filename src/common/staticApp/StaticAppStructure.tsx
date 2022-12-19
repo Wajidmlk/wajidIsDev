@@ -52,7 +52,6 @@ export const GetAppStructure = (): tpAppStructure => {
         parentId: '',
         sequence: 3,
         style: {
-          backgroundImage: `url(https://media.istockphoto.com/id/1066700950/vector/background-of-zeros-and-ones.jpg?s=612x612&w=0&k=20&c=SsJQE-CTyW18lRUnHENxtgvhqUHva7Bmm6VItqAeGqg=)`,
         }
       },
       {

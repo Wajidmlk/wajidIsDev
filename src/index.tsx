@@ -20,7 +20,6 @@ import './components/informationStripe/informationStripe.scss';
 import './components/cards/experienceBox/experienceBox.scss';
 import './pages/footerPages/footerPages.scss';
 //import './components/cards/sliderCardBox/sliderCardBox.scss';
-
 import AppStateProvider from './appUtils/AppStateProvider';
 
 const container = document.getElementById('react-container');

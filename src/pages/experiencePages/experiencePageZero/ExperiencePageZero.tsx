@@ -3,7 +3,7 @@ import { tpPageStructure } from '../../../common/commonTypes';
 import { tpExperienceState } from '../../../common/componentTypes';
 import ExperienceBox from '../../../components/cards/experienceBox/ExperienceBox';
 
-const ExperiencePageZero = (props: tpExperienceState&{page: tpPageStructure}) => {
+const ExperiencePageZero = (props: {page: tpPageStructure, state: tpExperienceState[]}) => {
   const { style, pageId } = props.page;
   return (
     <div
@@ -12,7 +12,9 @@ const ExperiencePageZero = (props: tpExperienceState&{page: tpPageStructure}) =>
         `experiencePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}
     >
-      <ExperienceBox id='expBox000' heading={props.heading} data={props.data}/>
+      {props.state.map(({heading, data}) => 
+        <ExperienceBox id='expBox000' heading={heading} data={data}/>      
+      )}
     </div>
   );
 };

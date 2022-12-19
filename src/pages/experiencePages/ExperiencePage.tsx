@@ -70,7 +70,7 @@ const expData = [
         association, It is an AI app based on cricket, which clones the behavior of
         batsman and predicts with accuracy of 90%. app contains high class
         simulators and result displays in charts and figures -
-        <LINK-https://www.facebook.com/JardineAI-LINK>`,
+        <https://www.facebook.com/JardineAI>`,
       },
     ],
   },

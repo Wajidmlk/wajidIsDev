@@ -9,13 +9,13 @@ const serviceGetLinks = (data: string) => {
   const startIndexOfLink = data.indexOf(MATCH_START) + MATCH_START.length;
   const endIndexOfLink = data.indexOf(MATCH_END) - 1;
   
-  const link = data.substring(startIndexOfLink, endIndexOfLink);
+  const link = data.substring(startIndexOfLink, endIndexOfLink + 1);
   const finalData = <>{
       data.substring(0, startIndexOfLink - MATCH_START.length)
     }
     <a href={link}>{link}</a>
     {
-      data.substring(endIndexOfLink + MATCH_END.length)
+      data.substring(endIndexOfLink + MATCH_END.length + 1)
     }</>
   return finalData;
 }

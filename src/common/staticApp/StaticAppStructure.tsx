@@ -5,6 +5,7 @@ import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
 import FooterPage from '../../pages/footerPages/FooterPage';
+import Gallery from '../../components/galleries/Gallery';
 
 const IMG = require('./../images/dp1.jpg');
 
@@ -43,6 +44,18 @@ export const GetAppStructure = (): tpAppStructure => {
         style: {
           backgroundImage: `url(https://img.freepik.com/free-vector/abstract-background-with-squares_23-2148995948.jpg?w=2000)`,
           padding: "35px",
+        }
+      },
+      {
+        pageId: '230d36aa-2aa4-11ed-a261-0242ac121001',
+        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120005',
+        pageName: 'Gallery',
+        parentId: '',
+        sequence: 3,
+        style: {
+          backgroundColor: "black",
+          height: "1000px",
+          width: "100%",
         }
       },
       {
@@ -138,6 +151,19 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
       break;
     case '630d36aa-2aa4-11ed-a261-0242ac120004' :
       pageById = <FooterPage page={page} />
+      break;
+    case '630d36aa-2aa4-11ed-a261-0242ac120005' :
+      pageById = <></>;/*<Gallery id='gallery-000' items={[
+        {id: "9", src: "https://source.unsplash.com/_cvwXhGqG-o/300x300", value: "test 1"},
+        {id: "8", src: "https://source.unsplash.com/AHBvAIVqk64/300x500", value: "test 2"},
+        {id: "7", src: "https://source.unsplash.com/VLPLo-GtrIE/300x300", value: "test 3"},
+        {id: "6", src: "https://source.unsplash.com/AR7aumwKr2s/300x300", value: "test 4"},
+        {id: "5", src: "https://source.unsplash.com/dnL6ZIpht2s/300x300", value: "test 5"},
+        {id: "4", src: "https://source.unsplash.com/tV_1sC603zA/300x500", value: "test 6"},
+        {id: "3", src: "https://source.unsplash.com/Xm9-vA_bhm0/300x500", value: "test 7"},
+        {id: "2", src: "https://source.unsplash.com/NTjSR3zYpsY/300x300", value: "test 8"},
+        {id: "1", src: "https://source.unsplash.com/2JH8d3ChNec/300x300", value: "test 9"},
+      ]}/>*/
       break;
     default :
       pageById = <HomePage page={page} />

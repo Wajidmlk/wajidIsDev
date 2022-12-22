@@ -6,6 +6,15 @@ export type tpNavState = {
   isMobileMode: boolean,
 };
 
+export type tpGallery = {
+  items: {
+    id: string,
+    src: string,
+    value: string,
+  }[],
+  className?: string,
+};
+
 export type tpSkillsState = {
   items: {
     id: string,

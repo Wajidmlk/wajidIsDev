@@ -63,7 +63,7 @@ const ShowcasePage = ({page}: {page: tpPageStructure}) => {
           name: "Description",
         },
       ],
-      description: "It a portfolio website, build to introduce the assists of construction company 'Consol'.",
+      description: "It is a portfolio website, build to introduce the assists of construction company 'Consol'.",
     }]
   });
   let pageById: JSX.Element = <></>;

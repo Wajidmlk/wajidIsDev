@@ -25,6 +25,7 @@ export type tpSkillsState = {
 
 export type tpExperienceState = {
   heading: string,
+  key?: string,
   data: {
     title: string,
     organization?: string,
@@ -45,6 +46,7 @@ export type tpFooterState = {
 
 export type tpProgressBarProps =  {
   value: number,
+  key?: string,
   max?: number,
   min?: number,
   label?: string,

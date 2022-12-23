@@ -2,6 +2,7 @@
   .gallery {
     display: flex;
     padding: 2px;
+    justify-content: space-evenly;
     transition: 0.3s;
   }
   .gallery:hover .gallery__image {

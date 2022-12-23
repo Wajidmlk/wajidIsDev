@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import AppRoutes from './AppRoutes';
+
+import "animate.css/animate.min.css";
+
+
 import './index.scss';
 import './appBase.scss';
 import './responsiveStyles.scss';

@@ -71,7 +71,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageName: 'Gallery',
         parentId: '',
         sequence: 3,
-   //     visibility: "hidden",
+        visibility: "hidden",
         style: {
           backgroundColor: "black",
           width: "100%",

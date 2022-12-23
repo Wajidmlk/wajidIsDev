@@ -1,5 +1,6 @@
 import React from 'react';
 import { tpAppStructure, tpPageStructure } from '../commonTypes';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
@@ -179,6 +180,13 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
       pageById = <>NO PAGE</>
     break;
   
+  }
+  if(page.pageCatId !== "630d36aa-2aa4-11ed-a261-0242ac120004") {
+    pageById = <AnimationOnScroll
+      animateIn="animate__fadeIn"
+    >
+      {pageById}
+    </AnimationOnScroll>;
   }
   return pageById;
 }

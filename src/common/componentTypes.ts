@@ -12,6 +12,7 @@ export type tpGallery = {
     src: string,
     value: string,
   }[],
+  noOfRows: number,
   className?: string,
 };
 

@@ -1,10 +1,21 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import { DEFAULT_IMAGE_URL, userIntroData } from './../../../common/staticApp/AppStaticData';
+import { DEFAULT_IMAGE_URL } from './../../../common/staticApp/AppStaticData';
 import { tpPageStructure } from '../../../common/commonTypes';
 import { useAppStateContext } from '../../../appUtils/AppState';
 import { Button } from '../../../components/buttons/Button';
 import { Toast } from '../../../baseComponents/reactToast/ReactToast';
+
+const userIntroData = {
+  title: `It's Malik Wajid`,
+  animated: {
+      first: 'I am MERN Stack Developer....',
+      second: '3+ Years of experience...',
+      third: '30+ successful projects....',
+  },
+  description: `Checkout my portfolio for products, Or Hit Contact Me for special requirements, custom apps or discussion`,
+  imageUrl: 'https://images.unsplash.com/photo-1514790193030-c89d266d5a9d',
+};
 
 const HomePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, pageId } = page;

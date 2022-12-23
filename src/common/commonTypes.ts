@@ -60,6 +60,7 @@ export type tpAppStructure = {
     button?: string,
   },
   userData: tpUserData,
+  isMobileMode: boolean,
 };
 
 export type tpCompId = {

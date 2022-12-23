@@ -3,6 +3,7 @@ import { useAppStateContext } from '../../../appUtils/AppState';
 import { tpPageStructure } from '../../../common/commonTypes';
 import InformationStripe from '../../../components/informationStripe/InformationStripe';
 import {ToastWIP} from '../../../baseComponents/reactToast/ReactToast';
+import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 const LOGO = require("../../../common/images/logo.png");
 
 const FooterPageZero = ({page}: {page: tpPageStructure}) => {
@@ -12,7 +13,13 @@ const FooterPageZero = ({page}: {page: tpPageStructure}) => {
   return (
     <div id={pageId} className='footerPage-000'>
       <div className="footer-header">
-        <InformationStripe data={footer.data} direction="horizontal" />
+        <ScrollAnimator
+          animateIn='animate__slideInUp'
+          delay={500}
+          animateOnce
+        >
+          <InformationStripe data={footer.data} direction="horizontal" />
+        </ScrollAnimator>
       </div>
       <div className="footer-body">
         <div className="inner">

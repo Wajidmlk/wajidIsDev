@@ -1,5 +1,5 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 import { tpSkillsState } from '../../../common/componentTypes';
 import ProgressBar from '../../../components/progressBar/ProgressBar';
 import { fetchSkillsState } from './skillsBoxServices';
@@ -14,8 +14,14 @@ const SkillsBox = () => {
   return (
     <div className='skills-box'>
       {
-        state.items.map(({id, placeholder, value}) => (
-          <ProgressBar key={id} id={id} value={value} label={placeholder} />
+        state.items.map(({id, placeholder, value}, i) => (
+          <ScrollAnimator
+            animateIn='animate__slideInUp'
+            delay={150 * i}
+            animateOnce
+          >
+            <ProgressBar key={id} id={id} value={value} label={placeholder} />
+          </ScrollAnimator>
         ))
       }
     </div>

@@ -9,10 +9,9 @@ import { fetchNavbarState } from './navServices';
 import { useAppStateContext } from '../../appUtils/AppState';
 
 const NavBar = (): JSX.Element => {
-  const isMobileMode = window.innerWidth < 550;
-  const [state, setState] = useState<tpNavState>({items: [], isMobileMode: false});
-  const { nav, pages } = useAppStateContext();
+  const { nav, pages, isMobileMode } = useAppStateContext();
 
+  const [state, setState] = useState<tpNavState>({items: [], isMobileMode});
   const {id, visibility} = nav;
 
   useEffect(() => {

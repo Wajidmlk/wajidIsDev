@@ -14,7 +14,7 @@ const TESTING_PAGE = (data: tpPageStructure) =>
   key={data.pageId}
   style={{...data.style, display: data.visibility === "hidden" ? "none" : "block"}}
 >
-  <Gallery id='gallery-002' noOfRows={1} items={[
+  <Gallery id='gallery-003' noOfRows={1} items={[
       {id: "9", src: "https://source.unsplash.com/_cvwXhGqG-o/300x300", value: "test 1"},
       {id: "8", src: "https://source.unsplash.com/AHBvAIVqk64/300x500", value: "test 2"},
       {id: "7", src: "https://source.unsplash.com/VLPLo-GtrIE/300x300", value: "test 3"},
@@ -71,7 +71,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageName: 'Gallery',
         parentId: '',
         sequence: 3,
-        visibility: "hidden",
+   //     visibility: "hidden",
         style: {
           backgroundColor: "black",
           width: "100%",

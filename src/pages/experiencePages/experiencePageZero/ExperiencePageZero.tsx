@@ -12,8 +12,8 @@ const ExperiencePageZero = (props: {page: tpPageStructure, state: tpExperienceSt
         `experiencePage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`}
       style={style}
     >
-      {props.state.map(({heading, data}) => 
-        <ExperienceBox id='expBox000' heading={heading} data={data}/>      
+      {props.state.map(({heading, data}, i) => 
+        <ExperienceBox key={`${i}-exp`} id='expBox000' heading={heading} data={data}/>      
       )}
     </div>
   );

@@ -18,14 +18,14 @@ const serviceGetLinks = (data: string) => {
   return finalData;
 }
 
-const ExperienceBox = ({id, heading, data}: tpExperienceState&tpCompId) => {
+const ExperienceBox = ({id, key, heading, data}: tpExperienceState&tpCompId) => {
   return (
-    <div id={id} className='experience-box'>
+    <div id={id} key={key} className='experience-box'>
       <div className='heading'>{heading}</div>
       {
         data.map((dt, i) => {
           const {title, list, details, duration, organization, description} = dt;
-          return <div key={`${title}-${i}`} className='row' style={{
+          return <div key={`${title}-${i}-${key}`} className='row' style={{
             paddingBottom: (data.length > 1 && i !== data.length -1) ? "50px" : "0px",
           }}>
             <div className='round-cap'></div>

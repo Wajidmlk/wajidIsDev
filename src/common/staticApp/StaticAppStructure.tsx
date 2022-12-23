@@ -9,6 +9,26 @@ import Gallery from '../../components/galleries/Gallery';
 
 const IMG = require('./../images/dp1.jpg');
 
+const TESTING_PAGE = (data: tpPageStructure) =>
+<div
+  id={data.pageId}
+  key={data.pageId}
+  style={{...data.style, display: data.visibility === "hidden" ? "none" : "block"}}
+>
+  <Gallery id='gallery-000' items={[
+      {id: "9", src: "https://source.unsplash.com/_cvwXhGqG-o/300x300", value: "test 1"},
+      {id: "8", src: "https://source.unsplash.com/AHBvAIVqk64/300x500", value: "test 2"},
+      {id: "7", src: "https://source.unsplash.com/VLPLo-GtrIE/300x300", value: "test 3"},
+      {id: "6", src: "https://source.unsplash.com/AR7aumwKr2s/300x300", value: "test 4"},
+      {id: "5", src: "https://source.unsplash.com/dnL6ZIpht2s/300x300", value: "test 5"},
+      {id: "4", src: "https://source.unsplash.com/tV_1sC603zA/300x500", value: "test 6"},
+      {id: "3", src: "https://source.unsplash.com/Xm9-vA_bhm0/300x500", value: "test 7"},
+      {id: "2", src: "https://source.unsplash.com/NTjSR3zYpsY/300x300", value: "test 8"},
+      {id: "1", src: "https://source.unsplash.com/2JH8d3ChNec/300x300", value: "test 9"},
+    ]}
+  />
+</div>
+
 export const GetAppStructure = (): tpAppStructure => {
   return ({
     multiPage: false,
@@ -48,13 +68,13 @@ export const GetAppStructure = (): tpAppStructure => {
       },
       {
         pageId: '230d36aa-2aa4-11ed-a261-0242ac121001',
-        pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120005',
+        pageCatId :'TEST',
         pageName: 'Gallery',
         parentId: '',
         sequence: 3,
+        visibility: "hidden",
         style: {
           backgroundColor: "black",
-          height: "1000px",
           width: "100%",
         }
       },
@@ -152,21 +172,11 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
     case '630d36aa-2aa4-11ed-a261-0242ac120004' :
       pageById = <FooterPage page={page} />
       break;
-    case '630d36aa-2aa4-11ed-a261-0242ac120005' :
-      pageById = <></>;/*<Gallery id='gallery-000' items={[
-        {id: "9", src: "https://source.unsplash.com/_cvwXhGqG-o/300x300", value: "test 1"},
-        {id: "8", src: "https://source.unsplash.com/AHBvAIVqk64/300x500", value: "test 2"},
-        {id: "7", src: "https://source.unsplash.com/VLPLo-GtrIE/300x300", value: "test 3"},
-        {id: "6", src: "https://source.unsplash.com/AR7aumwKr2s/300x300", value: "test 4"},
-        {id: "5", src: "https://source.unsplash.com/dnL6ZIpht2s/300x300", value: "test 5"},
-        {id: "4", src: "https://source.unsplash.com/tV_1sC603zA/300x500", value: "test 6"},
-        {id: "3", src: "https://source.unsplash.com/Xm9-vA_bhm0/300x500", value: "test 7"},
-        {id: "2", src: "https://source.unsplash.com/NTjSR3zYpsY/300x300", value: "test 8"},
-        {id: "1", src: "https://source.unsplash.com/2JH8d3ChNec/300x300", value: "test 9"},
-      ]}/>*/
+    case 'TEST' :
+      pageById = <TESTING_PAGE {...page} />
       break;
     default :
-      pageById = <HomePage page={page} />
+      pageById = <>NO PAGE</>
     break;
   
   }

@@ -67,7 +67,7 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
                 type: "element",
                 element: <div
                   className='showcase-inside-image page-backgroundImage'
-                  style={{backgroundImage: 'url(https://meritglobaltraining.com/backend/uploads/e29544dbabbcd8ae3eb604d30e3478eb.jpg)', backgroundAttachment: "scroll"}}
+                  style={{backgroundImage: 'url(https://thumbs.dreamstime.com/b/front-end-applications-color-concept-binary-code-digital-technology-background-web-abstract-programming-created-virus-242773661.jpg)'}}
                 ></div>
               }}
               defaultHeight={"100%"}

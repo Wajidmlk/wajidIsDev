@@ -7,8 +7,10 @@ import { tpNavState } from '../../../common/componentTypes';
 
 type tpProps =  {state: tpNavState};
 
-const getNavLines = (rows: Array<tpPageStructure|undefined>, multiPage: boolean) => rows.map(item => (
-  <a 
+const getNavLines = (rows: Array<tpPageStructure|undefined>, multiPage: boolean) => 
+rows.map(item => (
+  <a
+    key={item?.pageId} 
     href={`${multiPage ? '/' : '#'}${item?.pageId}`}
   >
     <li key={item?.pageId}>{item?.pageName}</li>

@@ -6,6 +6,16 @@ export type tpNavState = {
   isMobileMode: boolean,
 };
 
+export type tpGallery = {
+  items: {
+    id: string,
+    src: string,
+    value: string,
+  }[],
+  noOfRows: number,
+  className?: string,
+};
+
 export type tpSkillsState = {
   items: {
     id: string,
@@ -16,6 +26,7 @@ export type tpSkillsState = {
 
 export type tpExperienceState = {
   heading: string,
+  key?: string,
   data: {
     title: string,
     organization?: string,
@@ -36,6 +47,7 @@ export type tpFooterState = {
 
 export type tpProgressBarProps =  {
   value: number,
+  key?: string,
   max?: number,
   min?: number,
   label?: string,

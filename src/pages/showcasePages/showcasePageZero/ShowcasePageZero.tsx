@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
+import { ToastWIP } from '../../../baseComponents/reactToast/ReactToast';
 import { tpPageStructure } from '../../../common/commonTypes';
 import { tpProductsState } from '../../../common/componentTypes';
 import ProductContainer from '../productContainer/ProductContainer';
@@ -23,8 +24,9 @@ const ShowcasePageZero = ({page, state, setState}: {
               dataRow={item}
               state={state}
               setState={setState}
-              onBannerClick={() => {}}
-            />))
+              onBannerClick={() => ToastWIP()}
+            />
+          ))
         }
       </div>
     </div>

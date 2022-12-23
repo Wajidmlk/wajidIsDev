@@ -1,11 +1,11 @@
 import { tpAppStructure, tpPageStructure } from '../commonTypes';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
 import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
 import FooterPage from '../../pages/footerPages/FooterPage';
 import Gallery from '../../components/galleries/Gallery';
+import ScrollAnimator from '../../baseComponents/scrollAnimator/ScrollAnimator';
 
 const IMG = require('./../images/dp1.jpg');
 
@@ -32,6 +32,7 @@ const TESTING_PAGE = (data: tpPageStructure) =>
 export const GetAppStructure = (): tpAppStructure => {
   return ({
     multiPage: false,
+    isMobileMode: false,
     pages: [
       {
         pageId: '630d36aa-2aa4-11ed-a261-0242ac121000',
@@ -181,11 +182,13 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
   
   }
   if(page.pageCatId !== "630d36aa-2aa4-11ed-a261-0242ac120004") {
-    pageById = <AnimationOnScroll
+    pageById = <ScrollAnimator
       animateIn="animate__fadeIn"
+      delay={15}
+      animateOnce
     >
       {pageById}
-    </AnimationOnScroll>;
+    </ScrollAnimator>;
   }
   return pageById;
 }

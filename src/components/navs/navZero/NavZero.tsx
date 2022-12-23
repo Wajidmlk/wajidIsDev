@@ -19,7 +19,6 @@ rows.map(item => (
 
 const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
   const {multiPage} = useAppStateContext();
-  console.log(isMobileMode)
   if(!isMobileMode) return (
     <ul className='nav-000'>
       {getNavLines(items, multiPage)}

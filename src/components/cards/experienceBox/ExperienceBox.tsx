@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 import { tpCompId } from '../../../common/commonTypes';
 import { tpExperienceState } from '../../../common/componentTypes';
 
@@ -25,17 +26,23 @@ const ExperienceBox = ({id, key, heading, data}: tpExperienceState&tpCompId) => 
       {
         data.map((dt, i) => {
           const {title, list, details, duration, organization, description} = dt;
-          return <div key={`${title}-${i}-${key}`} className='row' style={{
+          return <ScrollAnimator
+            animateIn="animate__slideInUp"
+            delay={500}
+            animateOnce
+          >
+            <div key={`${title}-${i}-${key}`} className='row' style={{
             paddingBottom: (data.length > 1 && i !== data.length -1) ? "50px" : "0px",
           }}>
             <div className='round-cap'></div>
-            <div className='title'>{title}</div>
-            {organization && <div className='org-name'>{organization}</div>}
-            {duration && <div className='duration'>{duration}</div>}
-            {details && <div className='additional-details'><i>{serviceGetLinks(details)}</i></div>}
-            {description && <div className='description'>{serviceGetLinks(description)}</div>}
-            {(list && list.length > 0) && <ul className='list'>{list.map(point => <li>{serviceGetLinks(point)}</li>)}</ul>}
-          </div>;
+              <div className='title'>{title}</div>
+              {organization && <div className='org-name'>{organization}</div>}
+              {duration && <div className='duration'>{duration}</div>}
+              {details && <div className='additional-details'><i>{serviceGetLinks(details)}</i></div>}
+              {description && <div className='description'>{serviceGetLinks(description)}</div>}
+              {(list && list.length > 0) && <ul className='list'>{list.map(point => <li>{serviceGetLinks(point)}</li>)}</ul>}
+            </div>
+          </ScrollAnimator>
         })
       }
     </div>

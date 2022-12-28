@@ -1,8 +1,7 @@
 {
   "name": "wajidIsDev",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "http://wajidmlk.github.io/wajidIsDev",
+  "private": true,
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.4",

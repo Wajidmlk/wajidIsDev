@@ -13,9 +13,9 @@
   }
   .footer-body {
   ul { list-style: none; }
-  a { text-decoration: unset; }
-  a:hover { text-decoration: underline; }
-  ul > li > a { color:#fff; }
+  .anchor { text-decoration: unset; }
+  .anchor:hover { text-decoration: underline; }
+  ul > li > .anchor { color:#fff; }
   ul > li { line-height: 1.5em; }
     display: block;
     position: relative;
@@ -84,7 +84,7 @@
     position: absolute;
     top: -28px;
 }
-a.button {
+.anchor.button {
     display: inline-flex;
     position: relative;
     height: 60px;

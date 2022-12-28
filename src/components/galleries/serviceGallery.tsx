@@ -3,12 +3,12 @@ import { tpGallery } from "../../common/componentTypes";
 export const ServiceGallery1Maker = ({ items, noOfRows }: tpGallery) => {
   const table: JSX.Element[] = [];
   const tableRows: JSX.Element[] = items.map(({ id, src, value }) => (
-    <a key={id} target="_blank" className="gallery__link">
+    <div key={id} className="gallery__link">
       <figure className="gallery__thumb">
         <img src={src} alt={value} className="gallery__image" />
         <figcaption className="gallery__caption">{value}</figcaption>
       </figure>
-    </a>
+    </div>
   ));
   const dataInRow = Math.round(tableRows.length / noOfRows);
   for (let x = 0; x < noOfRows; x++) {

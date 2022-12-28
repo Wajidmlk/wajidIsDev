@@ -24,19 +24,23 @@ const FooterPageZero = ({page}: {page: tpPageStructure}) => {
       <div className="footer-body">
         <div className="inner">
           <div className="column is-logo">
-            <a href="#" className="main-logo">
+            <div className="main-logo">
               <div className="logo"><img src={LOGO} alt="stackfindover" /></div>
               <div className="logo-info">
                 <div className="text">Malik Wajid</div>
                 <span className="copyright">© 2022. All rights reserved.</span>
               </div>
-            </a>
+            </div>
           </div>
           <div className="column is-nav">
             <div className="column-title">Blog</div>
               <ul>
-                <li><a onClick={()=> ToastWIP()}>AI is eating the World</a></li>
-                <li><a onClick={()=> ToastWIP()}>9 to 5 jobs are old ways</a></li>
+                <li>
+                  <div className="anchor" onClick={()=> ToastWIP()}>AI is eating the World</div>
+                </li>
+                <li>
+                  <div className="anchor" onClick={()=> ToastWIP()}>9 to 5 jobs are old ways</div>
+                </li>
               </ul>
           </div>
         </div>

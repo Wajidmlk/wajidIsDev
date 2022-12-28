@@ -2,9 +2,9 @@ import React from 'react';
 import { tpCompProps } from '../../../common/commonTypes';
 
 export const Button0 = ({ className, onClick, id, label }: tpCompProps): JSX.Element => (
-  <a href='' id={id} onClick={onClick} className={`button-0 ${className}`}>
+  <div id={id} onClick={onClick} className={`button-0 ${className}`}>
     {label || 'Click'}
-  </a>    
+  </div>    
 );
 
 export const Button1 = ({ className, onClick, id, label }: tpCompProps): JSX.Element => (

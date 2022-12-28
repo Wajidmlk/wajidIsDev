@@ -58,7 +58,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                 </div>
             </div>
             <img
-              alt="display picture"
+              alt="displaying"
               src={dp?.url || DEFAULT_IMAGE_URL}
               className={`box user-dp`}
              />

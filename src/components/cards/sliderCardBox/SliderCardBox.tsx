@@ -36,7 +36,22 @@ const SliderCardBox = ({image, para, title, className, children, defaultHeight, 
           <p className="description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         </div>
       </div>
-      <div className="footer"><a className="btn" id="prev" href="#" ripple-color="#666666">Prev</a><a className="btn" id="next" href="#" ripple-color="#666666">Next</a></div>
+      <div className="footer">
+        <div
+          className="btn"
+          id="prev"
+          ripple-color="#666666"
+        >
+          Prev
+        </div>
+        <div
+          className="btn"
+          id="next"
+          ripple-color="#666666"
+        >
+          Next
+        </div>
+      </div>
     </div>
   );
 };

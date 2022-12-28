@@ -29,24 +29,24 @@ const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
     <ul className='nav-000'>
       {
         !toggle ? (
-          <a className='button'>
+          <div className='button'>
             <li
               key='open-nav'
               onClick={() => setToggle(true)}
             >
               {getIcon({ CODE: "MenuOpen", titleAccess:`Open Nav` })}
             </li>
-          </a>
+          </div>
         ) : (
           <>
-            <a className='button'>
+            <div className='button'>
               <li
                 key='close-nav'
                 onClick={() => setToggle(false)}
               >
                 {getIcon({ CODE: "Close", titleAccess:`Close Nav` })}
               </li>
-            </a>
+            </div>
             {getNavLines(items, multiPage)}
           </>
         )

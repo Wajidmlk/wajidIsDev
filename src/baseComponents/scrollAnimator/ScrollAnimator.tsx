@@ -8,17 +8,20 @@ type tpProps = {
   children: JSX.Element | JSX.Element[],
   delay?: number,
   duration?: number,
+  className?: string,
   animateIn?: string,
   animateOnce?: boolean,
 }
 
 
-const ScrollAnimator = ({children, animateIn, delay, duration, animateOnce}: tpProps): JSX.Element => <AnimationOnScroll
+const ScrollAnimator = ({
+  children, animateIn, delay, className, duration, animateOnce,
+}: tpProps): JSX.Element => <AnimationOnScroll
     animateIn={animateIn}
     delay={delay}
     duration={duration}
     animateOnce={animateOnce}
-    className='scroll-animator'
+    className={`scroll-animator ${className}`}
   >
     {children}
 </AnimationOnScroll>

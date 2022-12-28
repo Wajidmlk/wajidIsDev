@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import React from 'react';
+import { useState } from 'react';
+import { getIcon } from '../../../appUtils/AppUtilities';
 import { tpSliderParams } from '../../../common/componentTypes';
 
 
@@ -23,8 +23,8 @@ const SliderZero = ({data, hideArrows}:tpSliderParams) => {
   return (
     <section className='slider-000'>
       { !!hideArrows && <>
-          <ArrowBackIosNewIcon className='left-arrow' onClick={prevSlide} />
-          <ArrowForwardIosIcon className='right-arrow' onClick={nextSlide} />
+          {getIcon({CODE: "ArrowBackIosNew", className:'left-arrow', onClick: prevSlide})}
+          {getIcon({CODE: "ArrowForwardIos", className:'right-arrow', onClick: nextSlide})}
         </>
       }
       {data.map((slide, index) => {

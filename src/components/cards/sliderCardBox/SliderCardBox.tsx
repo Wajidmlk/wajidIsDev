@@ -1,5 +1,5 @@
 import React from 'react';
-import { getIcon, tpIconCODE } from "../../../appUtils/AppUtilities";
+import { tpIconCODE } from "../../../appUtils/AppUtilities";
 
 type tpProps = {
   title?: string,

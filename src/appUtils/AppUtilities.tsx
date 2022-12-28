@@ -1,4 +1,5 @@
-import React, {cloneElement} from 'react';
+import React  from 'react';
+import {cloneElement} from 'react';
 import { tpStyleProps } from '../common/commonTypes';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -13,6 +14,8 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import BurstModeIcon from '@mui/icons-material/BurstMode';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import OpenInFullIcon from '@mui/icons-material/OpenInFull';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
@@ -37,6 +40,8 @@ const icons = {
   QueryStats: <QueryStatsIcon />,
   OpenInFull: <OpenInFullIcon />,
   LocalPrintshop: <LocalPrintshopIcon />,
+  ArrowForwardIos: <ArrowForwardIosIcon />,
+  ArrowBackIosNew: <ArrowBackIosNewIcon />,
   CloseFullscreen: <CloseFullscreenIcon />,
   LocalPostOffice: <LocalPostOfficeIcon />,
   AppRegistration: <AppRegistrationIcon />,

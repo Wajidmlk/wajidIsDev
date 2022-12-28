@@ -1,6 +1,8 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { getIcon } from '../../../appUtils/AppUtilities';
 import { ToastWIP } from '../../../baseComponents/reactToast/ReactToast';
+import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 import { tpProduct, tpProductsState } from '../../../common/componentTypes';
 import { Button } from '../../../components/buttons/Button';
 import Slider from '../../../components/slider/Slider';
@@ -70,59 +72,65 @@ const ProductContainer = (props : tpProps) => {
     badges, sideBanner, className, toggleSize, toggleView, description,
   }, state, setState, onBannerClick} = props;
   return (
-    <div
+    <ScrollAnimator
+      animateIn={`animate__slideIn${seqNo % 2 === 0 ? "left" : "right"}`}
+      delay={150 * seqNo}
       className={`product-container ${className}`}
-      onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
+      animateOnce
     >
-      {(!toggleView && !toggleSize) && <div className='upper-description'>
-        <p>{description}</p>
-      </div>}
-      <ViewMode {...props} />
-      { sideBanner &&
-        <div className={`side-strip ${!toggleView && "visibility-hidden"}`} onClick={onBannerClick}>
-          <div className='strip-corner-left'></div>
-          <div className='strip-value'>{sideBanner.value}</div>
-          <div className='strip-corner-right'></div>
-        </div>
-      }
-      {(badges && badges.length > 0) && <div className={`badges ${!toggleView && "visibility-hidden"}`}>
-        {
-          badges.map((badge, badgeNo) => {
-            const {id, name, show, check, icon} = badge;
-            const Icon = icon ? getIcon({CODE: icon, style:{height: "18px"}}) : "";
-            return (
-            <div
-              id={id}
-              key={id}
-              className='badge'
-              onMouseEnter={() => onHoverOrClickBadges(seqNo, true, "check", badgeNo, state, setState)}
-              onMouseLeave={() => onHoverOrClickBadges(seqNo, false, "check", badgeNo, state, setState)}
-              onClick={() => onHoverOrClickBadges(seqNo, !show, "show", badgeNo, state, setState)}
-            >
-              { !(check || show) ?
-                <div>{Icon ? Icon : name.charAt(0).toLocaleUpperCase()}</div> : 
-                <div style={{display: "flex", height: "18px"}}><>{Icon}</> <>{name}</></div>
-              }
-            </div>
-          )})
+      <div 
+        onMouseEnter={() => onHoverProduct(seqNo, true, "toggleView", state, setState)}
+      >
+        {(!toggleView && !toggleSize) && <div className='upper-description'>
+          <p>{description}</p>
+        </div>}
+        <ViewMode {...props} />
+        { sideBanner &&
+          <div className={`side-strip ${!toggleView && "visibility-hidden"}`} onClick={onBannerClick}>
+            <div className='strip-corner-left'></div>
+            <div className='strip-value'>{sideBanner.value}</div>
+            <div className='strip-corner-right'></div>
+          </div>
         }
-      </div>}
-      <div className='toggle-button'>
-        <Button
-          className='toggle-product-button'
-          compId='button3'
-          label={ toggleSize ? 'Minimize' : 'Maximize'}
-          onClick={() => {
-            const copyData = {...state};
-            copyData.data[seqNo].className = toggleSize ?
-              copyData.data[seqNo].className.replace("product-full-screen", "") :
-              copyData.data[seqNo].className.replace("", "product-full-screen");
-            copyData.data[seqNo].toggleSize = !toggleSize;
-            setState(copyData);
-          }}
-        />
+        {(badges && badges.length > 0) && <div className={`badges ${!toggleView && "visibility-hidden"}`}>
+          {
+            badges.map((badge, badgeNo) => {
+              const {id, name, show, check, icon} = badge;
+              const Icon = icon ? getIcon({CODE: icon, style:{height: "18px"}}) : "";
+              return (
+              <div
+                id={id}
+                key={id}
+                className='badge'
+                onMouseEnter={() => onHoverOrClickBadges(seqNo, true, "check", badgeNo, state, setState)}
+                onMouseLeave={() => onHoverOrClickBadges(seqNo, false, "check", badgeNo, state, setState)}
+                onClick={() => onHoverOrClickBadges(seqNo, !show, "show", badgeNo, state, setState)}
+              >
+                { !(check || show) ?
+                  <div>{Icon ? Icon : name.charAt(0).toLocaleUpperCase()}</div> : 
+                  <div style={{display: "flex", height: "18px"}}><>{Icon}</> <>{name}</></div>
+                }
+              </div>
+            )})
+          }
+        </div>}
+        <div className='toggle-button'>
+          <Button
+            className='toggle-product-button'
+            compId='button3'
+            label={ toggleSize ? 'Minimize' : 'Maximize'}
+            onClick={() => {
+              const copyData = {...state};
+              copyData.data[seqNo].className = toggleSize ?
+                copyData.data[seqNo].className.replace("product-full-screen", "") :
+                copyData.data[seqNo].className.replace("", "product-full-screen");
+              copyData.data[seqNo].toggleSize = !toggleSize;
+              setState(copyData);
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </ScrollAnimator>
   );
 }
 

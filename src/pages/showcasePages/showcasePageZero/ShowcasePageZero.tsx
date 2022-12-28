@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { ToastWIP } from '../../../baseComponents/reactToast/ReactToast';
 import { tpPageStructure } from '../../../common/commonTypes';
 import { tpProductsState } from '../../../common/componentTypes';

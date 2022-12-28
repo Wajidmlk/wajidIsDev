@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 import { tpSkillsState } from '../../../common/componentTypes';
 import ProgressBar from '../../../components/progressBar/ProgressBar';

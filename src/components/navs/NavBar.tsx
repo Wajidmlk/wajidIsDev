@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { tpCompId } from '../../common/commonTypes';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import { tpNavState } from '../../common/componentTypes';
 import NavOne from './navOne/NavOne';
 import NavZero from './navZero/NavZero';

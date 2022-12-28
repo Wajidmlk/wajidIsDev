@@ -9,7 +9,6 @@ import {
   HandleDragLeave,
   HandleDragOver,
   HandleSelectFiles,
-  HandleUpload,
   OpenFileDialog,
 } from './serviceDragDropFiles';
 

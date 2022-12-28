@@ -6,8 +6,7 @@ import {
 } from './serviceGallery';
 
 const Gallery = (props: tpCompId&tpGallery): JSX.Element => {
-  const isMobileMode = window.innerWidth < 550;
-  const {id, items, className} = props;
+  const {id} = props;
   let selectedComp = <></>;
   switch(id) {
     case 'gallery-001':

@@ -1,7 +1,8 @@
 {
-  "name": "my-app",
+  "name": "wajidIsDev",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "http://wajidmlk.github.io/wajidIsDev",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.4",
@@ -17,6 +18,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "animate.css": "^4.1.1",
+    "eslint": "^8.30.0",
     "file-saver": "^2.0.5",
     "material-ui-popup-state": "^4.1.0",
     "node-sass": "^7.0.3",
@@ -33,6 +35,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "lint": "eslint --ext js,ts,tsx src",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,6 +57,7 @@
   "devDependencies": {
     "@types/file-saver": "^2.0.5",
     "@types/react-resizable": "^3.0.3",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.8.4"
   }
 }

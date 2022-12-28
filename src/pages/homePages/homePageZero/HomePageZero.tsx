@@ -20,7 +20,7 @@ const userIntroData = {
 const HomePageZero = ({page}: {page: tpPageStructure}) => {
   const { style, pageId } = page;
   const { userData, multiPage } = useAppStateContext();
-  const { fullName, dp } = userData;
+  const { dp } = userData;
   return (
     <div id={pageId} className='homePage-000'>
       
@@ -58,6 +58,7 @@ const HomePageZero = ({page}: {page: tpPageStructure}) => {
                 </div>
             </div>
             <img
+              alt="display picture"
               src={dp?.url || DEFAULT_IMAGE_URL}
               className={`box user-dp`}
              />

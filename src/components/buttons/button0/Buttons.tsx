@@ -33,7 +33,6 @@ export const Button3 = ({ className, onClick, id, label }: tpCompProps): JSX.Ele
   <button
     className={`button-3 ${className}`}
     id={id}
-    role='button'
     onClick={onClick}
   >
     {label || "Click"}

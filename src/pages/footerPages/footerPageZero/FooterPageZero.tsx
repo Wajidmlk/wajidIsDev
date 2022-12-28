@@ -7,7 +7,7 @@ import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimato
 const LOGO = require("../../../common/images/logo.png");
 
 const FooterPageZero = ({page}: {page: tpPageStructure}) => {
-  const { style, pageId } = page;
+  const { pageId } = page;
   const {footer} = useAppStateContext();
 
   return (

@@ -11,7 +11,7 @@ const AppStateProvider = ({children}: tpProps):JSX.Element => {
   const isMobileMode = window.innerWidth < 550;
   const [appState, setAppState] = useState<tpAppStructure>(GetAppStructure());
 
-  const value = useMemo(() => ({ ...appState, setAppState, isMobileMode }), [appState]);
+  const value = useMemo(() => ({ ...appState, setAppState, isMobileMode }), [appState, isMobileMode]);
   
   return (
     <ctxAppState.Provider value={value}>{children}</ctxAppState.Provider>

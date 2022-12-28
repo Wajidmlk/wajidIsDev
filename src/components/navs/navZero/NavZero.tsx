@@ -19,12 +19,12 @@ rows.map(item => (
 
 const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
   const {multiPage} = useAppStateContext();
+  const [toggle, setToggle] = useState<boolean>(false);
   if(!isMobileMode) return (
     <ul className='nav-000'>
       {getNavLines(items, multiPage)}
     </ul>
   )
-  const [toggle, setToggle] = useState<boolean>(false);
   return (
     <ul className='nav-000'>
       {

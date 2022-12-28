@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { Button } from '../../components/buttons/Button';
-import DialogBox from '../dialogBox/DialogBox';
-import DraggableDialog from '../dialogBox/draggableDialog/DraggableDialog';
-import { Toast } from '../reactToast/ReactToast';
 type tpProps = {
   children: JSX.Element | JSX.Element[],
   delay?: number,

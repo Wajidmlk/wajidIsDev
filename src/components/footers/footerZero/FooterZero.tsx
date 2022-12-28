@@ -31,7 +31,7 @@ const FooterZero = ({state}:{state: tpFooterData[]}): JSX.Element => {
       <DraggableDialog
         title={state[openData?.order || 0].value}
         open={openData.option === "open"}
-        children={<iframe src={openData.link} />}
+        children={<iframe title={openData.link} src={openData.link} />}
         onClose={() => setOpenData(openDataDefaultState)}
       />
     </div>    

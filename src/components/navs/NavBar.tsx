@@ -15,7 +15,7 @@ const NavBar = (): JSX.Element => {
 
   useEffect(() => {
     fetchNavbarState(setState, pages, isMobileMode);
-  }, []);
+  }, [pages, isMobileMode]);
 
   if(visibility === "hidden") return <></>;
 

@@ -6,7 +6,6 @@ import {
 import { Close } from '@mui/icons-material';
 import { DialogProps } from '@mui/material/Dialog/Dialog';
 import { PaperProps } from '@material-ui/core/Paper';
-import './dialogBox.scss';
 
 export type tpDialogBoxProps = {
   open: boolean,

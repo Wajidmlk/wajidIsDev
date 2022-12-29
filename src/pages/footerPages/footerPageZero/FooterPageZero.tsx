@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppStateContext } from '../../../appUtils/AppState';
 import { tpPageStructure } from '../../../common/commonTypes';
-import InformationStripe from '../../../components/informationStripe/InformationStripe';
+import InformationStripe from '../../../components/stripes/informationStripe/InformationStripe';
 import {ToastWIP} from '../../../baseComponents/reactToast/ReactToast';
 import ScrollAnimator from '../../../baseComponents/scrollAnimator/ScrollAnimator';
 const LOGO = require("../../../common/images/logo.png");

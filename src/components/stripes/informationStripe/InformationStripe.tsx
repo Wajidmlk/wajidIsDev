@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dispatch, SetStateAction, useState } from 'react';
-import { getIcon } from '../../appUtils/AppUtilities';
-import { tpFooterData } from '../../common/commonTypes';
+import { getIcon } from '../../../appUtils/AppUtilities';
+import { tpFooterData } from '../../../common/commonTypes';
 
 type tpProps = {
   shape?: "round" | "box" | "none",

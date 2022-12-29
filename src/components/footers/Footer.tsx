@@ -1,6 +1,6 @@
 import React from 'react';
 import { tpCompId, tpFooter } from '../../common/commonTypes';
-import InformationStripe from '../informationStripe/InformationStripe';
+import InformationStripe from '../stripes/informationStripe/InformationStripe';
 import FooterZero from './footerZero/FooterZero';
 
 const Footer = ({id, data, visibility}: tpFooter&tpCompId): JSX.Element => {

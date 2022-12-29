@@ -59,5 +59,5 @@ export const getIcon = ({CODE, style, titleAccess, onClick, className}: tpProps)
 
   if(!CODE) return "";
 
-  return cloneElement(icons[CODE], {style, titleAccess, className, onClick});;
+  return cloneElement(icons[CODE], {style, titleAccess, className, onClick});
 }

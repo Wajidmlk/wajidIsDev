@@ -14,8 +14,6 @@ import { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import { Resizable } from 'react-resizable';
-import 'react-resizable/css/styles.css';
-import './draggableDialog.scss';
 import DialogBox from '../DialogBox';
 import { tpDialogBoxProps } from '../DialogBox';
 import { getIcon } from '../../../appUtils/AppUtilities';

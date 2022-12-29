@@ -1,11 +1,19 @@
 import React from 'react';
+import { useAppStateContext } from '../../../appUtils/AppState';
 import { tpPageStructure } from '../../../common/commonTypes';
 import { tpExperienceState } from '../../../common/componentTypes';
 import ExperienceBox from '../../../components/cards/experienceBox/ExperienceBox';
+import BannerStripe from '../../../components/stripes/bannerStripe/BannerStripe';
 
 const ExperiencePageZero = (props: {page: tpPageStructure, state: tpExperienceState[]}) => {
+  const {isMobileMode} = useAppStateContext();
   const { style, pageId } = props.page;
-  return (
+  return <BannerStripe
+    bannerMessage='Recent CV'
+    width={isMobileMode ? 10 : 20}
+    raised
+    left
+  >
     <div
       id={pageId}
       className={
@@ -16,7 +24,7 @@ const ExperiencePageZero = (props: {page: tpPageStructure, state: tpExperienceSt
         <ExperienceBox key={`${i}-exp`} id='expBox000' heading={heading} data={data}/>      
       )}
     </div>
-  );
+  </BannerStripe>
 };
 
 export default ExperiencePageZero;

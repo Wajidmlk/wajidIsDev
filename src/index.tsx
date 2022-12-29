@@ -26,6 +26,7 @@ import './baseComponents/dialogBox/dialogBox.scss';
 import './baseComponents/reactToast/reactToast.scss';
 import './pages/experiencePages/experiencePages.scss';
 import './components/cards/experienceBox/experienceBox.scss';
+import './components/stripes/bannerStripe/bannerStripe.scss';
 import './components/stripes/informationStripe/informationStripe.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './baseComponents/dialogBox/draggableDialog/draggableDialog.scss';

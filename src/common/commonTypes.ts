@@ -1,12 +1,15 @@
 import { tpIconCODE } from "../appUtils/AppUtilities";
 
 export type tpStyleProps = {
-  backgroundImage?: string,
-  backgroundColor?: string,
-  height?: string,
+  color?: string,
   width?: string,
-  display?: string,
+  border?: string,
+  height?: string,
+  margin?: string,
   padding?: string,
+  display?: string,
+  backgroundColor?: string,
+  backgroundImage?: string,
 }
 
 export type tpPageStructure = {

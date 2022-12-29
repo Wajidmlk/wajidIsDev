@@ -1,79 +1,45 @@
 import React from 'react';
-import { Dispatch, SetStateAction, useState } from 'react';
-import { getIcon } from '../../../appUtils/AppUtilities';
-import { tpFooterData } from '../../../common/commonTypes';
+import { cloneElement } from 'react';
 
 type tpProps = {
-  shape?: "round" | "box" | "none",
-  direction?: "vertical" | "horizontal",
-  size?: number,
-  className?: string,
-  data: tpFooterData[],
+  children?: JSX.Element,
+  onClick?: () => void,
+  bColor?: string,
+  color?: string,
+  bannerMessage: string,
+  left?: boolean,
+  raised?: boolean,
+  zIndex?: boolean,
+  hide?: boolean,
+  width?: number,
 }
-const onHoverBox = (
-  seqNo: number, value: boolean, type: "detailed", state: tpProps,
-  setState: Dispatch<SetStateAction<tpProps>>,
-) => {
- const copyData = {...state};
- copyData.data[seqNo][type] = value;
- setState(copyData);
-}
-
-const BannerStripe = (props: tpProps): JSX.Element => {
-  const [state, setState] = useState<tpProps>({
-    direction: "vertical", size: 70, shape: "round", ...props,
-  });
-
-  const {direction, shape, size, className} = state;
-
-  const boxesShape = {
-    borderRadius: "0%", height: size || 20, width: size || 20,
+const BannerStripe = ({
+  children, hide, bColor, zIndex, color, left, raised, width, onClick, bannerMessage,
+}: tpProps): JSX.Element => {
+  
+  if(!children) return <></>;
+  
+  const {style, className} = children.props;
+  console.log(children)
+  const styling = {
+    ...style,
+    color: color || "black",
+    ["--c" as any]: bColor || "lightblue",
+    ["--f" as any]: `${width || (10 + bannerMessage.length)}px`,
+    ["--d" as any]: `${raised ? bannerMessage.length : "0"}px`,
   };
-  switch(shape) {
-    case "round":
-    boxesShape.borderRadius = "50%";
-    break;
-  }
-
-  return <div
-    className={`information-stripe ${className}`}
-    style={{
-      display: "flex", flexDirection: direction === "vertical" ? "column" : "row",
-    }}
-  >
-    {
-      state.data.map((box, i) => {
-        const {value, icon, style, detailed, mod, link} = box;
-        const iconSize = {paddingLeft: "5px", height: "60%", width: "60%"};
-        const IconJSX = getIcon({CODE: icon, titleAccess: icon, style: !detailed ? iconSize :{}}) || value;
-
-        return <div key={`${value}-${i}`} className='stripe-box' style={{
-            ...style,
-            ...boxesShape, 
-          }}
-          onMouseEnter={() => {
-            onHoverBox(i, true, "detailed", state, setState); 
-          }}
-          onMouseLeave={() => {
-            onHoverBox(i, false, "detailed", state, setState); 
-          }}
-          onClick={() => (mod === "goto" && window) && window.open(link)}
-        >
-          {
-            (!!detailed) ?
-              <div>
-                <div>
-                  {IconJSX}
-                </div>
-                &nbsp;
-                <textPath>{value}</textPath>
-              </div> :
-              <div>{IconJSX}</div>
-          }
-        </div>
-      })
-    }
-  </div>;
-}
+  return cloneElement(
+    children, {
+      ...children.props,
+      style: styling, onClick,
+      "data-ribbon": bannerMessage,
+      className: `
+      stripeContainer${left ? " left " : ""} 
+      ${hide ? "hide" : ""} 
+      ${zIndex ? "zIndex" : ""}
+      ${className}`,
+    },
+  );
+};
 
 export default BannerStripe;

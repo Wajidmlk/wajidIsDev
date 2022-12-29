@@ -5,6 +5,8 @@ import SkillsBox from '../skillsBox/SkillsBox';
 import { Button } from '../../../components/buttons/Button';
 import { saveAs } from "file-saver";
 import { tpIconCODE } from '../../../appUtils/AppUtilities';
+import BannerStripe from '../../../components/stripes/bannerStripe/BannerStripe';
+import { useAppStateContext } from '../../../appUtils/AppState';
 
 const WajidResume = require("../../../common/resume/WajidResumeDec.pdf");
 
@@ -42,8 +44,14 @@ const data = [
 ];
 
 const IntroPageZero = ({page}: {page: tpPageStructure}) => {
+  const {isMobileMode} = useAppStateContext();
   const { style, pageId } = page;
-  return (
+  return <BannerStripe
+    bannerMessage='My Target'
+    width={isMobileMode ? 15 : 25}
+    raised
+    left
+  >
     <div id={pageId} className={
       `introPage-000 ${style.backgroundImage ? 'page-backgroundImage' : ''}`} style={style}>
       <div className="showcase-card-boxes">
@@ -86,7 +94,7 @@ const IntroPageZero = ({page}: {page: tpPageStructure}) => {
         </div>
       </div>
     </div>
-  );
+  </BannerStripe>
 };
 
 export default IntroPageZero;

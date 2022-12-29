@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wajidIsDev/static/css/main.d090e475.css",
-    "main.js": "/wajidIsDev/static/js/main.166c9398.js",
+    "main.css": "/wajidIsDev/static/css/main.97ac13be.css",
+    "main.js": "/wajidIsDev/static/js/main.6b1c7d96.js",
     "static/media/2.png": "/wajidIsDev/static/media/2.558abcc30cca4081d8a4.png",
     "static/media/0.png": "/wajidIsDev/static/media/0.2810939c7f67ecf98b29.png",
     "static/media/1.png": "/wajidIsDev/static/media/1.5fb9a32ecd1cee5f9f42.png",
@@ -17,11 +17,11 @@
     "static/media/logo.png": "/wajidIsDev/static/media/logo.cdec204a73ec5d6dce2a.png",
     "static/media/10.png": "/wajidIsDev/static/media/10.07014332c685f7693104.png",
     "index.html": "/wajidIsDev/index.html",
-    "main.d090e475.css.map": "/wajidIsDev/static/css/main.d090e475.css.map",
-    "main.166c9398.js.map": "/wajidIsDev/static/js/main.166c9398.js.map"
+    "main.97ac13be.css.map": "/wajidIsDev/static/css/main.97ac13be.css.map",
+    "main.6b1c7d96.js.map": "/wajidIsDev/static/js/main.6b1c7d96.js.map"
   },
   "entrypoints": [
-    "static/css/main.d090e475.css",
-    "static/js/main.166c9398.js"
+    "static/css/main.97ac13be.css",
+    "static/js/main.6b1c7d96.js"
   ]
 }

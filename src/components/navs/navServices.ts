@@ -4,11 +4,14 @@ import { tpNavState } from '../../common/componentTypes';
 
 export const fetchNavbarState = async(
   setState: Dispatch<SetStateAction<tpNavState>>, pages: Partial<tpPageStructure[]>,
-  isMobileMode: boolean,
+  isMobileMode: boolean, isUser: boolean,
   ) => {
     const items: Partial<tpPageStructure[]> = [];
     pages.forEach(page => {
-      if(!page?.visibility || page?.visibility !== 'hidden') items.push(page);
+      if(
+        (!page?.visibility || page.visibility !== 'hidden') && 
+        (!page?.private || (page?.private && isUser))
+      ) items.push(page);
     })
   setState({items, isMobileMode})
 }

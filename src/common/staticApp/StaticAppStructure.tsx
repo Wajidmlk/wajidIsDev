@@ -1,4 +1,4 @@
-import { tpAppStructure, tpPageStructure } from '../commonTypes';
+import { tpAppStructure, tpPageStructure, tpUser } from '../commonTypes';
 import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
@@ -71,6 +71,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageId: '330d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120002',
         pageName: 'Experience',
+        private: true,
         parentId: '',
         sequence: 3,
         style: {
@@ -154,8 +155,8 @@ export const GetAppStructure = (): tpAppStructure => {
   });
 }
 
-export const GetPageById = ({page}: {page: tpPageStructure}) => {
-  if(page?.visibility === "hidden") return <></>
+export const GetPageById = ({page, user}: {page: tpPageStructure, user?: tpUser}) => {
+  if(page?.visibility === "hidden" || (page?.private && (!user || !user?.isLogin))) return <></>;
   let pageById: JSX.Element = <></>;
   switch(page.pageCatId) {
     case '630d36aa-2aa4-11ed-a261-0242ac120000' :

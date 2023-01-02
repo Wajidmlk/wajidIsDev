@@ -1,6 +1,6 @@
 import React  from 'react';
 import {cloneElement} from 'react';
-import { tpStyleProps } from '../common/commonTypes';
+import { tpStyleProps, tpUser } from '../common/commonTypes';
 
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -21,6 +21,7 @@ import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import { LOCAL_USER } from './AppConstants';
 
 
 
@@ -60,4 +61,18 @@ export const getIcon = ({CODE, style, titleAccess, onClick, className}: tpProps)
   if(!CODE) return "";
 
   return cloneElement(icons[CODE], {style, titleAccess, className, onClick});
+}
+
+export const serviceLocalStorageUser = (mode: "get"|"set", user?: tpUser): undefined|tpUser => {
+  if(mode === "get") {
+    const userData = localStorage.getItem(LOCAL_USER._VAR);
+    console.log(userData)
+    if(userData) return JSON.parse(userData as string);
+  } else if(user) localStorage.setItem(LOCAL_USER._VAR, JSON.stringify(user as tpUser)); 
+  return;
+}
+
+export const servicePrivateComp = (privateComp?: boolean) => {
+  const user = serviceLocalStorageUser("get");
+  return privateComp === true && (!user || !user?.isLogin);
 }

@@ -8,14 +8,14 @@ import { fetchNavbarState } from './navServices';
 import { useAppStateContext } from '../../appUtils/AppState';
 
 const NavBar = (): JSX.Element => {
-  const { nav, pages, isMobileMode } = useAppStateContext();
+  const { nav, pages, isMobileMode, user } = useAppStateContext();
 
   const [state, setState] = useState<tpNavState>({items: [], isMobileMode});
   const {id, visibility} = nav;
 
   useEffect(() => {
-    fetchNavbarState(setState, pages, isMobileMode);
-  }, [pages, isMobileMode]);
+    fetchNavbarState(setState, pages, isMobileMode, (user && user?.isLogin) || false);
+  }, [pages, user, isMobileMode]);
 
   if(visibility === "hidden") return <></>;
 

@@ -20,7 +20,6 @@ const BannerStripe = ({
   if(!children) return <></>;
   
   const {style, className} = children.props;
-  console.log(children)
   const styling = {
     ...style,
     color: color || "black",

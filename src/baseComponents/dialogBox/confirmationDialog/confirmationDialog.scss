@@ -1,0 +1,19 @@
+.confirmation-dialog {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      width: 450px;
+      .MuiDialogContent-root {
+        text-align: center;
+        .message {
+          padding: 20px;
+        }
+        .buttons {
+          padding: 10px;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}

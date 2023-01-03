@@ -7,7 +7,7 @@
   }
 }
 .content-display-block {
-  .dailog-custom-actions {
+  .dialog-custom-actions {
     position: absolute;
     right: 25;
     top: 8;
@@ -20,7 +20,8 @@
 .content-display-none {
   .MuiDialog-container {
     .MuiPaper-root {
-      .dailog-custom-actions {
+      min-width: 500px;
+      .dialog-custom-actions {
         position: absolute;
         right: 40;
         top: 5;

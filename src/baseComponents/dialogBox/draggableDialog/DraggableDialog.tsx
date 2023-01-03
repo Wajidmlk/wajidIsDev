@@ -113,7 +113,7 @@ const CpPaperComponent = (
   </Draggable>
 );
 
-const ResizeableBody = ({
+const ReSizeableBody = ({
   children, height, width, setHeight, setWidth,
 }: {
     children: (JSX.Element | JSX.Element[])
@@ -123,9 +123,10 @@ const ResizeableBody = ({
     setWidth: Dispatch<SetStateAction<number>>,
   }): ReactNode & (JSX.Element | JSX.Element[]) => (
     <Resizable
-      className='resizeable-dailog-autosize'
+      className='re-sizeable-dialog-auto-size'
       height={height}
       width={width}
+      
       onResize={(event) => {
         setHeight(height + (event as unknown as tpDialogDragEventAxis).movementY);
         setWidth(width + (event as unknown as tpDialogDragEventAxis).movementX);
@@ -141,19 +142,19 @@ const ResizeableBody = ({
 
 const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHeightWidthProps&{
   isDraggable?: boolean,
-  isResizeable?: boolean,
+  isReSizeable?: boolean,
   isSimple?: boolean,
 }): JSX.Element => {
   const [state, setState] = useState<tpDragDialogState>({ maximum: true, onTop: false });
   const {
-    className, onDelete, onPrint, isResizeable, isDraggable, children, defaultHeight, defaultWidth,
-    isSimple,
+    className, onDelete, onPrint, isReSizeable, isDraggable, children, defaultHeight, defaultWidth,
+    isSimple, onBackdropClick,
   } = props;
   const [height, setHeight] = useState(defaultHeight || 350);
   const [width, setWidth] = useState(defaultWidth || 500);
 
   const DraggableDialogActions = () => (
-    <div className='dailog-custom-actions'>
+    <div className='dialog-custom-actions'>
       {
         state.maximum
           ? (
@@ -201,14 +202,15 @@ const DraggableDialog = (props: tpDialogBoxProps&tpDragDialog&tpDialogDefaultHei
   return (
     <DialogBox
       {...props}
+      onBackdropClick={onBackdropClick}
       hideBackdrop={state.onTop}
       removeBackdrop={state.onTop}
       className={`cp-draggable-dialog-root ${state.maximum ? 'content-display-block' : 'content-display-none'} ${className}`}
       PaperComponent={isDraggable ? CpPaperComponent : undefined}
       customActions={isSimple ? <></> : <DraggableDialogActions />}
     >
-      { isResizeable
-        ? ResizeableBody({
+      { isReSizeable
+        ? ReSizeableBody({
           children, height, width, setHeight, setWidth,
         })
         : children}
@@ -220,7 +222,7 @@ DraggableDialog.defaultProps = {
   onDelete: undefined,
   onPrint: undefined,
   isDraggable: false,
-  isResizeable: false,
+  isReSizeable: false,
   isSimple: false,
 };
 

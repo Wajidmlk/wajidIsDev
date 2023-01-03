@@ -1,18 +1,22 @@
 .dialog-comp-root {
   .MuiDialog-container {
+    .MuiPaper-root {
+      max-width: 90vw !important;
+      max-height: 90vh !important;
+    }
     .MuiDialog-paper {
       border-radius: 0.5rem;
     }
     .MuiDialogTitle-root {
-      background-color: green;
-      color: orange;
+      background-color: rgb(29, 43, 49);
+      color: white;
       font-family: 'Poppins', sans-serif;
       font-size: 16px;
       font-weight: 600;
       line-height: 0.85rem;
 
       .MuiButtonBase-root {
-        color:orange
+        color:white
       }
     }
   }

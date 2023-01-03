@@ -24,6 +24,7 @@ const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
   if(!isMobileMode) return (
     <ul className='nav-000'>
       {getNavLines(items, multiPage)}
+      <Settings id="settings000"/>
     </ul>
   )
   return (

@@ -7,6 +7,7 @@ import FooterPage from '../../pages/footerPages/FooterPage';
 import ScrollAnimator from '../../baseComponents/scrollAnimator/ScrollAnimator';
 import BannerStripe from '../../components/stripes/bannerStripe/BannerStripe';
 import Settings from '../../components/settings/Settings';
+import { serviceLoggedIn } from '../../appUtils/AppUtilities';
 
 const IMG = require('./../images/dp1.jpg');
 
@@ -87,7 +88,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageName: 'Banner',
         parentId: '',
         sequence: 3,
-        visibility: 'visible',
+        visibility: 'hidden',
         style: {
           padding: "30px",
           border: "black 15px solid",
@@ -148,7 +149,7 @@ export const GetAppStructure = (): tpAppStructure => {
 }
 
 export const GetPageById = ({page, user}: {page: tpPageStructure, user?: tpUser}) => {
-  if(page?.visibility === "hidden" || (page?.private && (!user || !user?.isLogin))) return <></>;
+  if(page?.visibility === "hidden" || (page?.private && !serviceLoggedIn(user))) return <></>;
   let pageById: JSX.Element = <></>;
   switch(page.pageCatId) {
     case '630d36aa-2aa4-11ed-a261-0242ac120000' :

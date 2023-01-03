@@ -22,7 +22,7 @@ import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-
+import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
 
 
 
@@ -47,6 +47,7 @@ const icons = {
   LocalPostOffice: <LocalPostOfficeIcon />,
   AppRegistration: <AppRegistrationIcon />,
   SettingsSuggest: <SettingsSuggestIcon />,
+  DisplaySettings: <DisplaySettingsIcon />,
 };
 
 export type tpIconCODE = keyof typeof icons;
@@ -76,3 +77,5 @@ export const servicePrivateComp = (privateComp?: boolean) => {
   const user = serviceLocalStorageUser("get");
   return privateComp === true && (!user || !user?.isLogin);
 }
+
+export const serviceLoggedIn = (user?: tpUser) => !!(user && user?.isLogin);

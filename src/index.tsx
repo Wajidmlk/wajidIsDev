@@ -31,6 +31,7 @@ import './components/stripes/bannerStripe/bannerStripe.scss';
 import './components/stripes/informationStripe/informationStripe.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './baseComponents/dialogBox/draggableDialog/draggableDialog.scss';
+import './baseComponents/dialogBox/confirmationDialog/confirmationDialog.scss';
 
 
 //import './components/cards/sliderCardBox/sliderCardBox.scss';

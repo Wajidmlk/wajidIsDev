@@ -11,7 +11,7 @@ import Footer from './components/footers/Footer';
 
 const CpRoutes = (): JSX.Element => {
 
-  const {footer, multiPage, pages} = useAppStateContext();
+  const {footer, multiPage, pages, user} = useAppStateContext();
   
   if(!multiPage) return (<>
       <div className='app-base-root'>
@@ -20,7 +20,7 @@ const CpRoutes = (): JSX.Element => {
         }/>
           {pages.map((page) => <PagesBase
               key={page.pageId}
-              Component={[<GetPageById page={page} />]}
+              Component={[<GetPageById page={page} user={user} />]}
             />)
           }
         <FooterContainer children={<Footer {...footer}/>}/>
@@ -44,7 +44,7 @@ const CpRoutes = (): JSX.Element => {
               ].map((page, key) => <Route path={`/${page.pageId}`} element={
                 <PagesBase
                   key={`${page.pageId}${key}`}
-                  Component={[<GetPageById page={page} />]}
+                  Component={[<GetPageById page={page} user={user}/>]}
                 />
               } />)
             }

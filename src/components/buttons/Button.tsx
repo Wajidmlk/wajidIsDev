@@ -21,5 +21,10 @@ export const Button = (props: tpCompProps) => {
     break;
   
   }
-  return button
-}
+  return button;
+};
+
+Button.defaultProps = {
+  height: "fit-content",
+  width: "fit-content",
+};

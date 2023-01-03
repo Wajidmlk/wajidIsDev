@@ -4,6 +4,7 @@ import { useAppStateContext } from '../../../appUtils/AppState';
 import { getIcon } from '../../../appUtils/AppUtilities';
 import { tpPageStructure } from '../../../common/commonTypes';
 import { tpNavState } from '../../../common/componentTypes';
+import Settings from '../../settings/Settings';
 
 type tpProps =  {state: tpNavState};
 
@@ -23,6 +24,7 @@ const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
   if(!isMobileMode) return (
     <ul className='nav-000'>
       {getNavLines(items, multiPage)}
+      <Settings id="settings000"/>
     </ul>
   )
   return (
@@ -30,12 +32,15 @@ const NavZero = ({state: {isMobileMode, items}}: tpProps): JSX.Element => {
       {
         !toggle ? (
           <div className='button'>
+            <div style={{display: "flex"}}>
             <li
               key='open-nav'
               onClick={() => setToggle(true)}
             >
               {getIcon({ CODE: "MenuOpen", titleAccess:`Open Nav` })}
             </li>
+            <Settings id="settings000"/>
+            </div>
           </div>
         ) : (
           <>

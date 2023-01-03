@@ -19,6 +19,7 @@ import './components/buttons/buttons.scss';
 import './components/navs/navsDrawers.scss';
 import './pages/IntroPages/introPages.scss';
 import './components/galleries/gallery.scss';
+import './components/settings/settings.scss';
 import './pages/footerPages/footerPages.scss';
 import './pages/showcasePages/showcasePages.scss';
 import './components/progressBar/progressBar.scss';
@@ -30,6 +31,7 @@ import './components/stripes/bannerStripe/bannerStripe.scss';
 import './components/stripes/informationStripe/informationStripe.scss';
 import './pages/showcasePages/productContainer/productContainer.scss';
 import './baseComponents/dialogBox/draggableDialog/draggableDialog.scss';
+import './baseComponents/dialogBox/confirmationDialog/confirmationDialog.scss';
 
 
 //import './components/cards/sliderCardBox/sliderCardBox.scss';

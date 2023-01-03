@@ -9,24 +9,26 @@ import { PaperProps } from '@material-ui/core/Paper';
 
 export type tpDialogBoxProps = {
   open: boolean,
-  title: string;
-  onClose: () => void;
+  title: string,
+  onClose: () => void,
   PaperComponent?: ComponentType<PaperProps> | undefined,
-  children: React.ReactNode & (JSX.Element | JSX.Element[]);
-  customActions?: React.ReactNode & (JSX.Element | JSX.Element[]);
-  size?: DialogProps['maxWidth'];
-  className?: string;
-  hideBackdrop?: boolean;
+  children: React.ReactNode & (JSX.Element | JSX.Element[]),
+  customActions?: React.ReactNode & (JSX.Element | JSX.Element[]),
+  size?: DialogProps['maxWidth'],
+  className?: string,
+  onBackdropClick?: () => void,
+  hideBackdrop?: boolean,
 };
 
 const DialogBox = ({
   title, onClose, open, size, children, className, PaperComponent, customActions,
-  hideBackdrop, removeBackdrop,
+  hideBackdrop, removeBackdrop, onBackdropClick,
 }: tpDialogBoxProps&{
     removeBackdrop?: boolean}): JSX.Element => (
       <Dialog
         open={open}
         maxWidth={size}
+        onBackdropClick={onBackdropClick}
         PaperComponent={PaperComponent}
         disableEnforceFocus
         className={`dialog-comp-root ${className} background-clickable-${hideBackdrop && removeBackdrop}`}

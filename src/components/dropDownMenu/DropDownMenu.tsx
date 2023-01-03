@@ -20,7 +20,7 @@ const DropDownMenu = ({
 }: tpProps): JSX.Element => (
   <>
     {open && (
-    <div className={`dailog-custom-actions ${className}`}>
+    <div className={`dialog-custom-actions ${className}`}>
       <PopupState
         variant='popover'
         popupId={`${openButtonProps.id}-popup-menu`}
@@ -32,7 +32,7 @@ const DropDownMenu = ({
               title={openButtonProps.toolTip}
               variant='contained'
               {...bindTrigger(popupState)}
-              style={{ background: 'none', boxShadow: 'none', transition: 'none' }}
+              style={{ background: 'none', boxShadow: 'none', transition: 'none'}}
             >
               {getIcon({CODE: openButtonProps.icon, titleAccess: openButtonProps.icon})}
               {' '}

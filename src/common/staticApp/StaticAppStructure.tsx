@@ -1,4 +1,4 @@
-import { tpAppStructure, tpPageStructure } from '../commonTypes';
+import { tpAppStructure, tpPageStructure, tpUser } from '../commonTypes';
 import HomePage from '../../pages/homePages/HomePage';
 import IntroPage from '../../pages/IntroPages/IntroPage';
 import ExperiencePage from '../../pages/experiencePages/ExperiencePage';
@@ -6,6 +6,8 @@ import ShowcasePage from '../../pages/showcasePages/ShowcasePage';
 import FooterPage from '../../pages/footerPages/FooterPage';
 import ScrollAnimator from '../../baseComponents/scrollAnimator/ScrollAnimator';
 import BannerStripe from '../../components/stripes/bannerStripe/BannerStripe';
+import Settings from '../../components/settings/Settings';
+import { serviceLoggedIn } from '../../appUtils/AppUtilities';
 
 const IMG = require('./../images/dp1.jpg');
 
@@ -16,16 +18,7 @@ const TESTING_PAGE = (data: tpPageStructure) =>
   style={data.style}
 >
   <>
-    <BannerStripe
-      bannerMessage='Message'
-      raised
-      color='black !important'
-      left
-    >
-      <div style={{height: 300, width: 400, border: "2px black solid", color:"black"}}>
-        dsfsdf
-      </div>
-    </BannerStripe>
+    <Settings id="settings000"/>
   </>
 </div>
 
@@ -71,6 +64,7 @@ export const GetAppStructure = (): tpAppStructure => {
         pageId: '330d36aa-2aa4-11ed-a261-0242ac121001',
         pageCatId :'630d36aa-2aa4-11ed-a261-0242ac120002',
         pageName: 'Experience',
+        private: false,
         parentId: '',
         sequence: 3,
         style: {
@@ -154,8 +148,8 @@ export const GetAppStructure = (): tpAppStructure => {
   });
 }
 
-export const GetPageById = ({page}: {page: tpPageStructure}) => {
-  if(page?.visibility === "hidden") return <></>
+export const GetPageById = ({page, user}: {page: tpPageStructure, user?: tpUser}) => {
+  if(page?.visibility === "hidden" || (page?.private && !serviceLoggedIn(user))) return <></>;
   let pageById: JSX.Element = <></>;
   switch(page.pageCatId) {
     case '630d36aa-2aa4-11ed-a261-0242ac120000' :
@@ -181,7 +175,7 @@ export const GetPageById = ({page}: {page: tpPageStructure}) => {
     break;
   
   }
-  if(page.pageCatId !== "630d36aa-2aa4-11ed-a261-0242ac120004") {
+  if(page.pageCatId !== "630d36aa-2aa4-11ed-a261-0242ac120004" && page.pageCatId !== "TEST") {
     pageById = <ScrollAnimator
       animateIn="animate__fadeIn"
       delay={15}

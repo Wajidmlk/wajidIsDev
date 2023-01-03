@@ -1,5 +1,12 @@
 import { tpIconCODE } from "../appUtils/AppUtilities";
 
+export type tpUser = {
+  id: string,
+  name: string,
+  userId: string,
+  isLogin: boolean,
+}
+
 export type tpStyleProps = {
   color?: string,
   width?: string,
@@ -14,6 +21,7 @@ export type tpStyleProps = {
 
 export type tpPageStructure = {
   pageId: string,
+  private?: boolean,
   pageName: string,
   parentId: string,
   pageCatId: string,
@@ -74,7 +82,10 @@ export type tpCompProps = {
   compId: string,
   onClick: () => void,
   className?: string,
+  icon?: tpIconCODE,
   label?: string,
+  height?: string,
+  width?: string,
   id?: string,
 }
 

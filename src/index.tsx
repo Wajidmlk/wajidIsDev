@@ -19,6 +19,7 @@ import './components/buttons/buttons.scss';
 import './components/navs/navsDrawers.scss';
 import './pages/IntroPages/introPages.scss';
 import './components/galleries/gallery.scss';
+import './components/settings/settings.scss';
 import './pages/footerPages/footerPages.scss';
 import './pages/showcasePages/showcasePages.scss';
 import './components/progressBar/progressBar.scss';

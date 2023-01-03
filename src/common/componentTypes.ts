@@ -6,6 +6,11 @@ export type tpNavState = {
   isMobileMode: boolean,
 };
 
+export type tpSettings = {
+  items: Partial<tpPageStructure[]>,
+  isMobileMode: boolean,
+};
+
 export type tpGallery = {
   items: {
     id: string,

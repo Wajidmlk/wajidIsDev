@@ -82,7 +82,10 @@ export type tpCompProps = {
   compId: string,
   onClick: () => void,
   className?: string,
+  icon?: tpIconCODE,
   label?: string,
+  height?: string,
+  width?: string,
   id?: string,
 }
 

@@ -79,6 +79,7 @@ const expData = [
     data: [
       {
         title: "Full Stack Developer (REMOTE)",
+        organization: "CQ Technologies",
         duration: "03/2022 - Present",
         details: "Web development Software House",
         description: "",
@@ -94,6 +95,7 @@ const expData = [
       },
       {
         title: "Web Developer (Hybrid)",
+        organization: "RIKSOF",
         duration: "04/2021 - 03/2022",
         details: "Web and Mobile development Software House",
         description: "",
@@ -105,6 +107,7 @@ const expData = [
       },
       {
         title: "Trainee - Associate Software Engineer",
+        organization: "CONSOL",
         duration: "03/2020 - 04/2021",
         details: "Services and Provider Company",
         description: "",
